@@ -1,33 +1,19 @@
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-@media screen and (max-width:480px) {
-  span.wrap {
-    white-space: nowrap;
-  }
-}
-
 body {
   margin: 0;
   background: #fafafa;
 }
 
+img {
+  max-width: 900px;
+}
+
 a {
   text-decoration: none;
   color: #8bc34a;
+}
+
+li {
+  padding-bottom: 6px;
 }
 
 
@@ -47,13 +33,25 @@ a img {
   color: #fff;
 }
 
-.osmtw-search-box .mdl-textfield__input {
-  color: rgba(0, 0, 0, 0.87);
+div.section--center {
+  max-width: 900px;
 }
 
-.osmtw-header .mdl-menu__container {
-  z-index: 50;
-  margin: 0 !important;
+
+/* components override */
+
+.mdl-components__warning {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: #FFF9C4;
+  padding: 16px;
+  border-radius: 8px;
+  color: #333
+}
+
+p.mdl-chip-after {
+  margin-top: 16px;
 }
 
 .mdl-textfield--expandable {
@@ -62,6 +60,18 @@ a img {
 
 .mdl-menu__item a {
   color: #333;
+}
+
+
+/* osmtw component */
+
+.osmtw-search-box .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.osmtw-header .mdl-menu__container {
+  z-index: 50;
+  margin: 0 !important;
 }
 
 .osmtw-fab {
@@ -271,6 +281,7 @@ a img {
   position: relative;
   top: 6px;
 }
+
 .osmtw-more-section {
   padding: 80px 0;
   max-width: 1148px;
@@ -281,6 +292,16 @@ a img {
 .osmtw-more-section .osmtw-section-title {
   margin-left: 12px;
   padding-bottom: 24px;
+}
+
+.osmtw-iframe {
+  height: 355px;
+  width: 410px;
+  border: 1px solid #CCC;
+  border-width: 1px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  max-width: 100%;
 }
 
 .osmtw-card-container {}
@@ -321,6 +342,10 @@ a img {
 }
 
 .osmtw-footer {
+  margin-top: 160px;
+}
+
+.osmtw-footer {
   position: relative;
 }
 
@@ -353,10 +378,50 @@ a img {
   cursor: pointer;
 }
 
+.osmtw-sub-sec {
+  margin-bottom: 160px;
+}
+
+.osmtw-toc {
+  border-left: 4px solid #C1EEF4;
+  margin: 24px;
+  padding: 0;
+  padding-left: 8px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.osmtw-toc h4 {
+  font-size: .75rem;
+  margin-top: 0;
+  line-height: 16px;
+}
+
+.osmtw-toc a {
+  color: darkslategrey;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 24px;
+  display: block;
+}
+
 
 /**** Mobile layout ****/
 
 @media (max-width: 900px) {
+  img {
+    max-width: 560px;
+  }
+  div.section--center {
+    max-width: 560px;
+  }
+  .mdl-components__warning {
+    max-width: 480px;
+  }
   .osmtw-navigation-container {
     display: none;
   }
@@ -400,6 +465,9 @@ a img {
     margin: 0 16px;
     padding-top: 8px;
   }
+  .osmtw-sub-sec {
+    margin-bottom: 80px;
+  }
   .osmtw-try-map {
     padding-top: 10px;
   }
@@ -433,7 +501,23 @@ a img {
   .osmtw-whatis-section-desc p.mdl-typography--headline {
     font-size: 16px;
   }
+  .osmtw-footer {
+    margin-top: 80px;
+  }
   .osmtw-footer .mdl-mega-footer--bottom-section {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  img {
+    max-width: 240px;
+  }
+  div.section--center {
+    left: 15%;
+    max-width: 300px;
+  }
+  .mdl-components__warning {
+    max-width: 260px;
   }
 }
