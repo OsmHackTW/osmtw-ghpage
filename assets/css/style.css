@@ -312,6 +312,7 @@ p.mdl-chip-after {
 }
 
 .osmtw-card-container .mdl-card__media img {
+  max-width: 960px;
   width: 100%;
 }
 
