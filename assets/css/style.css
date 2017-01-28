@@ -33,7 +33,7 @@ a img {
   color: #fff;
 }
 
-div.section--center {
+.section--center {
   max-width: 900px;
 }
 
@@ -296,7 +296,7 @@ p.mdl-chip-after {
 
 .osmtw-iframe {
   height: 355px;
-  width: 410px;
+  width: 425px;
   border: 1px solid #CCC;
   border-width: 1px;
   margin-top: 16px;
@@ -340,6 +340,10 @@ p.mdl-chip-after {
 .osmtw-card-container .mdl-card__actions a {
   border-top: none;
   font-size: 16px;
+}
+
+.osmtw-news-card{
+  min-height: 320px
 }
 
 .osmtw-footer {
