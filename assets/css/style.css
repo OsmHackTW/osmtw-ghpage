@@ -83,8 +83,13 @@ p.mdl-chip-after {
   color: white !important;
 }
 
+.osmtw-title {
+  color: white;
+}
+
 .osmtw-mobile-title {
   display: none !important;
+  color: white;
 }
 
 .osmtw-logo-image {
@@ -196,7 +201,7 @@ p.mdl-chip-after {
   padding-top: 400px;
 }
 
-.osm-try-map button {
+.osmtw-try-map button {
   padding: 320px 0;
 }
 
@@ -295,8 +300,8 @@ p.mdl-chip-after {
 }
 
 .osmtw-iframe {
-  height: 355px;
-  width: 425px;
+  height: 485px;
+  width: 595px;
   border: 1px solid #CCC;
   border-width: 1px;
   margin-top: 16px;
@@ -342,7 +347,7 @@ p.mdl-chip-after {
   font-size: 16px;
 }
 
-.osmtw-news-card{
+.osmtw-news-card {
   min-height: 320px
 }
 
