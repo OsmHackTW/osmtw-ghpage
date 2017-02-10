@@ -202,7 +202,8 @@ p.mdl-chip-after {
 }
 
 .osmtw-try-map button {
-  padding: 320px 0;
+  padding: 4px 24px;
+  display: inline-block;
 }
 
 .osmtw-try-map a {
@@ -516,6 +517,10 @@ p.mdl-chip-after {
   }
   .osmtw-footer .mdl-mega-footer--bottom-section {
     display: none;
+  }
+  
+  .osmtw-try-map button {
+  padding: 0;
   }
 }
 
