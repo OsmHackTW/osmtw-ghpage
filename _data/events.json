@@ -1,0 +1,20 @@
+{
+    "events": [{
+            "name": "OSM x Wikidata 月聚 #2",
+            "url": "https://www.facebook.com/events/260021498251579/",
+            "date": "2019-03-18",
+            "time": "19:30"
+        },{
+            "name": "Open Data Day Taiwan 2019",
+            "url": "https://www.facebook.com/events/1008634569260907/",
+            "date": "2019-03-02",
+            "time": "09:00"
+        },
+        {
+            "name": "OpenStreetMap台北月聚",
+            "url": "https://www.facebook.com/events/288628638665990/",
+            "date": "2019-01-14",
+            "time": "19:30"
+        }
+    ]
+}
