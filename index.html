@@ -1,252 +1,133 @@
-<!doctype html>
-<html lang="zh-tw">
+---
+layout: default
+title: 首頁
+---
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="OpenStreetMap Taiwan  開放街圖的台灣社群網站">
-  <meta property="og:title" content="OpenStreetMap Taiwan 開放街圖台灣">
-  <meta property="og:image" content="https://wiki.openstreetmap.org/w/images/f/fb/Sticker_of_openstreetmap_taiwan_logo.jpg">
-  <meta property="og:description" content="OpenStreetMap 開放街圖的台灣社群網站 Website of OpenStreetMap Taiwan">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <title>OpenStreetMap Taiwan 開放街圖台灣</title>
-  <link rel="shortcut icon" href="assets/img/icon.ico" type="image/vnd.microsoft.icon" />
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-purple.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body>
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <!--header-->
-    <header class="mdl-layout__header mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <a href="index.html" class="osmtw-title mdl-layout-title"><img class="osmtw-logo-image" src="http://openstreetmap.tw/sites/default/files/logo_2.png"> OpenStreetMap 台灣</a>
-        <!-- Add spacer, to align navigation to the right -->
-        <div class="mdl-layout-spacer"></div>
-        <!-- top nav begins -->
-        <div class="osmtw-navigation-container">
-          <nav class="mdl-navigation osmtw-navigation">
-            <a class="mdl-navigation__link" href="index.html">首頁</a>
-            <a class="mdl-navigation__link" href="#more">什麼是 OSM</a>
-            <a class="mdl-navigation__link" href="">台灣社群活動</a>
-            <a class="mdl-navigation__link" href="">台灣化地圖</a>
-            <a class="mdl-navigation__link" href="news.html">新聞公告</a>
-            <a class="mdl-navigation__link" href="document.html">教學文件</a>
-            <a class="mdl-navigation__link" href="">聯絡我們</a>
-          </nav>
-        </div>
-        <a href="index.html" class="osmtw-mobile-title mdl-layout-title"><img class="osmtw-logo-image" src="assets/img/logo.png">OpenStreetMap 台灣</a>
+<div class="page-content">
+  <div class="osmtw-main-head-section mdl-typography--text-center">
+    <div class="osmtw-main-head-mobile-section">
+      <div class="mdl-typography--font-regular osmtw-slogan mdl-color-text--grey-800">開放街圖・台灣</div>
+      <div class="osmtw-sub-slogan mdl-typography--font-bold mdl-color-text--grey-800">廣泛運用的圖資 自由開放的圖資</div>
+      <div class="osmtw-try-map">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored js-ripple-effect mdl-color--green">
+          <a class="mdl-typography--title mdl-typography--font-regular" href="http://www.openstreetmap.org/">立刻開始使用</a>
+        </button>
       </div>
-    </header>
-    <!-- left drawer nav begins -->
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">OpenStreetMap 台灣 </span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">首頁</a>
-        <a class="mdl-navigation__link" href="#more">什麼是 OSM</a>
-        <a class="mdl-navigation__link" href="">台灣社群活動</a>
-        <a class="mdl-navigation__link" href="">台灣化地圖</a>
-        <a class="mdl-navigation__link" href="news.html">新聞公告</a>
-        <a class="mdl-navigation__link" href="document.html">教學文件</a>
-        <a class="mdl-navigation__link" href="">聯絡我們</a>
-        <div class="osmtw-drawer-separator"></div>
-        <span class="mdl-navigation__link">台灣社群據點</span>
-        <a class="mdl-navigation__link" href="https://fb.com/groups/OpenStreetMap.TW/">Facebook 社團</a>
-        <a class="mdl-navigation__link" href="http://osmtw.hackpad.com/">Hackpad</a>
-        <a class="mdl-navigation__link" href="https://lists.openstreetmap.org/listinfo/talk-tw">郵件論壇</a>
-        <a class="mdl-navigation__link" href="https://osm-tw.signup.team/">Slack</a>
-      </nav>
     </div>
-    <!-- main content begins-->
-    <main class="mdl-layout__content">
-      <a name="top"></a>
-      <div class="page-content">
-        <div class="osmtw-main-head-section mdl-typography--text-center">
-          <div class="osmtw-main-head-mobile-section">
-            <div class="font-l_black mdl-typography--font-bold osmtw-slogan">開放街圖・台灣</div>
-            <div class="font-l_black osmtw-sub-slogan">被廣泛運用的圖資 自由開放的圖資</div>
-            <div class="osmtw-try-map">
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored js-ripple-effect">
-                <a class="mdl-typography--title" href="http://www.openstreetmap.org/">開始使用 OpenStreetMap</a>
-                </button>
-            </div>
-          </div>
-          <a href="#whatis">
-            <button class="osmtw-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
-              <i class="material-icons">expand_more</i>
-            </button>
-          </a>
-        </div>
-      </div>
-      <a name="whatis"></a>
-      <div class="osmtw-whatis-section mdl-typography--text-center">
-        <div class="mdl-typography--display-2-color-contrast osmtw-whatis-section-title">什麼是 OpenStreetMap?</div>
-        <div class="osmtw-whatis-section-desc">
-          <p class="mdl-typography--headline mdl-typography--font-light">
-            OpenStreetMap (開放街圖，簡稱OSM) 是自由而且開源的全球地圖，於2004年由英國的 Steve Coast 發起，採用類似 Wiki 的協作編輯以及開放的授權與格式。 OSM 的地圖由像你一樣的使用者繪製。因為來自一般的使用者，所以內容相當多元。資料的來源可能根據手持GPS裝置、航照圖以及其他自由內容，甚至是單靠使用者由於對本地的認識而得。雖然不全是經過專業訓練的人士，但可以產生接近專業地理資訊水準的地圖。
-            地圖以開放資料庫授權 (ODbL)方式授權，可以日常生活、導航、學術、甚至商業應用。
-          </p>
-        </div>
-      </div>
-      <div class="osmtw-map-layer-section">
-        <div class="osmtw-map-layer-block">
-          <div class="osmtw-map-layer-block-text">
-            <div class="mdl-typography--display-2 mdl-typography--font-thin">不同圖資 各取所需</div>
-            <p class="mdl-typography--headline mdl-typography--font-thin">OpenStreetMap 提供多種地圖樣式，同樣的資料會給你全然不同的感受！
-            </p>
-            <p>
-              <a class="mdl-typography--font-regular osmtw-alt-link" href="http://www.openstreetmap.org/">  立即體驗 OpenStreetMap<i class="material-icons">chevron_right</i></a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <a name="more"></a>
-      <!-- about section -->
-      <div class="osmtw-more-section">
-        <div class="osmtw-section-title mdl-typography--display-1-color-contrast">更多資訊</div>
-        <div class="osmtw-card-container mdl-grid">
-          <!-- card -->
-          <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-            <div class="mdl-card__media">
-              <img src="https://wiki.openstreetmap.org/w/images/f/fb/Sticker_of_openstreetmap_taiwan_logo.jpg">
-            </div>
-            <div class="mdl-card__title">
-              <h4 class="mdl-card__title-text">什麼是 OpenStreetMap？</h4>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <span class="mdl-typography--font-light mdl-typography--subhead">OpenStreetMap (開放街圖，簡稱OSM) 是自由而且開源的全球地圖，於2004年由英國的 Steve Coast 發起，採用類似 Wiki 的協作編輯以及開放的授權與格式。 OSM 的地圖由像你一樣的使用者繪製。因為來自一般的使用者，所以內容相當多元。資料的來源可能根據手持GPS裝置、航照圖以及其他自由內容，甚至是單靠使用者對於本地的認識而得。雖然不全是經過專業訓練的人士，但可以產生接近專業地理資訊水準的地圖。 地圖以開放資料庫授權 (ODbL)方式授權，可以日常生活、導航、學術、甚至商業應用。</span>
-            </div>
-            <div class="mdl-card__actions">
-              <a class="osmtw-link mdl-button mdl-js-button" href="http://www.openstreetmap.org/">開始使用 OpenStreetMap
-                   <i class="material-icons">chevron_right</i>
-                 </a>
-            </div>
-          </div>
-          <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-            <div class="mdl-card__media">
-              <img src="https://wiki.openstreetmap.org/w/images/thumb/c/c6/SOTM_Taiwan_2015.jpg/640px-SOTM_Taiwan_2015.jpg">
-            </div>
-            <div class="mdl-card__title">
-              <h4 class="mdl-card__title-text">開放街圖在台灣</h4>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <span class="mdl-typography--font-light mdl-typography--subhead">台灣社群目前在網路上有幾個據點：
-                <ul class="mdl-list">
-                  <li class="mdl-list__item"><a href="https://www.facebook.com/groups/OpenStreetMap.TW/">Facebook 社團</a></li>
-                  <li class="mdl-list__item"><a href="http://osmtw.hackpad.com/">Hackpad 共筆服務</a></li>
-                  <li class="mdl-list__item"><a href="https://lists.openstreetmap.org/listinfo/talk-tw">郵件論壇</a></li>
-                  <li class="mdl-list__item"><a href="https://webchat.oftc.net/?channels=#osm-tw">IRC</a></li>
-                  <li class="mdl-list__item"><a href="https://osm-tw.signup.team/">Slack</a></li>
-                </ul>
-              </span>
-            </div>
-            <div class="mdl-card__actions">
-              <a class="osmtw-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">加入我們<i class="material-icons">chevron_right</i></a>
-            </div>
-          </div>
-        </div>
-        <!-- new row -->
-        <div class="osmtw-card-container mdl-grid">
-          <!-- card -->
-          <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-            <div class="mdl-card__media">
-              <img src="https://wiki.openstreetmap.org/w/images/b/b1/Meshu.io.jpg">
-            </div>
-            <div class="mdl-card__title">
-              <h4 class="mdl-card__title-text">OpenStreetMap 的資料可以作什麼應用？</h4>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <span class="mdl-typography--font-light mdl-typography--subhead">可以使用OSM的資料產生<a href="http://wheelmap.org/zh-tw/map" target="_blank">輪椅地圖</a>和布農族語的地圖；也可以利用<a href="http://osmand.net/" target="_blank">行動裝置導航</a>；有公司用 OSM 的資料生產客製化的商品。其他的地圖可以做的應用，OSM 幾乎都可以，而且更有想像不到的彈性。</span>
-            </div>
-            <!--div class="mdl-card__actions">
-              <a class="osmtw-link mdl-button mdl-js-button" href="">
-                   Act now
-                   <i class="material-icons">chevron_right</i>
-                 </a>
-            </div-->
-          </div>
-          <!-- card -->
-          <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-            <div class="mdl-card__media">
-              <img src="http://placehold.it/350x150">
-            </div>
-            <div class="mdl-card__title">
-              <h4 class="mdl-card__title-text">台灣社群活動</h4>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <span class="mdl-typography--font-light mdl-typography--subhead">想要參加台灣各地的 OpenStreetMap  聚會活動？看這裡就對了！</span>
-            </div>
-            <div class="mdl-card__actions">
-              <a class="osmtw-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">國內活動列表<i class="material-icons">chevron_right</i></a>
-            </div>
-          </div>
-        </div>
-        <!-- new row -->
-        <div class="osmtw-card-container mdl-grid">
-          <!-- card -->
-          <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-            <div class="mdl-card__media">
-              <img src="http://placehold.it/350x150">
-            </div>
-            <div class="mdl-card__title">
-              <h4 class="mdl-card__title-text">我要如何參與？</h4>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <span class="mdl-typography--font-light mdl-typography--subhead">
-                如果希望貢獻 OpenStreetMap ，首先您必須申請 OpenStreetMap.org 的帳號。如果你發現地圖上錯誤，你可以用幾分鐘的時間幫忙標示。出遊時，你可以用行動裝置紀錄公路、街道的軌跡，順手紀錄一下實用的地物又更棒了。也可以用容易上手的 iD 編輯器進行線上編輯。請參考教學文件，或參與我們舉辦的活動。</span>
-            </div>
-            <div class="mdl-card__actions">
-              <a class="osmtw-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://www.openstreetmap.org/user/new">
-                   建立賬號
-                   <i class="material-icons">chevron_right</i>
-                 </a>
-            </div>
-          </div>
-          <!-- card -->
-          <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-            <div class="mdl-card__media">
-              <img src="http://placehold.it/350x150">
-            </div>
-            <div class="mdl-card__title">
-              <h4 class="mdl-card__title-text">徵求星球</h4>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <span class="mdl-typography--font-light mdl-typography--subhead">各位喜歡 OpenStreetMap 的朋友們，你是不是時常會在自己的 Blog 提起對 OSM 的心得或觀察呢？現在 OpenStreetMap 台灣社群網站有「星球」的功能，可以輪播社群朋友的文章。如有意願，請洽 editor@openstreetmap.tw 。</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--footer begins-->
-      <footer class="osmtw-footer mdl-mega-footer">
-        <div class="mdl-mega-footer--middle-section">
-          <div class="mdl-mega-footer--left-section">
-            <button class="mdl-mega-footer--social-btn"><a href="https://www.facebook.com/groups/OpenStreetMap.TW/"><img src="assets/img/FB-f-Logo__white_29.png" height="24px"></a></button>&nbsp;
-            <button class="mdl-mega-footer--social-btn"><a href="https://www.facebook.com/openstreetmaptaiwan/"><img src="assets/img/FB-f-Logo__white_29.png" height="24px"></a></button>&nbsp;
-            <button class="mdl-mega-footer--social-btn"><a href="https://plus.google.com/+OpenstreetmapTw"><img src="assets/img/G+Logo__white_32.png" height="24px"></a></button>
-          </div>
-          <div class="mdl-mega-footer--right-section">
-            <a class="mdl-typography--font-light" href="#top">
-                Back to Top
-                <i class="material-icons">expand_less</i>
-              </a>
-          </div>
-        </div>
-        <div class="mdl-mega-footer__bottom-section">
-          <div class="mdl-logo">&copy; OpenStreetMap Taiwan 2017</div>
-          <ul class="mdl-mega-footer__link-list">
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Privacy &amp; Terms</a></li>
-            <li><a href="#">Fork me on Github</a></li>
-          </ul>
-        </div>
-      </footer>
-    </main>
+    <a data-scroll href="#whatis">
+      <button class="osmtw-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--green">
+        <i class="fas fa-angle-down mdl-color-text--white"></i>
+      </button>
+    </a>
   </div>
-  <!-- scripts -->
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-</body>
+</div>
+<a name="whatis"></a>
+<div class="osmtw-whatis-section mdl-typography--text-center">
+  <div class="mdl-typography--display-2-color-contrast osmtw-whatis-section-title">什麼是 OpenStreetMap?</div>
+  <div class="osmtw-whatis-section-desc">
+    <p class="mdl-typography--headline mdl-typography--font-light">
+      OpenStreetMap (開放街圖，簡稱OSM) 是自由而且開源的全球地圖，於2004年由英國的 <a href="https://stevecoast.com/">Steve Coast</a> 發起，採用類似 Wiki
+      的協作編輯以及開放的授權與格式。 OSM
+      的地圖由像你一樣的使用者繪製。因為來自一般的使用者，所以內容相當多元。資料的來源可能根據手持GPS裝置、航照圖以及其他自由內容，甚至是單靠使用者由於對本地的認識而得。雖然不全是經過專業訓練的人士，但可以產生接近專業地理資訊水準的地圖。
+      地圖以開放資料庫授權 (ODbL)方式授權，可以日常生活、導航、學術、甚至商業應用。
+    </p>
+  </div>
+</div>
+<div class="osmtw-map-layer-section">
+  <div class="osmtw-map-layer-block">
+    <div class="osmtw-map-layer-block-text">
+      <div class="mdl-typography--display-2 mdl-typography--font-thin">不同圖資 各取所需</div>
+      <p class="mdl-typography--headline mdl-typography--font-thin">OpenStreetMap 提供多種地圖樣式，同樣的資料會給你全然不同的感受！
+      </p>
+      <p>
+        <a class="mdl-typography--font-regular osmtw-alt-link mdl-color-text--teal-200" href="http://www.openstreetmap.org/">
+          立即體驗 OpenStreetMap
+          <i class="fas fa-angle-right"></i></a>
+      </p>
+    </div>
+  </div>
+</div>
+<a name="more"></a>
+<!-- about section -->
+<div class="osmtw-more-section">
+  <div class="osmtw-section-title mdl-typography--display-1-color-contrast">更多資訊</div>
+  <div class="osmtw-card-container mdl-grid">
+    <!-- card -->
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+      <div class="mdl-card__media" id="tt1">
+        <img src="/assets/img/Sticker_of_openstreetmap_taiwan_logo.jpg">
+        <div class="mdl-tooltip" data-mdl-for="tt1">&copy; mcdlee [CC-BY-SA-3.0] <br>&copy; OpenStreetMap Foundation</div>
+      </div>
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text">什麼是 OpenStreetMap？</h4>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">OpenStreetMap (開放街圖，簡稱OSM)
+          採用類似Wiki的協作編輯以及開放的授權與格式，因而被稱之為「維基版的地圖」，也被視為Google最強大的競爭者。
+        </span>
+      </div>
+      <div class="mdl-card__actions">
+        <a class="osmtw-link mdl-button mdl-js-button" href="/tutorial/#overview">開始使用 OpenStreetMap
+          <i class="fas fa-angle-right"></i>
+        </a>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+      <div class="mdl-card__media">
+        <img src="/assets/img/SOTM_Taiwan_2015.jpg" id="tt2">
+        <div class="mdl-tooltip" data-mdl-for="tt2">&copy; othree (flickr) [CC-BY.2.0]</div>
+      </div>
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text">開放街圖在台灣</h4>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">想要參加台灣各地的 OpenStreetMap 聚會活動？看這裡就對了！</span>
+      </div>
+      <div class="mdl-card__actions">
+        <a class="osmtw-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/events">國內活動列表 <i class="fas fa-angle-right"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- new row -->
+  <div class="osmtw-card-container mdl-grid">
+    <!-- card -->
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+      <div class="mdl-card__media">
+        <img src="/assets/img/Citymaps-coloring-book.jpg" id="tt3">
+        <div class="mdl-tooltip" data-mdl-for="tt3">&copy; @PetersonGIS [CC-BY-SA-4.0] <br>&copy; OpenStreetMap contributors</div>
+      </div>
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text">OpenStreetMap 的資料可以作什麼應用？</h4>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">可以使用OSM的資料產生<a href="http://wheelmap.org/zh-tw/map"
+            target="_blank">輪椅地圖</a>和布農族語的地圖；也可以利用<a href="http://osmand.net/" target="_blank">行動裝置導航</a>；有公司用 OSM
+          的資料生產客製化的商品。其他的地圖可以做的應用，OSM 幾乎都可以，而且更有想像不到的彈性。</span>
+      </div>
 
-</html>
+    </div>
+
+    <!-- card -->
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+      <div class="mdl-card__media">
+        <img src="/assets/img/mapathon_wanhwa.jpg">
+      </div>
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text">我要如何參與？</h4>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">
+          如果希望貢獻 OpenStreetMap ，首先您必須申請 OpenStreetMap.org
+          的帳號。如果你發現地圖上錯誤，你可以用幾分鐘的時間幫忙標示。出遊時，你可以用行動裝置紀錄公路、街道的軌跡，順手紀錄一下實用的地物又更棒了。也可以用容易上手的 iD
+          編輯器進行線上編輯。請參考教學文件，或參與我們舉辦的活動。</span>
+      </div>
+      <div class="mdl-card__actions">
+        <a class="osmtw-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://www.openstreetmap.org/user/new">
+          建立帳號 <i class="fas fa-angle-right"></i>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</div>

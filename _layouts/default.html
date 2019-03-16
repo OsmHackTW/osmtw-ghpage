@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-tw">
+
+<head>
+    <!--head section meta & css-->
+    {% include meta.html %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    {% include ganalytics.html %}
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <!--header-->
+        {% include header.html %}
+        {% if page.url == "/tutorial/" %}
+        {% include tut-tab.html %}
+        {% endif %}
+        </header>
+        <!-- left drawer nav begins -->
+        {% include navi.html %}
+        <!-- main content begins-->
+        <a name="top"></a>
+        <main class="mdl-layout__content">
+            {{ content }}
+
+            <!--footer begins-->
+            {% include footer.html %}
+        </main>
+    </div>
+    <!-- scripts -->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+</body>
+
+</html>

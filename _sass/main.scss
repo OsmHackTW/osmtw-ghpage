@@ -1,0 +1,557 @@
+@charset "utf-8";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  background: #fafafa;
+  font-family: 'Noto Sans TC', '微軟正黑體', "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+img {
+  max-width: 900px;
+}
+
+a {
+  text-decoration: none;
+  color: #8bc34a;
+}
+
+li {
+  padding-bottom: 6px;
+}
+
+/* Disable ugly boxes around images in IE10 */
+
+a img {
+  border: 0px;
+}
+
+::-moz-selection, ::selection {
+  background-color: darkslategray;
+  color: white;
+}
+
+.section--center {
+  max-width: 900px;
+}
+
+/* components override */
+
+.mdl-components__warning {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: #fff9c4;
+  padding: 16px;
+  border-radius: 8px;
+  color: #333333;
+}
+
+p.mdl-chip-after {
+  margin-top: 16px;
+}
+
+.mdl-textfield--expandable {
+  width: auto;
+}
+
+.mdl-menu__item a {
+  color: #333333;
+}
+
+/* osmtw component */
+
+.osmtw-search-box .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.osmtw-header .mdl-menu__container {
+  z-index: 50;
+  margin: 0;
+}
+
+.osmtw-fab {
+  position: absolute;
+  right: 20%;
+  bottom: -26px;
+  z-index: 3;
+  color: white;
+}
+
+.osmtw-title {
+  color: white;
+}
+
+.osmtw-mobile-title {
+  display: none;
+  color: white;
+}
+
+.osmtw-logo-image {
+  height: 40px;
+  width: 40px;
+}
+
+.osmtw-header {
+  overflow: visible;
+  background-color: white;
+
+  .material-icons {
+    color: #767777;
+  }
+
+  .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777;
+  }
+
+  .mdl-navigation__link {
+    color: #757575;
+    font-weight: 700;
+    font-size: 14px;
+  }
+}
+
+.osmtw-navigation-container {
+  /* Simple hack to make the overflow happen to the left instead... */
+  direction: rtl;
+  order: 1;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.osmtw-navigation {
+  /* ... and now make sure the content is actually LTR */
+  direction: ltr;
+  justify-content: flex-end;
+
+  .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent;
+    border-bottom: 3px solid transparent;
+  }
+}
+
+.osmtw-more-button {
+  order: 3;
+}
+
+.osmtw-drawer {
+  border-right: none;
+}
+
+.osmtw-drawer-separator {
+  height: 1px;
+  background-color: gainsboro;
+  margin: 8px 0;
+}
+
+.osmtw-drawer {
+  .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+    color: #757575;
+  }
+
+  span.mdl-navigation__link.mdl-navigation__link {
+    color: #8bc34a;
+  }
+
+  .mdl-layout-title {
+    position: relative;
+    background: #6ab344;
+    height: 160px;
+  }
+
+  .osmtw-logo-image {
+    position: absolute;
+    bottom: 16px;
+  }
+}
+
+.osmtw-main-head-section {
+  position: relative;
+  height: 800px;
+  width: auto;
+  background: url("/assets/img/hero-landing.png") center 30% no-repeat;
+  background-size: cover;
+}
+
+.logo-font {
+  line-height: 1;
+  color: #767777;
+  font-weight: 500;
+}
+
+.osmtw-slogan {
+  font-size: 66px;
+  padding-top: 250px;
+}
+
+.osmtw-sub-slogan {
+  font-size: 26px;
+  padding-top: 46px;
+}
+
+.osmtw-try-map {
+  padding-top: 400px;
+
+  button {
+    padding: 4px 24px;
+    display: inline-block;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+}
+
+.osmtw-whatis-section {
+  position: relative;
+  padding-top: 96px;
+  padding-bottom: 80px;
+}
+
+.osmtw-whatis-section-desc {
+  text-align: left;
+  max-width: 1280px;
+  padding-top: 20px;
+  margin: 0 auto;
+  padding: 64px;
+  text-align: left;
+}
+
+.osmtw-image-link {
+  text-decoration: none;
+}
+
+.osmtw-map-layer-section {
+  position: relative;
+  background: url("/assets/img/hero-layers.png") center top no-repeat;
+  background-size: cover;
+  height: 1000px;
+}
+
+.osmtw-map-layer-block {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: darkslategray;
+}
+
+.osmtw-map-layer-block-text {
+  max-width: 800px;
+  margin-top: 16px;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: left;
+  color: white;
+}
+
+.osmtw-link {
+  text-decoration: none;
+  color: teal;
+
+  &:hover {
+    color: teal;
+  }
+
+  .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+}
+
+.osmtw-alt-link {
+  text-decoration: none;
+  color: #8bc34a;
+  font-size: 16px;
+
+  &:hover {
+    color: #00bfa5;
+  }
+
+  .material-icons {
+    position: relative;
+    top: 6px;
+  }
+}
+
+.osmtw-more-section {
+  padding: 80px 0;
+  max-width: 1148px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .osmtw-section-title {
+    margin-left: 12px;
+    padding-bottom: 24px;
+  }
+}
+
+.osmtw-iframe {
+  height: 485px;
+  width: 595px;
+  border: 1px solid #cccccc;
+  border-width: 1px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  max-width: 100%;
+}
+
+.osmtw-card-container {
+  .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+
+    img {
+      max-width: 960px;
+      width: 100%;
+    }
+  }
+
+  .mdl-card__title {
+    background: transparent;
+    height: auto;
+  }
+
+  .mdl-card__title-text {
+    color: black;
+    height: auto;
+  }
+
+  .mdl-card__supporting-text {
+    height: auto;
+    color: black;
+    padding-bottom: 56px;
+  }
+
+  .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+
+    a {
+      border-top: none;
+      font-size: 16px;
+    }
+  }
+}
+
+.osmtw-news-card {
+  min-height: 320px;
+}
+
+.osmtw-footer {
+  margin-top: 160px;
+  position: relative;
+
+  a:hover {
+    color: #8bc34a;
+  }
+
+  .mdl-mega-footer--top-section::after, .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+  }
+
+  .mdl-mega-footer--bottom-section {
+    position: relative;
+
+    a {
+      margin-right: 2em;
+    }
+  }
+
+  .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+  }
+}
+
+.osmtw-link-menu:hover {
+  cursor: pointer;
+}
+
+.osmtw-sub-sec {
+  margin-bottom: 160px;
+}
+
+.osmtw-toc {
+  border-left: 4px solid #c1eef4;
+  margin: 24px;
+  padding: 0;
+  padding-left: 8px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  h4 {
+    font-size: 1.25rem;
+    display: block;
+    line-height: 24px;
+    padding-bottom: 12px;
+    margin-bottom: 0;
+  }
+
+  a {
+    color: darkslategray;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 24px;
+    display: block;
+  }
+}
+
+/*** Mobile layout ** */
+
+@media (max-width: 900px) {
+  img, div.section--center {
+    max-width: 560px;
+  }
+
+  .mdl-components__warning {
+    max-width: 480px;
+  }
+
+  .osmtw-navigation-container {
+    display: none;
+  }
+
+  .osmtw-title {
+    display: none;
+  }
+
+  .osmtw-mobile-title {
+    display: block;
+    position: absolute;
+    left: calc(50% - 100px);
+    top: 10px;
+    font-size: 1.25rem;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    img {
+      padding-right: 0.5rem;
+    }
+  }
+
+  /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+   * consecutive "+" operators in some cases. Therefore, we need to use both
+   * here to cover all the bases. */
+  .osmtw-more-button ~ .osmtw-mobile-title, .osmtw-search-box.is-focused + .osmtw-navigation-container + .osmtw-mobile-title {
+    opacity: 0;
+  }
+
+  .osmtw-more-button {
+    display: none;
+  }
+
+  .osmtw-main-head-section {
+    height: 350px;
+  }
+
+  .osmtw-main-head-mobile-section {
+    padding-top: 100px;
+  }
+
+  .osmtw-slogan {
+    font-size: 32px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
+
+  .osmtw-sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .osmtw-sub-sec {
+    margin-bottom: 80px;
+  }
+
+  .osmtw-try-map {
+    padding-top: 10px;
+
+    button {
+      margin-top: 24px;
+    }
+
+    a {
+      padding: 10px;
+      font-size: 11px;
+    }
+  }
+
+  .osmtw-fab {
+    display: none;
+  }
+
+  .osmtw-map-layer-block-text {
+    margin-left: 0;
+    padding: 16px;
+
+    div.mdl-typography--display-2 {
+      font-size: 2rem;
+    }
+
+    p.mdl-typography--headline {
+      font-size: 1.25rem;
+    }
+  }
+
+  .osmtw-whatis-section-title {
+    font-size: 22px;
+  }
+
+  .osmtw-whatis-section-desc {
+    margin-left: 0;
+    padding: 16px;
+
+    p.mdl-typography--headline {
+      font-size: 16px;
+    }
+  }
+
+  .osmtw-footer {
+    margin-top: 80px;
+
+    .mdl-mega-footer--bottom-section {
+      display: none;
+    }
+  }
+
+  .osmtw-try-map button {
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  img {
+    max-width: 240px;
+  }
+
+  div.section--center {
+    left: 15%;
+    max-width: 300px;
+  }
+
+  .mdl-components__warning {
+    max-width: 260px;
+  }
+
+  .osmtw-footer {
+    margin-top: 80px;
+  }
+}
