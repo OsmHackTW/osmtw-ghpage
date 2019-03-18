@@ -31,7 +31,9 @@ a img {
   border: 0px;
 }
 
-::-moz-selection, ::selection {
+
+::-moz-selection,
+::selection {
   background-color: darkslategray;
   color: white;
 }
@@ -359,7 +361,10 @@ p.mdl-chip-after {
     color: #8bc34a;
   }
 
-  .mdl-mega-footer--top-section::after, .mdl-mega-footer--middle-section::after {
+
+  .mdl-mega-footer--top-section::after,
+  .mdl-mega-footer--middle-section::after {
+
     border-bottom: none;
   }
 
@@ -383,7 +388,11 @@ p.mdl-chip-after {
 
 .osmtw-sub-sec {
   margin-bottom: 160px;
-}
+
+  p {
+    margin: 15px;
+  }
+
 
 .osmtw-toc {
   border-left: 4px solid #c1eef4;
@@ -414,10 +423,24 @@ p.mdl-chip-after {
   }
 }
 
+.osmtw-contact {
+  .mdl-textfield {
+    width: 100%;
+  }
+
+  form {
+    max-width: 1024px;
+    margin: 0;
+  }
+}
+
 /*** Mobile layout ** */
 
 @media (max-width: 900px) {
-  img, div.section--center {
+
+  img,
+  div.section--center {
+
     max-width: 560px;
   }
 
@@ -449,7 +472,9 @@ p.mdl-chip-after {
   /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
    * consecutive "+" operators in some cases. Therefore, we need to use both
    * here to cover all the bases. */
-  .osmtw-more-button ~ .osmtw-mobile-title, .osmtw-search-box.is-focused + .osmtw-navigation-container + .osmtw-mobile-title {
+  .osmtw-more-button~.osmtw-mobile-title,
+  .osmtw-search-box.is-focused+.osmtw-navigation-container+.osmtw-mobile-title {
+
     opacity: 0;
   }
 
