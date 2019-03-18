@@ -3,7 +3,7 @@ version: 1.0.0
 name: OpenStreetMap 台灣
 description: 廣泛運用的圖資 自由開放的圖資
 url: https://osm.tw/
-baseurl: /
+baseurl: ""
 repository: https://github.com/OsmHackTW/osmtw-ghpage/
 timezone: Asia/Taipei
 logo: "/assets/img/logo.png"
