@@ -42,6 +42,13 @@ a img {
   max-width: 900px;
 }
 
+.section-iframe--stretch {
+  min-height: 900px;
+  height: 100%;
+  min-width: 900px;
+  width: 100% !important;
+}
+
 /* components override */
 
 .mdl-components__warning {
@@ -394,6 +401,7 @@ p.mdl-chip-after {
   }
 
 }
+
 .osmtw-toc {
   border-left: 4px solid #c1eef4;
   margin: 24px;
@@ -578,5 +586,18 @@ p.mdl-chip-after {
 
   .osmtw-footer {
     margin-top: 80px;
+  }
+}
+
+// break table on mobile device
+@media all and (max-width:1080px) {
+  .osm-table--break tr {
+    display: table;
+    width: 100%;
+  }
+
+  .osm-table--break td {
+    display: table-row;
+    text-align: left
   }
 }
