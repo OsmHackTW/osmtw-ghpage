@@ -1,5 +1,59 @@
 {
     "events": [{
+            "name": "OSM x Wikidata 月聚 #11",
+            "url": "",
+            "venue": "摩茲工寮 Mozilla Community Space Taipei",
+            "date": "2019-12-09",
+            "time": "19:30"
+        },{                
+            "name": "OSM x Wikidata 月聚 #10",
+            "url": "",
+            "venue": "摩茲工寮 Mozilla Community Space Taipei",
+            "date": "2019-11-11",
+            "time": "19:30"
+        },{                
+            "name": "OSM x Wikidata 月聚 #9",
+            "url": "",
+            "venue": "摩茲工寮 Mozilla Community Space Taipei",
+            "date": "2019-10-14",
+            "time": "19:30"
+        },{                
+            "name": "OSM x Wikidata 月聚 #8",
+            "url": "",
+            "venue": "摩茲工寮 Mozilla Community Space Taipei",
+            "date": "2019-09-09",
+            "time": "19:30"
+        },{                
+            "name": "OSM x Wikidata 月聚 #7",
+            "url": "",
+            "venue": "摩茲工寮 Mozilla Community Space Taipei",
+            "date": "2019-08-12",
+            "time": "19:30"
+        },{                
+            "name": "OSM x Wikidata 月聚 #6",
+            "url": "",
+            "venue": "摩茲工寮 Mozilla Community Space Taipei",
+            "date": "2019-07-08",
+            "time": "19:30"
+        },{                
+            "name": "OSM x Wikidata 月聚 #5",
+            "url": "",
+            "venue": "摩茲工寮 Mozilla Community Space Taipei",
+            "date": "2019-06-03",
+            "time": "19:30"
+        },{        
+            "name": "OSM x Wikidata 月聚 #4",
+            "url": "",
+            "venue": "摩茲工寮 Mozilla Community Space Taipei",
+            "date": "2019-05-06",
+            "time": "19:30"
+        },{
+            "name": "OSM x Wikidata 月聚 #3",
+            "url": "https://www.facebook.com/events/2006032119496124/",
+            "venue": "摩茲工寮 Mozilla Community Space Taipei",
+            "date": "2019-04-08",
+            "time": "19:30"
+        },{
             "name": "OSM x Wikidata 月聚 #2",
             "url": "https://www.facebook.com/events/260021498251579/",
             "venue": "摩茲工寮 Mozilla Community Space Taipei",
