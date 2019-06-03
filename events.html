@@ -16,9 +16,9 @@ permalink: /events/
                 {% if site.data.events.events == null %}
                 <p><a class="mdl-card__supporting-text mdl-color-text--grey-700" href="#">近期沒有活動</a></p>
                 {% else %}
-                {% assign month = 1  | times: 2592000 %}
-                {% capture next30Day %}{{ 'now' | date: "%s" | plus: month | date: '%F' }}{% endcapture %}
-                {% capture prev30Day %}{{ 'now' | date: "%s" | minus: month | date: '%F' }}{% endcapture %}
+                {% assign month = 1  | times: 3888000 %}
+                {% capture next45Day %}{{ 'today' | date: "%s" | plus: month | date: '%F' }}{% endcapture %}
+                {% capture prev45Day %}{{ 'today' | date: "%s" | minus: month | date: '%F' }}{% endcapture %}
                 <table class="mdl-data-table mdl-js-data-table osm-table--break">
                     <thead>
                         <tr>
@@ -30,7 +30,7 @@ permalink: /events/
                     </thead>
                     <tbody>
                         {% for event in site.data.events.events %}
-                        {% if event.date <= next30Day and  event.date >= prev30Day %}
+                        {% if event.date <= next45Day and  event.date >= prev45Day %}
                         <tr>
                             <td class="mdl-data-table__cell--non-numeric"><a class="mdl-color-text--light-green" href="{{event.url}}">{{event.name}}</a></td>
                             <td>{{event.date}}</td>
