@@ -191,6 +191,36 @@ p.mdl-chip-after {
   }
 }
 
+.osmtw-osmcontributors--bottom-left {
+  &::before{
+    display:inline-block;
+    content:"© OpenStreetMap contributors";
+    color:#555;
+    font-size:.7rem;
+    font-weight: bold;
+    background-color:rgba(255,255,255,.65);
+    position:absolute;
+    left:0;
+    bottom:0;
+    padding:4px 8px;
+  }
+}
+
+.osmtw-osmcontributors--top-left {
+  &::before{
+    display:inline-block;
+    content:"© OpenStreetMap contributors";
+    color:#555;
+    font-size:.7rem;
+    font-weight: bold;
+    background-color:rgba(255,255,255,.65);
+    position:absolute;
+    left:0;
+    top:0;
+    padding:4px 8px;
+  }
+}
+
 .osmtw-main-head-section {
   position: relative;
   height: 800px;
@@ -608,4 +638,24 @@ p.mdl-chip-after {
     display: table-row;
     text-align: left
   }
+
+  .osmtw-map-layer-section {
+    height: 400px;
+    .osmtw-map-layer-block {
+      height: 150px;
+      .osmtw-map-layer-block-text {
+      margin-top: -5%;
+        .mdl-typography--display-2 {
+          font-size: 150%
+        }
+        .mdl-typography--headline{
+          font-size: 90%
+        } 
+        .mdl-typography--font-regular{
+          font-size: 90%
+        }
+      }
+    } 
+  } 
+
 }
