@@ -42,6 +42,13 @@ a img {
   max-width: 900px;
 }
 
+.section-iframe--stretch {
+  min-height: 900px;
+  height: 100%;
+  min-width: 900px;
+  width: 100% !important;
+}
+
 /* components override */
 
 .mdl-components__warning {
@@ -64,6 +71,14 @@ p.mdl-chip-after {
 
 .mdl-menu__item a {
   color: #333333;
+}
+
+.width--90{
+  width: 90%
+}
+
+.width--100{
+  width: 100%
 }
 
 /* osmtw component */
@@ -173,6 +188,36 @@ p.mdl-chip-after {
   .osmtw-logo-image {
     position: absolute;
     bottom: 16px;
+  }
+}
+
+.osmtw-osmcontributors--bottom-left {
+  &::before{
+    display:inline-block;
+    content:"© OpenStreetMap contributors";
+    color:#555;
+    font-size:.7rem;
+    font-weight: bold;
+    background-color:rgba(255,255,255,.65);
+    position:absolute;
+    left:0;
+    bottom:0;
+    padding:4px 8px;
+  }
+}
+
+.osmtw-osmcontributors--top-left {
+  &::before{
+    display:inline-block;
+    content:"© OpenStreetMap contributors";
+    color:#555;
+    font-size:.7rem;
+    font-weight: bold;
+    background-color:rgba(255,255,255,.65);
+    position:absolute;
+    left:0;
+    top:0;
+    padding:4px 8px;
   }
 }
 
@@ -393,6 +438,7 @@ p.mdl-chip-after {
     margin: 15px;
   }
 
+}
 
 .osmtw-toc {
   border-left: 4px solid #c1eef4;
@@ -579,4 +625,37 @@ p.mdl-chip-after {
   .osmtw-footer {
     margin-top: 80px;
   }
+}
+
+// break table on mobile device
+@media all and (max-width:1080px) {
+  .osm-table--break tr {
+    display: table;
+    width: 100%;
+  }
+
+  .osm-table--break td {
+    display: table-row;
+    text-align: left
+  }
+
+  .osmtw-map-layer-section {
+    height: 400px;
+    .osmtw-map-layer-block {
+      height: 150px;
+      .osmtw-map-layer-block-text {
+      margin-top: -5%;
+        .mdl-typography--display-2 {
+          font-size: 150%
+        }
+        .mdl-typography--headline{
+          font-size: 90%
+        } 
+        .mdl-typography--font-regular{
+          font-size: 90%
+        }
+      }
+    } 
+  } 
+
 }
