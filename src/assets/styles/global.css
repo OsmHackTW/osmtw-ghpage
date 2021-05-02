@@ -1,0 +1,79 @@
+/* ./src/assets/styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.osmtw-landing-hero{
+    background-image: url('../images/hero-landing.png') ;
+    background: cover center;
+}
+
+.osmtw-osmcontributors--bottom-left::before{
+    display:inline-block;
+    content:"© OpenStreetMap contributors";
+    color:#555;
+    font-size:.75rem;
+    font-weight:normal;
+    background:rgba(255,255,255,0.65);
+    left:0;
+    bottom:0%;
+    padding:2px;
+    position: absolute;
+    text-align: center;
+}
+
+.osmtw-osmcontributors--bottom-right::before{
+    display:inline-block;
+    content:"© OpenStreetMap contributors";
+    color:#555;
+    font-size:.75rem;
+    font-weight:normal;
+    background:rgba(255,255,255,0.65);
+    right:0;
+    bottom:0%;
+    padding:2px;
+    position: absolute;
+    text-align: center;
+}
+
+.osmtw-osmcontributors--top-left::before{
+    display:inline-block;
+    content:"© OpenStreetMap contributors";
+    color:#555;
+    font-size:.75rem;
+    font-weight:normal;
+    background-color:rgba(255,255,255,0.65);
+    position:absolute;
+    left:0;
+    top:0;
+    padding:4px 8px
+}
+
+.highlight-yellow {
+    font-weight: bolder;
+    background: linear-gradient(104deg, rgba(255, 226, 80,0) 0.9%, rgba(255, 226, 80, 1.25) 2.4%, rgba(255, 226, 80,0.6) 5.8%, rgba(255, 226, 80, 0.1) 93%, rgba(255, 226, 80, 0.7) 96%, rgba(255, 226, 80, 0) 98%), linear-gradient(183deg, rgba(255, 226, 80, 0) 0%, rgba(255, 226, 80, 0.3) 7.9%, rgba(255, 226, 80, 0) 15%);
+    padding: 0.65em 8px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    margin: 0;
+    border-radius: 5px;
+    text-shadow: -12px 12px 9.8px rgba(255, 226, 80, 0.7), 18px -15px 7.3px rgba(240, 240, 240, 0.8), -15px -21px 27px rgba(240, 240, 240, 0.8);
+}
+
+.highlight-green {
+    font-weight: bolder;
+    background: linear-gradient(104deg, rgba(130, 255, 173,0) 0.9%, rgba(130, 255, 173,1.25) 2.4%, rgba(130, 255, 173,0.6) 5.8%, rgba(130, 255, 173, 0.1) 93%, rgba(130, 255, 173, 0.7) 96%, rgba(130, 255, 1732, 0) 98%), linear-gradient(183deg, rgba(130, 255, 173, 0) 0%, rgba(130, 255, 173, 0.3) 7.9%, rgba(130, 255, 173, 0) 15%);
+    padding: 0.6em 8px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    margin: 0;
+    border-radius: 5px;
+    text-shadow: -12px 12px 9.8px rgba(130, 255, 173, 0.7), 21px -18.1px 7.3px rgba(240, 240, 240, 0.8), -18.1px -24.6px 30px rgba(240, 240, 240, 0.8);
+}
+
+.iframe--stretch{
+    min-height: 900px;
+    height: 100%;
+    min-width: 900px;
+    width: 100% !important;
+}
