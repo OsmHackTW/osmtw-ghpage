@@ -2,7 +2,7 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { ExtLinkIcon, aboutPageComponents } from "../components/glaube";
+import { aboutPageComponents } from "../components/glaube";
 
 function AboutPage() {
   return (

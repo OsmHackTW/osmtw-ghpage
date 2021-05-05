@@ -3,14 +3,10 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout";
 import { ExtLinkIcon } from "../components/glaube";
-// import SEO from "../components/seo"; 
-
-// function EventPage(props) {
-//   const events = props.data.allEvent.edges;
-  
+import SEO from "../components/seo"; 
 
 
-function EventPage({node}) {
+const EventPage = () => {
   const osmCalQuery = useStaticQuery(graphql`
   {
     allEvents {
@@ -40,10 +36,10 @@ function EventPage({node}) {
   const events = osmCalQuery.allEvents.edges.length !== 0 ? osmCalQuery.allEvents.edges : null;
   return (
     <Layout>
-      {/* <SEO 
-            keywords={[``,``]}
-            title=""
-        />*/}
+      <SEO 
+            keywords={[`近期活動`,`Upcoming Events`]}
+            title="近期活動 Upcoming Events"
+        />
       <section className="flex flex-col items-center justify-center my-8">
         <div className="relative w-full flex py-8">            
           <div className="w-5xl px-4 py-5 mx-auto sm:max-w-xl md:w-full lg:max-w-screen-xl border-b rounded-t">
@@ -85,7 +81,7 @@ function EventPage({node}) {
               : events.map((event) => (
                 // throw OsmCal events in TW
               <li className="border-gray-400 flex flex-row mb-2">
-                <a className="cursor-pointer" href={event.node.url} className="block hover:bg-gray-50 shadow border select-none cursor-pointer bg-white rounded-md flex flex-1 items-center p-4">
+                <a href={event.node.url} className="cursor-pointer block hover:bg-gray-50 shadow border select-none cursor-pointer bg-white rounded-md flex flex-1 items-center p-4">
                   <div className="flex-1 pl-1 md:mr-16">
                     <div className="text-xl font-medium mb-2">
                       {event.node.name}<ExtLinkIcon/>

@@ -4,6 +4,7 @@ module.exports = {
     author: '開放街圖台灣社群',
     description: 'Website of the OpenStreetMap Taiwan Community 台灣開放街圖社群網站',
   },
+  pathPrefix: '/osmtw-ghpage',
   plugins: [
     {
       resolve: 'gatsby-plugin-google-analytics',
@@ -19,7 +20,7 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/assets/images/logo.png',
-      },icons: [
+      }, icons: [
         {
           src: `/favicons/android-chrome-192x192.png`,
           sizes: `192x192`,
@@ -55,7 +56,7 @@ module.exports = {
       options: {
         url: "https://osmcal.org/api/v2/events/?in=TW",
         rootKey: 'events',
-        schemas:  {
+        schemas: {
           events: `
             name: String,
             url: String,
@@ -63,7 +64,7 @@ module.exports = {
             location: location,
             cancelled: Boolean,
           `,
-          date:`
+          date: `
               start: String,
               end: String,
               human: String,
@@ -75,8 +76,8 @@ module.exports = {
               detailed: String,
               venue: String,
           `
-          }
-            }
-        },
-  ], 
+        }
+      }
+    },
+  ],
 };

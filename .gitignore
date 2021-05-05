@@ -1,8 +1,14 @@
+# dir
 node_modules
 .cache
-debug.log
+public
 
-# V2 failsafe
+# file
+.ENV
+debug.log
+thumbs.db
+
+# V2 fail
 _site
 .sass-cache
 .jekyll-metadata
