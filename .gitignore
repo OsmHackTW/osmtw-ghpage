@@ -5,7 +5,7 @@ public
 
 # file
 .ENV
-debug.log
+*.log
 thumbs.db
 
 # V2 fail
