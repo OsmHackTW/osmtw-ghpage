@@ -9,13 +9,6 @@ import Footer from "../../components/footer";
 import logo from "../../assets/images/logo.png";
 import RN990586 from "../../assets/images/RN990586_2000.jpg";
 
-const navigation = [
-    { name: 'Product', href: '#' },
-    { name: 'Features', href: '#' },
-    { name: 'Marketplace', href: '#' },
-    { name: 'Company', href: '#' },
-]
-
 export default function ContributePage() {
     const [isExpanded, toggleExpansion] = useState(false);
     return (
@@ -84,12 +77,12 @@ export default function ContributePage() {
                                 </h4>
                                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                     <div className="rounded-full shadow">
-                                        <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-grey-100 bg-fern-green-600 hover:bg-fern-green-700 md:py-4 md:text-lg md:px-10">
+                                        <a href="/#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-grey-100 bg-fern-green-600 hover:bg-fern-green-700 md:py-4 md:text-lg md:px-10">
                                             Live demo
                                         </a>
                                     </div>
                                     <div className="mt-3 sm:mt-0 sm:ml-3">
-                                        <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-fern-green-700 bg-fern-green-100 hover:bg-fern-green-200 md:py-4 md:text-lg md:px-10">
+                                        <a href="https://www.openstreetmap.org/" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-fern-green-700 bg-fern-green-100 hover:bg-fern-green-200 md:py-4 md:text-lg md:px-10">
                                             OpenStreetMap.org<ExtLinkIcon />
                                         </a>
                                     </div>
