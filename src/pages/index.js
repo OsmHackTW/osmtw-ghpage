@@ -18,7 +18,7 @@ const IndexPage = () => {
 
       {/* Hero */}
       <section className="flex flex-col items-center">
-        <div className="relative w-full flex py-32 md:py-64 bg-cover bg-center bg-no-repeat object-fill osmtw-landing-hero osmtw-osmcontributors--bottom-right">
+        <div className="relative w-full flex py-32 md:py-64 bg-cover bg-center bg-no-repeat object-fill bg-osmtw-landing-hero osmtw-osmcontributors--bottom-right">
           <div className="w-full md:w-11/12 lg:w-full xl:w-3/4 mx-auto p-2">
             <div className="flex-1 text-center md:text-left bg-grey-100 bg-opacity-25 mx-auto px-4 my-4 md:px-16 md:mr-8 lg:ml-16">
               <div className="text-4xl md:text-6xl lg:text-7xl font-semibold text-gray-900 leading-none my-4 ">開放街圖・台灣</div>

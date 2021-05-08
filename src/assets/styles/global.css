@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.osmtw-landing-hero{
+.bg-osmtw-landing-hero{
     background-image: url('../images/hero-landing.png') ;
     background: cover center;
 }

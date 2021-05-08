@@ -4,15 +4,26 @@ module.exports = {
     author: '開放街圖台灣社群',
     description: 'Website of the OpenStreetMap Taiwan Community 台灣開放街圖社群網站',
   },
-  pathPrefix: '/osmtw-ghpage',
+  //pathPrefix: '/osmtw-ghpage',
   plugins: [
+    {
+      resolve: 'gatsby-plugin-postcss',
+      options: {
+        postCssPlugins: [
+          require('tailwindcss')('./tailwind.config.js'),
+          require(`autoprefixer`),
+          ...(process.env.NODE_ENV === `production`
+            ? [require(`cssnano`)]
+            : []),
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-136100516-1',
       },
     },
-    'gatsby-plugin-postcss',
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
