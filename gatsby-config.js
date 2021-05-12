@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://osm.tw`,
     title: 'OpenStreetMap Taiwan 開放街圖台灣',
     author: '開放街圖台灣社群',
     description: 'Website of the OpenStreetMap Taiwan Community 台灣開放街圖社群網站',

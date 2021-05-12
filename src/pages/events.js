@@ -9,31 +9,28 @@ import SEO from "../components/seo";
 const EventPage = () => {
   const osmCalQuery = useStaticQuery(graphql`
   {
-    allEvents {
-      edges {
-        node {
-          name
-          url
-          date {
-            start
-            end
-            human
-            human_short
-          }
-          location {
-            short
-            detailed
-            venue
-          }
-          cancelled
-        }
+    events {
+      name
+      url
+      cancelled
+      id
+      date {
+        end
+        human_short
+        start
+        human
+      }
+      location {
+        detailed
+        short
+        venue
       }
     }
   }
   `)
 
   // 
-  const events = osmCalQuery.allEvents.edges.length !== 0 ? osmCalQuery.allEvents.edges : null;
+  const events = osmCalQuery.events.length !== 0 ? [osmCalQuery.events] : null;
   return (
     <Layout>
       <SEO 
@@ -81,24 +78,24 @@ const EventPage = () => {
               : events.map((event) => (
                 // throw OsmCal events in TW
               <li className="border-gray-400 flex flex-row mb-2">
-                <a href={event.node.url} className="cursor-pointer block hover:bg-gray-50 shadow border select-none cursor-pointer bg-white rounded-md flex flex-1 items-center p-4">
+                <a href={event.url} className="cursor-pointer block hover:bg-gray-50 shadow border select-none cursor-pointer bg-white rounded-md flex flex-1 items-center p-4">
                   <div className="flex-1 pl-1 md:mr-16">
                     <div className="text-xl font-medium mb-2">
-                      {event.node.name}<ExtLinkIcon/>
+                      {event.name}<ExtLinkIcon/>
                     </div>
                     <div className="text-gray-600 dark:text-gray-200 text-lg">
-                      {event.node.date.human}
+                      {event.date.human}
                     </div>
                     <div className="text-gray-600 dark:text-gray-200 text-sm">
-                      {event.node.location.venue}
+                      {event.location.venue}
                     </div>
                     <div className="text-gray-600 dark:text-gray-200 text-sm">
-                      {event.node.location.short}
+                      {event.location.short}
                     </div>
                   </div>
                   <div className="ml-2 flex-shrink-0 flex">
-                    <div className={'px-2 py-1 inline-flex text-base- leading-5 font-semibold rounded-full '+ ((event.node.cancelled === null ) ? 'bg-green-100 text-green-800': 'bg-red-100 text-red-800')}>
-                        {(event.node.cancelled === null ) ? '如期舉辦' : '活期取消' }
+                    <div className={'px-2 py-1 inline-flex text-base- leading-5 font-semibold rounded-full '+ ((event.cancelled === null ) ? 'bg-green-100 text-green-800': 'bg-red-100 text-red-800')}>
+                        {(event.cancelled === null ) ? '如期舉辦' : '活期取消' }
                     </div>
                   </div>
                 </a>
