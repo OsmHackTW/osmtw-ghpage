@@ -1,3 +1,14 @@
+# dir
+node_modules
+.cache
+public
+
+# file
+.ENV
+*.log
+thumbs.db
+
+# V2 fail
 _site
 .sass-cache
 .jekyll-metadata
