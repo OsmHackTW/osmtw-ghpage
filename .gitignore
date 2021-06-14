@@ -1,14 +1,15 @@
-# dir
+# directory
 node_modules
 .cache
 public
 
-# file
+# log and cache
 .ENV
 *.log
 thumbs.db
+.eslintcache
 
-# V2 fail
+# V2 fallback
 _site
 .sass-cache
 .jekyll-metadata

@@ -1,9 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
-import { Helmet } from "react-helmet";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({
+  description, lang, meta, keywords, title,
+}) {
   const { site } = useStaticQuery(graphql`
     query DefaultSEOQuery {
       site {
@@ -25,45 +27,45 @@ function SEO({ description, lang, meta, keywords, title }) {
       }}
       meta={[
         {
-          name: `description`,
+          name: 'description',
           content: metaDescription,
         },
         {
-          property: `og:title`,
+          property: 'og:title',
           content: title,
         },
         {
-          property: `og:description`,
+          property: 'og:description',
           content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: 'og:type',
+          content: 'website',
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          name: 'twitter:card',
+          content: 'summary',
         },
         // {
         //   name: `twitter:creator`,
         //   content: site.siteMetadata.author,
         // },
         {
-          name: `twitter:title`,
+          name: 'twitter:title',
           content: title,
         },
         {
-          name: `twitter:description`,
+          name: 'twitter:description',
           content: metaDescription,
         },
       ]
         .concat(
           keywords.length > 0
             ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
+              name: 'keywords',
+              content: keywords.join(', '),
+            }
+            : [],
         )
         .concat(meta)}
       title={title}
@@ -73,7 +75,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `zh-tw`,
+  lang: 'zh-tw',
   keywords: [],
   meta: [],
 };

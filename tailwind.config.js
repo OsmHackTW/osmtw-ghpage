@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -23,16 +23,16 @@ module.exports = {
       teal: colors.teal,
       'fern-green': {
         DEFAULT: '#4F7942',
-        '50': '#C9DEC3',
-        '100': '#BAD5B2',
-        '200': '#9DC391',
-        '300': '#7FB170',
-        '400': '#659A54',
-        '500': '#4F7942',
-        '600': '#395830',
-        '700': '#24371E',
-        '800': '#0E160C',
-        '900': '#000000'
+        50: '#C9DEC3',
+        100: '#BAD5B2',
+        200: '#9DC391',
+        300: '#7FB170',
+        400: '#659A54',
+        500: '#4F7942',
+        600: '#395830',
+        700: '#24371E',
+        800: '#0E160C',
+        900: '#000000',
       },
     },
     extend: {},
@@ -42,4 +42,4 @@ module.exports = {
     },
   },
   plugins: ['gatsby-plugin-postcss'],
-}
+};
