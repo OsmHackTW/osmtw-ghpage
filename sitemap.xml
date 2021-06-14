@@ -9,5 +9,11 @@
 <url> <loc>https://osm.tw/news/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://osm.tw/privacy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://osm.tw/tos/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://osm.tw/qsg/contribute/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://osm.tw/qsg/covid19-mapping/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://osm.tw/qsg/developer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://osm.tw/qsg/general/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://osm.tw/qsg/get-started/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://osm.tw/qsg/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://osm.tw/qsg/mapper/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
