@@ -55,7 +55,7 @@
     "eslint-plugin-react": "^7.25.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "gh-pages": "^3.2.3",
-    "postcss": "^8.3.2",
+    "postcss": "^8.3.7",
     "prettier": "^2.4.1",
     "tailwindcss": "^2.2.15"
   },
