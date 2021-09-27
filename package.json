@@ -57,7 +57,7 @@
     "gh-pages": "^3.2.3",
     "postcss": "^8.3.7",
     "prettier": "^2.4.1",
-    "tailwindcss": "^2.2.15"
+    "tailwindcss": "^2.2.16"
   },
   "repository": {
     "type": "git",
