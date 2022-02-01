@@ -1,7 +1,12 @@
 {
-  "extends": "airbnb",
+  "extends": ["airbnb", "next"],
   "plugins": ["react", "import", "react-hooks"],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-props-no-spreading": "off",
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": "function-declaration" }
+    ]
   }
 }

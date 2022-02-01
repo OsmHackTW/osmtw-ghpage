@@ -1,32 +1,44 @@
-/* eslint-disable max-len */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-one-expression-per-line */
 import React, { useState } from 'react';
+import { default as NextLink } from 'next/link';
+import Image from 'next/image';
 
 import logo from '../assets/images/logo.png';
 
 // common components 共通元件
+function Link({ href, children, ...props }) {
+  return (
+    <NextLink href={href}>
+      <a {...props}>
+        {children}
+      </a>
+    </NextLink>
+  );
+}
 
-const ExtLinkIcon = () => (
-  <svg className="inline-block w-4 xl:w-5 m-1" viewBox="0 0 20 20" fill="currentColor">
-    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-  </svg>
-);
+function ExtLinkIcon() {
+  return (
+    <svg className="inline-block w-4 xl:w-5 m-1" viewBox="0 0 20 20" fill="currentColor">
+      <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+      <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+    </svg>
+  );
+}
 
-const EnIcon = () => (
-  <span className="text-xs text-gray-400">(英語)</span>
-);
+function EnIcon() {
+  return <span className="text-xs text-slate-400">(英語)</span>;
+}
 
-const OsmtwGuideTitle = () => (
-  <h1 className="flex flex-grow-0 place-items-center ">
-    <span className="sr-only">入門指南</span>
-    <img className="block h-10 w-auto" src={logo} alt="OSMTW" />
-    <span className="px-2 text-xl font-semibold text-fern-green-500 inlne">入門指南</span>
-  </h1>
-);
+function OsmtwGuideTitle() {
+  return (
+    <h1 className="flex flex-grow-0 place-items-center ">
+      <span className="sr-only">入門指南</span>
+      <span className="block h-10 w-10" ><Image src={logo} alt="OSMTW" /></span>
+      <span className="px-4 text-xl font-semibold text-fern-green-500 inlne">入門指南</span>
+    </h1>
+  );
+}
 
-const Accordion = ({ title, content }) => {
+function Accordion({ title, content }) {
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -35,18 +47,20 @@ const Accordion = ({ title, content }) => {
         <div className="block-inline">{title}</div>
         <div className="text-lg block-inline">{isActive ? '-' : '+'}</div>
       </button>
-      {isActive && (
-        <div className="overflow-hidden border-l-2 bg-gray-50 border-indigo-500 leading-normal">
+      {isActive ? (
+        <div className="overflow-hidden border-l-2 bg-slate-50 border-indigo-500 leading-normal">
           <div className="p-5">{content}</div>
         </div>
-      )}
+      ) : null}
     </div>
 
   );
-};
+}
 
-const Pre = ({ content }) => (<span className="font-mono bg-indigo-50 mx-0.5">{content}</span>
-);
+function Pre({ content }) {
+  return <span className="font-mono bg-indigo-50 mx-0.5">{content}</span>;
+}
+
 const commonComponents = {
   learnMore: '了解更多',
   headerLink: [
@@ -163,24 +177,24 @@ const landingPageComponents = {
       SVGpath: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z',
     },
   ],
-  hashtag: ['#FLOSS', '#開放格式', '#開放式參與', '#在地的故事', '#在地的地圖'],
+  hashtag: ['FLOSS', '開放格式', '開放式參與', '在地的故事', '在地的地圖'],
   quickStartGuide: [
     {
       role: '一般使用者',
       desc: '了解在日常生活中可見的 OSM 圖資及使用方式，包括實體文件、應用程式。',
-      route: '/qsg/general',
+      route: '/qsg/general/',
       SVGpath: 'M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122',
     },
     {
       role: '新手圖客',
       desc: '了解構成 OSM 的幾何資料模型，以及如何編輯地圖及建構關聯。',
-      route: '/qsg/mapper',
+      route: '/qsg/mapper/',
       SVGpath: 'M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7',
     },
     {
       role: '開發者',
       desc: '了解如何透過 OSM 及其他相關工具為你的專案帶來更大效益。',
-      route: '/qsg/developer',
+      route: '/qsg/developer/',
       SVGpath: 'M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z',
     },
   ],
@@ -203,7 +217,7 @@ const aboutPageComponents = {
                 《開放資料庫授權》（ODbL）
                 <ExtLinkIcon />
               </a>
-              <span className="text-grey-600 text-sm mx-1">(英語)</span>
+              <span className="text-slate-600 text-sm mx-1">(英語)</span>
               方式授權釋出，沒有版權費用、許可證費用、使用費用及其他一切費用， 您可以將圖資用於個人、社群、教育、商業、政府以及其他任何可以想到的應用用途。
             </div>
           ),
@@ -315,7 +329,7 @@ const qsgCOVID19MappingComponents = {
               </thead>
               <tbody>
                 {daysOfWeek.map(({ abbr, en, zh }) => (
-                  <tr>
+                  <tr key={abbr}>
                     <td className="border px-2 py-1">{abbr}</td>
                     <td className="border px-2 py-1">{en}</td>
                     <td className="border px-2 py-1">{zh}</td>
@@ -390,7 +404,7 @@ const qsgCOVID19MappingComponents = {
 
 // Privacy page components 隠私權政策頁面構成
 const privacyPageComponents = {
-  privacyAritcleSectionV: ['① 經由您書面同意；', '② 法律明文規定；', '③ 為免除您生命、身體、自由或財產上之危險；', '④ 與公務機關或學術研究機構合作，基於公共利益為統計或學術研究而有必要，且資料經過提供者處理或蒐集著依其揭露方式無從識別特定之當事人；', '⑥ 有利於您的權益；', '⑦ 本網站委託廠商協助蒐集、處理或利用您的個人資料時，將對委外廠商或個人善盡監督管理之責。'],
+  lastModified: '2021-12-22',
   privacyArticle: [
     {
       section: '一、隱私權保護政策的適用範圍',
@@ -398,7 +412,7 @@ const privacyPageComponents = {
     },
     {
       section: '二、個人資料的蒐集、處理及利用方式',
-      text: '當您造訪本網站或使用本網站所提供之功能服務時，我們將視該服務功能性質，請您提供必要的個人資料，並在該特定目的範圍內處理及利用您的個人資料；非經您書面同意，本網站不會將個人資料用於其他用途。本網站在您使用服務信箱、問卷調查等互動性功能時，會保留您所提供的姓名、電子郵件地址、聯絡方式及使用時間等。 於一般瀏覽時，伺服器會自行記錄相關行徑，包括您使用連線設備的IP位址、使用時間、使用的瀏覽器、瀏覽及點選資料記錄等，做為我們增進網站服務的參考依據，此記錄為內部應用，決不對外公佈。 為提供精確的服務，我們會將收集的問卷調查內容進行統計與分析，分析結果之統計數據或說明文字呈現，除供內部研究外，我們會視需要公佈統計數據及說明文字，但不涉及特定個人之資料。',
+      text: '當您造訪本網站或使用本網站所提供之功能服務時，我們將視該服務功能性質，請您提供必要的個人資料，並在該特定目的範圍內處理及利用您的個人資料；非經您書面同意，本網站不會將個人資料用於其他用途。本網站在您使用服務信箱、問卷調查等互動性功能時，會保留您所提供的姓名、電子郵件地址、聯絡方式及使用時間等。於一般瀏覽時，伺服器會自行記錄相關行徑，包括您使用連線設備的IP位址、使用時間、使用的瀏覽器、瀏覽及點選資料記錄等，做為我們增進網站服務的參考依據，此記錄為內部應用，決不對外公佈。 為提供精確的服務，我們會將收集的問卷調查內容進行統計與分析，分析結果之統計數據或說明文字呈現，除供內部研究外，我們會視需要公佈統計數據及說明文字，但不涉及特定個人之資料。',
 
     },
     {
@@ -414,7 +428,7 @@ const privacyPageComponents = {
     {
       section: '五、與第三方共用個人資料之政策',
       text: '本網站不會將您提供的個人資訊轉移給其他個人、團體、私人企業或公務機關，作行銷或市場推廣使用；但有法律依據或合約義務者，不在此限。前項但書之情形包括不限於：',
-      point: 'SectionV',
+      point: ['① 經由您書面同意；', '② 法律明文規定；', '③ 為免除您生命、身體、自由或財產上之危險；', '④ 與公務機關或學術研究機構合作，基於公共利益為統計或學術研究而有必要，且資料經過提供者處理或蒐集著依其揭露方式無從識別特定之當事人；', '⑥ 有利於您的權益；', '⑦ 本網站委託廠商協助蒐集、處理或利用您的個人資料時，將對委外廠商或個人善盡監督管理之責。'],
     },
     {
       section: '六、Cookie之使用',
@@ -452,6 +466,7 @@ const privacyPageComponents = {
 
 // TOS page components
 const tosPageComponents = {
+  lastModified: '2021-12-22',
   tosAritcle: [
     {
       section_zh: '定義',
@@ -485,14 +500,14 @@ const tosPageComponents = {
     {
       section_zh: '一般條款',
       section_en: 'Terms',
-      text_zh: '本服務條款構成您與本網站就您使用本服務之完整合意，取代您先前與本網站間有關本服務所為之任何約定。訪問本網站，即表示您同意接受網站的使用條款、隱私政策，所有適用的法律和法規約束，並同意您有責任遵守任何適用之當地法律。若您不同意這些條款中的任何一項，則無法使用或訪問本網站。本網站內容應受著作權及商標法所保護。 ',
-      text_en: 'By accessing this website, you are agreeing to be bound by these website Terms and Conditions of Use, our Privacy Policy, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trade mark law.',
+      text_zh: '本服務條款構成您與本網站就您使用本服務之完整合意，取代您先前與本網站間有關本服務所為之任何約定。訪問本網站，即表示您同意接受網站的使用條款、隱私政策，所有適用的法律和法規約束，並同意您有責任遵守任何適用之當地法律。若您不同意這些條款中的任何一項，則無法使用或訪問本網站。本網站內容應受著作權所保護。',
+      text_en: 'By accessing this website, you are agreeing to be bound by these website Terms and Conditions of Use, our Privacy Policy, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright law.',
     },
     {
       section_zh: '免責事項',
       section_en: 'Disclaimer',
       text_zh: '本網站及其內容是按照「現狀」來提供的，OSMTW對其使用、可用性、準確性或表現不作任何明示的或隱含的保証或聲明；包括但不限於對本網站不會中斷或可連續登入的保證。對於本網站所有刊載資料、產品及/或服務的任何適用性之陳述；對其適銷性的非明確保證；對本網站之任何有關服務的特定用途適用性或非侵權性。',
-      text_en: "The materials on OSMTW's website are provided \"as is\". OSMTW makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, OSMTW does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its Internet website or otherwise relating to such materials or on any sites linked to this site.",
+      text_en: 'The materials on this website are provided "as is". OSMTW makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, OSMTW does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its Internet website or otherwise relating to such materials or on any sites linked to this site.',
     },
     {
       section_zh: '責任限制',
@@ -529,7 +544,7 @@ const tosPageComponents = {
 
 // EXPORT 匯出
 export {
-  ExtLinkIcon, EnIcon, OsmtwGuideTitle, Accordion, Pre,
+  ExtLinkIcon, EnIcon, OsmtwGuideTitle, Accordion, Pre, Link,
   commonComponents, landingPageComponents,
   aboutPageComponents, contactPageComponents,
   qsgCOVID19MappingComponents,

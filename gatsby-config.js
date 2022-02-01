@@ -94,7 +94,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-custom-api',
       options: {
-        url: 'https://osmcal.org/api/v2/events/?in=TW',
+        url: 'https://osmcal.org/api/v2/events/',
         rootKey: 'events',
         schemas: {
           events: `

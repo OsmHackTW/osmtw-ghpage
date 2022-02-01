@@ -1,17 +1,19 @@
+/* eslint-disable no-irregular-whitespace */
+/* eslint-disable max-len */
 import React from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-function NewsPage() {
+export default function NewsPage() {
   return (
     <Layout>
       <SEO title="" keywords={['', '']} />
 
-      <section className="antialiased text-gray-900 py-2 h-full flex items-center justify-center">
+      <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center">
         <div className="py-32" />
         <div className="md:w-2/3 mx-auto">
-          <blockquote className="pl-4 text-l leading-loose text-justify border-l-4 border-gray-900">
+          <blockquote className="pl-4 text-l leading-loose text-justify border-l-4 border-slate-900">
             <div className="mb-4">
               「一日喪命散」是用七種不同的毒蟲，再加上鶴頂紅，提煉七七四十九日而成的，無色無味，殺人於無影無蹤。吃了「一日喪命散」的人，一天之內會武功全失，筋脈逆流，胡思亂想，而致走火入魔，最後會血管爆裂而死。
             </div>
@@ -29,5 +31,3 @@ function NewsPage() {
     </Layout>
   );
 }
-
-export default NewsPage;

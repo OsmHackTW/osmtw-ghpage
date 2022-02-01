@@ -1,10 +1,10 @@
-import { Link } from 'gatsby';
 import React, { useState } from 'react';
-import { ExtLinkIcon, commonComponents } from './glaube';
+import Image from 'next/image';
 
+import { ExtLinkIcon, Link, commonComponents } from './glaube';
 import logo from '../assets/images/logo.png';
 
-function Header() {
+export default function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
@@ -13,23 +13,26 @@ function Header() {
       <header className="bg-fern-green-200 flex flex-row justify-between w-full px-2 lg:px-8">
         <div className="flex flex-col flex-1 sm:flex-row items-center p-4 max-w-7xl mx-auto md:py-5 sm:items-stretch sm:justify-start">
           <div className=" sm:w-full md:w-1/6 lg:w-1/3 w-full self-start flex flex-row flex-no-wrap justify-between items-center">
-            <Link to="/">
-              <h1 className="flex flex-grow-0 no-underline">
-                <img className="block h-10 w-auto" src={logo} alt="OSMTW" />
-                <span className="block h-8 px-4 py-1 w-auto text-xl font-bold tracking-tight">
-                  <span className="block lg:hidden">
-                    OSMTW
+            <Link href="/">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <a>
+                <h1 className="flex flex-grow-0 no-underline">
+                  <Image className="block h-10 w-auto" src={logo} layout="intrinsic" height={40} width={40} alt="OSMTW" />
+                  <span className="block h-8 px-4 py-1 w-auto text-xl font-bold tracking-tight">
+                    <span className="block lg:hidden">
+                      OSMTW
+                    </span>
+                    <span className="hidden lg:block">
+                      OpenStreetMap 台灣
+                    </span>
                   </span>
-                  <span className="hidden lg:block">
-                    OpenStreetMap 台灣
-                  </span>
-                </span>
-              </h1>
+                </h1>
+              </a>
             </Link>
 
             <button
               type="button"
-              className="block items-center self-end flex-col inline-flex justify-center p-2 border border-grey-700 rounded md:hidden"
+              className="block items-center self-end flex-col justify-center p-2 border border-slate-700 rounded md:hidden"
               onClick={() => toggleExpansion(!isExpanded)}
             >
               <span className="sr-only">Menu</span>
@@ -52,14 +55,14 @@ function Header() {
           <div className="w-3/4 md:w-5/6 lg:w-2/3 self-start flex flex-row flex-no-wrap justify-between items-center">
             <div className="w-full md:w-3/4 self-start flex flex-row flex-no-wrap justify-between items-center">
               <nav
-                className={`${isExpanded ? 'block' : 'hidden'
-                } py-2 md:block md:items-center w-full md:w-auto w-full sm:w-auto md:self-end`}
+                className={`${isExpanded ? 'block' : 'hidden'}
+                py-2 md:block md:items-center w-full md:w-auto sm:w-auto md:self-end`}
               >
                 {commonComponents.headerLink.map((link) => (
                   <Link
                     className="block mt-4 no-underline md:inline-block md:mt-0 md:ml-6"
                     key={link.title}
-                    to={link.route}
+                    href={link.route}
                   >
                     {link.title}
                   </Link>
@@ -78,7 +81,7 @@ function Header() {
       </header>
 
       {/* COVID-19 Alert */}
-      <div className="bg-yellow-300 text-grey-800 px-1 py-2 md:p-3" role="alert">
+      <div className="bg-yellow-300 text-slate-800 px-1 py-2 md:p-3" role="alert">
         <div className="container items-center flex flex-row w-full lg:w-11/12 lg:max-w-5xl m-auto px-2 lg:px-0 leading-none">
           <span className="h-8 w-8 md:h-6 md:w-6">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -99,5 +102,3 @@ function Header() {
     </div>
   );
 }
-
-export default Header;

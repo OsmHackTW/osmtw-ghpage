@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
+import Image from 'next/image';
 
-import { ExtLinkIcon, OsmtwGuideTitle, landingPageComponents } from '../../components/glaube';
+import {
+  ExtLinkIcon, OsmtwGuideTitle, landingPageComponents, Link,
+} from '../../components/glaube';
 import SEO from '../../components/seo';
 import Footer from '../../components/footer';
 
@@ -10,16 +12,17 @@ import LandingImg from '../../assets/images/RN990586_2000.jpg';
 export default function QSGIndexPage() {
   const [isExpanded, toggleExpansion] = useState(false);
   return (
-    <div className="antialiased text-gray-900 h-full items-center justify-center">
+    <div className="antialiased text-slate-900 h-full items-center justify-center">
       <SEO title="入門指南 Quick Start Guide" keywords={['OpenStreetMap', 'OSM', 'OSMTW', 'Community', '開放街圖', '開放街圖台灣', '台灣開放街圖']} />
-      <div className="bg-grey-100 overflow-hidden mx-auto flex flex-wrap">
+      <div className="bg-slate-100 overflow-hidden mx-auto flex flex-wrap">
         <div className="w-full lg:w-3/5 xl:w-1/2 xl:max-w-3xl xl:mt-8 mb-8 lg:mb-0 mx-auto bg-qsg-landing-background">
           {/* Header */}
           <header className="flex flex-row w-full px-2 mx-auto">
             <div className="flex flex-col flex-1 w-max-5xl sm:flex-row py-5 mx-auto">
               <div className="w-full md:w-1/4 flex flex-row flex-no-wrap px-2 pb-4 md:px-0 md:pb-0 justify-between md:justify-around place-items-center no-underline">
-                <Link to="/qsg/contribute">
-                  <OsmtwGuideTitle />
+                <Link href="/qsg/contribute/">
+                  {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                  <a><OsmtwGuideTitle /></a>
                 </Link>
 
                 <button
@@ -50,13 +53,15 @@ export default function QSGIndexPage() {
                     <Link
                       className="block md:inline pr-8 font-medium text-lg text-fern-green-400 hover:text-fern-green-600"
                       key={item.role}
-                      to={item.route}
+                      href={item.route}
                     >
                       {item.role}
                     </Link>
                   ))}
 
-                  <Link to="/" className="block md:inline-block font-medium text-lg text-gray-600 hover:text-gray-900">回到主頁</Link>
+                  <Link href="/" className="block md:inline-block font-medium text-lg text-slate-600 hover:text-slate-900">
+                    回到主頁
+                  </Link>
                 </nav>
               </div>
 
@@ -64,21 +69,21 @@ export default function QSGIndexPage() {
           </header>
 
           {/* Hero-left */}
-          <section className="relative z-10 pb-8 bg-grey-100 mx-auto sm:pb-16 md:pb-24 lg:max-w-4xl lg:w-full lg:pb-28 xl:pb-32">
+          <section className="relative z-10 pb-8 bg-slate-100 mx-auto sm:pb-16 md:pb-24 lg:max-w-4xl lg:w-full lg:pb-28 xl:pb-32">
             <div className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
               <div className="sm:text-center lg:text-left">
-                <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl md:text-6xl space-y-3">
+                <h1 className="text-4xl font-extrabold text-slate-900 sm:text-5xl md:text-6xl space-y-3">
                   <span className="block">以開源圖資豐富</span>
                   <span className="block text-fern-green-600">數位體驗</span>
                 </h1>
-                <h4 className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                <h4 className="mt-3 text-base text-slate-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                   無論你是首次使用 OpenStreetMap 圖資或是温故知新，都希望你能夠透過這份簡單指南找到所需的入門資訊。
                   也歡迎你隨時來參與線上及實體各類活動，和社群成員有更多討論及互動。
                 </h4>
                 <div className="items-center text-base mt-6 sm:mt-8 sm:flex sm:justify-center lg:justify-start ">
                   <div className="justify-center font-bold text-white">
                     <Link
-                      to="/qsg/get-started"
+                      href="/qsg/get-started/"
                       className="w-full flex rounded-full shadow px-8 py-3 bg-fern-green-600 hover:bg-fern-green-700 md:py-4 md:text-lg md:px-10"
                     >
                       開始行動
@@ -100,7 +105,7 @@ export default function QSGIndexPage() {
         </div>
         {/* Hero-right: image */}
         <div className="w-full lg:w-2/5 xl:w-1/2 mb-10 lg:mb-0 overflow-hidden">
-          <img className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src={LandingImg} alt="" />
+          <Image className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src={LandingImg} alt="" />
         </div>
       </div>
 

@@ -10,13 +10,13 @@ const QsgGeneralPage = () => (
   <Layout>
     <SEO title="入門指南 Quick Start Guide" keywords={['OpenStreetMap', 'OSM', 'OSMTW', 'Community', '開放街圖', '開放街圖台灣', '台灣開放街圖']} />
     <div className="flex-1 p-2 md:py-2 md:px-12 antialiased w-full xl:h-5/6 items-center justify-center">
-      <div className="text-gray-900">
-        <div className="bg-white flex flex-col flex-wrap p-6 max-w-7xl mx-auto overflow-hidden">
+      <div className="text-slate-900">
+        <div className="bg-slate-50 flex flex-col flex-wrap p-6 max-w-7xl mx-auto overflow-hidden">
           <h2 className="text-3xl font-semibold mb-6">
             一般使用者
           </h2>
-          <hr className="h-0.5 px-1 my-4 bg-gray-300" />
-          <h4 className="my-2 font-semibold text-xl text-gray-600">應用程式</h4>
+          <hr className="h-0.5 px-1 my-4 bg-slate-300" />
+          <h4 className="my-2 font-semibold text-xl text-slate-600">應用程式</h4>
           <h5 className="my-1 font-medium">OsmAnd</h5>
           <p className="my-1 ">OsmAnd 是以 OpenStreetMap 為基底，在Android及iOS系統上的導航應用程式。</p>
           <p className="my-1 mb-4">

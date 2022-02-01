@@ -1,13 +1,14 @@
 # directory
 node_modules
-.cache
-public
+.next
+.github
 
 # log and cache
 .ENV
 *.log
 thumbs.db
 .eslintcache
+.cache
 
 # V2 fallback
 _site

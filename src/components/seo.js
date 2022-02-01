@@ -1,91 +1,23 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
+import config from '../config';
 
-function SEO({
-  description, lang, meta, keywords, title,
-}) {
-  const { site } = useStaticQuery(graphql`
-    query DefaultSEOQuery {
-      site {
-        siteMetadata {
-          title
-          description
-          author
-        }
-      }
-    }
-  `);
-
-  const metaDescription = description || site.siteMetadata.description;
+// eslint-disable-next-line react/prop-types
+export default function SEO({ description, title }) {
+  const siteTitle = config.title;
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      meta={[
-        {
-          name: 'description',
-          content: metaDescription,
-        },
-        {
-          property: 'og:title',
-          content: title,
-        },
-        {
-          property: 'og:description',
-          content: metaDescription,
-        },
-        {
-          property: 'og:type',
-          content: 'website',
-        },
-        {
-          name: 'twitter:card',
-          content: 'summary',
-        },
-        // {
-        //   name: `twitter:creator`,
-        //   content: site.siteMetadata.author,
-        // },
-        {
-          name: 'twitter:title',
-          content: title,
-        },
-        {
-          name: 'twitter:description',
-          content: metaDescription,
-        },
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-              name: 'keywords',
-              content: keywords.join(', '),
-            }
-            : [],
-        )
-        .concat(meta)}
-      title={title}
-      titleTemplate={`${site.siteMetadata.title} | %s`}
-    />
+    <Head>
+      <title>{siteTitle ? `${siteTitle} | ${title}` : null}</title>
+      <meta name="description" content={description} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:site_name" content={siteTitle} />
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:creator" content={config.social.twitter} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+    </Head>
   );
 }
-
-SEO.defaultProps = {
-  lang: 'zh-tw',
-  keywords: [],
-  meta: [],
-};
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  lang: PropTypes.string,
-  meta: PropTypes.array,
-  title: PropTypes.string.isRequired,
-};
-
-export default SEO;
