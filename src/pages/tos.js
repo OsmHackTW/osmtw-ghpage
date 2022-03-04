@@ -1,9 +1,7 @@
-import * as React from 'react';
-
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-
-import { tosPageComponents } from '../components/glaube';
+import * as React from "react"
+import Layout from "../components/layouts/layout";
+import SEO from "../components/seo";
+import { tosPageComponents } from "../components/glaube";
 
 const acceptance = [{ english: 'Welcome to the OpenStreetMap Taiwan website. By using our website, you are agreeing to comply with and be bound by the following terms and conditions of use (the "agreement"), and notices contained herein and as they may change, from time to time. Please review them carefully.' }, { english: 'If you are entering into this agreement on behalf of third parties, you represent that you have the authority to bind such parties to these Terms and Conditions, in which the case "You" or "Your" shall refer to such parties. If you do not have such authority, or if you disagree with any part of these terms and conditions, please do not use our service.' }];
 
@@ -11,7 +9,7 @@ const acceptance = [{ english: 'Welcome to the OpenStreetMap Taiwan website. By 
 export default function TosPage() {
   return (
     <Layout>
-      <SEO title="服務約定條款及細則 Terms and Conditions" keywords={['服務約定條款及細則', 'Terms and Conditions']} />
+      <SEO title="服務約定條款及細則 Terms and Conditions" keywords={["服務約定條款及細則", "Terms and Conditions"]} />
       <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center">
         <div className="w-full xl:w-8/12 2mx-auto px-4 sm:px-8  pb-16">
           <div className="main-title my-8 md:my-16">
@@ -33,7 +31,7 @@ export default function TosPage() {
                 <span className="pb-2">如您不同意、接受或遵守此條款，您將無法使用本網站之任何服務。</span>
               </h3>
               <h5 className="mt-1 max-w-5xl text-md text-slate-500">
-                {acceptance.map((op) => (<span className="pb-2">{op.english}</span>))}
+                {acceptance.map((op) => (<span className="pb-2" key={op.id}>{op.english}</span>))}
               </h5>
             </div>
             <div className="border-t border-slate-200">

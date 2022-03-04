@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import '../assets/styles/global.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "../styles/global.css";
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
 
 App.propTypes = {
-  Component: PropTypes.node.isRequired,
-  pageProps: PropTypes.node.isRequired,
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.elementType.isRequired,
 };

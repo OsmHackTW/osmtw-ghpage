@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import {
-  OsmtwGuideTitle, Link, landingPageComponents,
-} from '../glaube';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { landingPageComponents } from "../glaube";
+import { OsmtwGuideTitle, ExtLinkIcon, Link } from "../util";
 
-function Layout({ children }) {
+function Layout({ title, children }) {
   const [isExpanded, toggleExpansion] = useState(false);
   return (
     <div className="flex flex-col min-h-screen bg-white text-slate-900 z-50">
@@ -30,7 +29,7 @@ function Layout({ children }) {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      d={`${isExpanded ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}`}
+                      d={`${isExpanded ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}`}
                     />
                   </svg>
                 </button>
@@ -49,7 +48,7 @@ function Layout({ children }) {
         <div className="min-h-screen bg-white mt-0 lg:w-1/3 ">
           <aside className="w-full">
             <nav
-              className={`${isExpanded ? 'inline z-30' : 'hidden'}
+              className={`${isExpanded ? "inline z-30" : "hidden"}
               py-2 lg:block lg:items-center fixed min-h-screen h-full lg:relative flex flex-col w-11/12 lg:w-full bg-slate-100 border-r`}
             >
               <div className="static w-full pl-4 xl:mt-8 2xl:pl-48 mx-auto">
@@ -75,7 +74,7 @@ function Layout({ children }) {
                 </ul>
                 <ul className="py-4 ml-8 lg:ml-16 flex-1 overflow-auto font-bold">
                   {landingPageComponents.quickStartGuide.map((item) => (
-                    <li>
+                    <li key={item.role}>
                       <Link
                         activeClassName="border-t border-b border-l bg-slate-50 text-fern-green-500 hover:bg-slate-50"
                         className="block mt-4 p-3 no-underline w-full lg:inline-block lg:mt-0 text-slate-700 hover:bg-slate-300"
@@ -85,8 +84,9 @@ function Layout({ children }) {
                         {item.role}
                       </Link>
                     </li>
-
                   ))}
+                </ul>
+                <ul className="py-4 ml-8 lg:ml-16 flex-1 overflow-auto font-bold">
                   <li>
                     <Link
                       activeClassName="border-t border-b border-l bg-slate-50 text-fern-green-500 hover:bg-slate-50"
@@ -96,6 +96,15 @@ function Layout({ children }) {
                     >
                       COVID-19 Mapping
                     </Link>
+                  </li>
+                  <li>
+                    <a className="block mt-4 p-3 no-underline w-full text-sm lg:inline-block lg:mt-0 text-slate-700 hover:bg-slate-300"
+                      href="https://www.openstreetmap.org/copyright/zh-TW" target="_blank" rel="noopener noreferrer">
+                      <div className="flex gap-2">
+                        <div className="flex flex-col"><span>開放街圖版權與授權條款</span><span>Copyright and License of OSM</span> </div>
+                        <ExtLinkIcon />
+                      </div>
+                    </a>
                   </li>
                 </ul>
                 <div className="py-4 ml-8 lg:ml-16 lg:my-24 flex-1 overflow-auto font-bold">
@@ -108,7 +117,18 @@ function Layout({ children }) {
           </aside>
         </div>
         <div className="bg-slate-50 p-2 w-full lg:w-3/4 xl:pr-64 container relative mx-auto min-h-screen">
-          {children}
+          <div className="flex-1 p-2 md:py-2 md:px-12 antialiased w-full xl:h-5/6 items-center justify-center">
+            <div className="text-slate-900">
+              <div className="bg-slate-50 flex flex-col flex-wrap p-6 max-w-7xl mx-auto overflow-hidden">
+                <h2 className="text-3xl font-semibold mb-6">
+                  {title}
+                </h2>
+                <hr className="h-0.5 px-1 my-4 bg-slate-300" />
+                {children}
+              </div>
+            </div>
+          </div>
+
         </div>
       </main>
 

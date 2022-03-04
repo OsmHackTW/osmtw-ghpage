@@ -1,19 +1,16 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React, { useState } from "react";
+import SEO from "../../components/seo";
+import Footer from "../../components/layouts/footer";
+import { landingPageComponents } from "../../components/glaube";
+import { ExtLinkIcon, OsmtwGuideTitle, Link } from "../../components/util";
 
-import {
-  ExtLinkIcon, OsmtwGuideTitle, landingPageComponents, Link,
-} from '../../components/glaube';
-import SEO from '../../components/seo';
-import Footer from '../../components/footer';
+const LandingImg = "../assets/images/RN990586_2000.jpg";
 
-import LandingImg from '../../assets/images/RN990586_2000.jpg';
-
-export default function QSGIndexPage() {
+const QSGIndexPage = () => {
   const [isExpanded, toggleExpansion] = useState(false);
   return (
     <div className="antialiased text-slate-900 h-full items-center justify-center">
-      <SEO title="入門指南 Quick Start Guide" keywords={['OpenStreetMap', 'OSM', 'OSMTW', 'Community', '開放街圖', '開放街圖台灣', '台灣開放街圖']} />
+      <SEO title="入門指南 Quick Start Guide" keywords={["OpenStreetMap", "OSM", "OSMTW", "Community", "開放街圖", "開放街圖台灣", "台灣開放街圖"]} />
       <div className="bg-slate-100 overflow-hidden mx-auto flex flex-wrap">
         <div className="w-full lg:w-3/5 xl:w-1/2 xl:max-w-3xl xl:mt-8 mb-8 lg:mb-0 mx-auto bg-qsg-landing-background">
           {/* Header */}
@@ -21,8 +18,7 @@ export default function QSGIndexPage() {
             <div className="flex flex-col flex-1 w-max-5xl sm:flex-row py-5 mx-auto">
               <div className="w-full md:w-1/4 flex flex-row flex-no-wrap px-2 pb-4 md:px-0 md:pb-0 justify-between md:justify-around place-items-center no-underline">
                 <Link href="/qsg/contribute/">
-                  {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                  <a><OsmtwGuideTitle /></a>
+                  <OsmtwGuideTitle />
                 </Link>
 
                 <button
@@ -42,13 +38,13 @@ export default function QSGIndexPage() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      d={`${isExpanded ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}`}
+                      d={`${isExpanded ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}`}
                     />
                   </svg>
                 </button>
               </div>
               <div className="w-full md:w-3/4 flex flex-row flex-no-wrap justify-around self-center place-items-center no-underline">
-                <nav className={`${isExpanded ? 'block' : 'hidden'} px-2 md:block md:items-center w-full md:w-auto sm:w-auto md:self-end space-y-1`}>
+                <nav className={`${isExpanded ? "block" : "hidden"} px-2 md:block md:items-center w-full md:w-auto sm:w-auto md:self-end space-y-1`}>
                   {landingPageComponents.quickStartGuide.map((item) => (
                     <Link
                       className="block md:inline pr-8 font-medium text-lg text-fern-green-400 hover:text-fern-green-600"
@@ -105,11 +101,13 @@ export default function QSGIndexPage() {
         </div>
         {/* Hero-right: image */}
         <div className="w-full lg:w-2/5 xl:w-1/2 mb-10 lg:mb-0 overflow-hidden">
-          <Image className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src={LandingImg} alt="" />
+          <img className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src={LandingImg} alt="" />
         </div>
       </div>
 
       <Footer />
     </div>
   );
-}
+};
+
+export default QSGIndexPage;

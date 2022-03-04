@@ -1,14 +1,13 @@
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable max-len */
-import React from 'react';
-
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import React from "react";
+import Layout from "../components/layouts/layout";
+import SEO from "../components/seo";
 
 export default function NewsPage() {
   return (
     <Layout>
-      <SEO title="" keywords={['', '']} />
+      <SEO title="" keywords={["", ""]} />
 
       <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center">
         <div className="py-32" />

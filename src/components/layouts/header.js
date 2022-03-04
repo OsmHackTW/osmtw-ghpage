@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React, { useState } from "react";
+import { uriComponents } from "../glaube";
+import { ExtLinkIcon, Link } from "../util";
 
-import { ExtLinkIcon, Link, commonComponents } from './glaube';
-import logo from '../assets/images/logo.png';
+const logo = "/assets/images/logo.png";
 
 export default function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -14,20 +14,17 @@ export default function Header() {
         <div className="flex flex-col flex-1 sm:flex-row items-center p-4 max-w-7xl mx-auto md:py-5 sm:items-stretch sm:justify-start">
           <div className=" sm:w-full md:w-1/6 lg:w-1/3 w-full self-start flex flex-row flex-no-wrap justify-between items-center">
             <Link href="/">
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a>
-                <h1 className="flex flex-grow-0 no-underline">
-                  <Image className="block h-10 w-auto" src={logo} layout="intrinsic" height={40} width={40} alt="OSMTW" />
-                  <span className="block h-8 px-4 py-1 w-auto text-xl font-bold tracking-tight">
-                    <span className="block lg:hidden">
-                      OSMTW
-                    </span>
-                    <span className="hidden lg:block">
-                      OpenStreetMap 台灣
-                    </span>
+              <h1 className="flex flex-grow-0 no-underline">
+                <img className="block h-10 w-auto" src={logo} layout="intrinsic" height={40} width={40} alt="OSMTW" />
+                <span className="block h-8 px-4 py-1 w-auto text-xl font-bold tracking-tight">
+                  <span className="block lg:hidden">
+                    OSMTW
                   </span>
-                </h1>
-              </a>
+                  <span className="hidden lg:block">
+                    OpenStreetMap 台灣
+                  </span>
+                </span>
+              </h1>
             </Link>
 
             <button
@@ -47,7 +44,7 @@ export default function Header() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d={`${isExpanded ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}`}
+                  d={`${isExpanded ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}`}
                 />
               </svg>
             </button>
@@ -55,10 +52,10 @@ export default function Header() {
           <div className="w-3/4 md:w-5/6 lg:w-2/3 self-start flex flex-row flex-no-wrap justify-between items-center">
             <div className="w-full md:w-3/4 self-start flex flex-row flex-no-wrap justify-between items-center">
               <nav
-                className={`${isExpanded ? 'block' : 'hidden'}
+                className={`${isExpanded ? "block" : "hidden"}
                 py-2 md:block md:items-center w-full md:w-auto sm:w-auto md:self-end`}
               >
-                {commonComponents.headerLink.map((link) => (
+                {uriComponents.headerLink.map((link) => (
                   <Link
                     className="block mt-4 no-underline md:inline-block md:mt-0 md:ml-6"
                     key={link.title}

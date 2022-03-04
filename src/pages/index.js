@@ -1,22 +1,23 @@
-import * as React from 'react';
-import Image from 'next/image';
+import * as React from "react";
 
-import Layout from '../components/layout';
-import {
-  ExtLinkIcon, Link, commonComponents, landingPageComponents,
-} from '../components/glaube';
-import SEO from '../components/seo';
-import RN990698 from '../assets/images/RN990698_2000.jpg';
-import mapLayersd0 from '../assets/images/landing_maplayers_d0.png';
-import mapLayersd1 from '../assets/images/landing_maplayers_d1.png';
-import mapLayersd2 from '../assets/images/landing_maplayers_d2.png';
+import Layout from "../components/layouts/layout";
+import { uriComponents, landingPageComponents,
+} from "../components/glaube";
+ import {  ExtLinkIcon, Link} from "../components/util";
 
-const { learnMore } = commonComponents;
+import SEO from "../components/seo";
+
+const RN990698 = "assets/images/RN990698_2000.jpg";
+const mapLayersd0 = "assets/images/landing_maplayers_d0.png";
+const mapLayersd1 = "assets/images/landing_maplayers_d1.png";
+const mapLayersd2 = "assets/images/landing_maplayers_d2.png";
+
+const { learnMore } = uriComponents;
 // markup
-export default function IndexPage() {
+export default function LandingPage() {
   return (
     <Layout>
-      <SEO title="首頁" keywords={['OpenStreetMap', 'OSM', 'OSMTW', 'Community', '開放街圖', '開放街圖台灣', '台灣開放街圖', '地圖']} />
+      <SEO title="首頁" keywords={["OpenStreetMap", "OSM", "OSMTW", "Community", "開放街圖", "開放街圖台灣", "台灣開放街圖", "地圖"]} />
 
       {/* Hero */}
       <section className="flex flex-col items-center">
@@ -54,7 +55,7 @@ export default function IndexPage() {
             </div>
             <div className="grid gap-8 row-gap-10 sm:grid-cols-2 lg:grid-cols-4">
               {landingPageComponents.feature.map((link) => (
-                <div className="max-w-md" key={link.head}>
+                <div className="max-w-md" key={link.id}>
                   <div className="flex items-center justify-center relative mx-auto w-24 h-24 mb-4 rounded-full bg-red-200">
                     <svg className="w-16 h-16 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
                       <path d={link.SVGpath} />
@@ -81,7 +82,8 @@ export default function IndexPage() {
             >
               <path d="M50 0H100L50 100H0L50 0Z" />
             </svg>
-            <Image
+            {/* eslint-disable jsx-a11y/img-redundant-alt */}
+            <img
               className="object-cover w-full h-48 rounded-lg shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
               src={RN990698}
               alt="Photo by Rainny Lin (C) MSF"
@@ -90,7 +92,7 @@ export default function IndexPage() {
           <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
             <div className="lg:my-40 lg:max-w-xl">
               <p className="hidden gap-2 ml-2 py-4 md:flex">
-                {landingPageComponents.hashtag.map((hashtag) => (<span key={hashtag} className="px-3 py-px text-sm font-semibold tracking-wider text-indigo-700 uppercase rounded-full border-2 border-indigo-600 hover:border-blue-800 hover:text-blue-800">{`#${hashtag}`}</span>))}
+                {landingPageComponents.hashtag.map((hashtag) => (<span key={hashtag.id} className="px-3 py-px text-sm font-semibold tracking-wider text-indigo-700 uppercase rounded-full border-2 border-indigo-600 hover:border-blue-800 hover:text-blue-800">{`#${hashtag}`}</span>))}
               </p>
               <div className="hidden px-2 py-4 md:flex">
                 <div className="w-24 h-1 rounded-full bg-teal-600 inline-flex" />
@@ -109,7 +111,7 @@ export default function IndexPage() {
                   className="inline-flex items-center justify-center h-12 py-px px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-indigo-600 hover:bg-blue-600 focus:shadow-outline focus:outline-none"
                 >
                   開始畫圖
-                  {' '}
+                  {" "}
                   <ExtLinkIcon />
                 </a>
                 <Link
@@ -131,14 +133,14 @@ export default function IndexPage() {
             <div className="flex items-center justify-center md:pr-8 xl:pr-0">
               <div className="flex flex-col items-end px-2">
                 <div>
-                  <Image className="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56" height={224} width={224} src={mapLayersd2} alt="" />
+                  <img className="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56" height={224} width={224} src={mapLayersd2} alt="" />
                 </div>
                 <div>
-                  <Image className="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40" height={160} width={160} src={mapLayersd1} alt="" />
+                  <img className="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40" height={160} width={160} src={mapLayersd1} alt="" />
                 </div>
               </div>
               <div className="px-2">
-                <Image className="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80" height={320} width={320} src={mapLayersd0} alt="" />
+                <img className="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80" height={320} width={320} src={mapLayersd0} alt="" />
               </div>
             </div>
             <div className="flex flex-col justify-center px-5 -mx-4 md:px-0 lg:pl-8 lg:max-w-lg xl:max-w-3xl">
@@ -183,7 +185,7 @@ export default function IndexPage() {
               </div>
               <div className="flex flex-wrap -m-4">
                 {landingPageComponents.quickStartGuide.map((link) => (
-                  <div className="p-4 md:w-1/3" key={link.role}>
+                  <div className="p-4 md:w-1/3" key={link.id}>
                     <div className="flex rounded-lg h-full shadow-lg bg-slate-100 p-8 flex-col">
                       <div className="flex items-center mb-3">
                         <div className="w-12 h-12 mr-3 inline-flex items-center justify-center rounded-full bg-green-500 text-white flex-shrink-0">

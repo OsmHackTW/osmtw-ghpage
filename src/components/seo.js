@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import config from '../config';
+import React from "react";
+import Head from "next/head";
+import config from "../config";
 
 // eslint-disable-next-line react/prop-types
 export default function SEO({ description, title }) {

@@ -4,7 +4,7 @@ node_modules
 .github
 
 # log and cache
-.ENV
+.env
 *.log
 thumbs.db
 .eslintcache

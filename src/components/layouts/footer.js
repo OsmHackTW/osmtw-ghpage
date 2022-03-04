@@ -1,6 +1,6 @@
-import React from 'react';
-
-import { commonComponents, ExtLinkIcon, Link } from './glaube';
+import React from "react";
+import { uriComponents } from "../glaube";
+import { ExtLinkIcon, Link } from "../util";
 
 function Footer() {
   return (
@@ -20,7 +20,7 @@ function Footer() {
             經過多年的發展，世界各地的地理圖資逐漸增加，部分地區圖資的詳細程度甚至可用以一般商業應用。
           </div>
           <div className="flex flex-row px-1 my-2 w-full item-center">
-            {commonComponents.footerLink.infoLinks.map((link) => (
+            {uriComponents.footerLink.infoLinks.map((link) => (
               <Link
                 className="w-1/2 flex text-slate-200 hover:text-slate-100 text-xs font-medium duration-700"
                 key={link.title}
@@ -38,7 +38,7 @@ function Footer() {
             <div className="text-xs uppercase text-blue-100 font-medium mb-4">
               了解更多 Find out more
             </div>
-            {commonComponents.footerLink.sitemapLinks.map((link) => (
+            {uriComponents.footerLink.sitemapLinks.map((link) => (
               <Link
                 className="my-2 block text-slate-200 hover:text-slate-100 text-sm font-medium duration-700"
                 key={link.title}
@@ -53,12 +53,13 @@ function Footer() {
             <div className="text-xs uppercase text-blue-100 font-medium mb-4">
               台灣社群據點 Community Hubs
             </div>
-            {commonComponents.footerLink.communityLinks.map((href) => (
+            {uriComponents.footerLink.communityLinks.map((href) => (
               <a
                 className="my-3 block text-slate-200 hover:text-slate-100 text-sm font-medium duration-700"
                 href={href.url}
                 rel="noopener noreferrer"
                 target="_blank"
+                key={href.title}
               >
                 {href.title}
                 <ExtLinkIcon />
@@ -70,7 +71,7 @@ function Footer() {
             <div className="text-xs uppercase text-blue-100 font-medium mb-4">
               法律事項 Legal Stuff
             </div>
-            {commonComponents.footerLink.legalLinks.map((link) => (
+            {uriComponents.footerLink.legalLinks.map((link) => (
               <Link
                 className="my-2 block text-slate-200 hover:text-slate-100 text-sm font-medium duration-700"
                 key={link.title}
@@ -79,6 +80,15 @@ function Footer() {
                 {link.title}
               </Link>
             ))}
+            <a
+              className="my-2 block text-slate-200 hover:text-slate-100 text-xs font-medium duration-700"
+              href="https://www.openstreetmap.org/copyright/zh-TW" target="_blank" rel="noopener noreferrer"
+            >
+              <div className="flex gap-2">
+                <div className="flex flex-col"><span>開放街圖版權與授權條款</span><span>Copyright and License of OSM</span> </div>
+                <ExtLinkIcon />
+              </div>
+            </a>
           </div>
         </div>
       </div>
