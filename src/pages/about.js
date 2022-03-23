@@ -5,22 +5,31 @@ import { aboutPageComponents } from "../components/glaube";
 
 const AboutPage = () => (
   <Layout>
-    <SEO
-      keywords={["OSM", "開放街圖"]}
-      title="什麼是開放街圖"
-    />
+    <SEO keywords={["OSM", "開放街圖"]} title="什麼是開放街圖" />
     <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center">
       <div className="w-full xl:w-2/3 mx-auto px-4 sm:px-8 ">
         {aboutPageComponents.aboutOSM.map((paragraph) => (
-          <div className="main-title my-8 md:my-16 w-full md:w-3/4 mx-auto" id={paragraph.key} key={paragraph.key}>
-            <h1 className="font-bold text-xl md:text-3xl lg:text-4xl text-center text-slate-600">{paragraph.title}</h1>
+          <div
+            className="main-title my-8 md:my-16 w-full md:w-3/4 mx-auto"
+            id={paragraph.key}
+            key={paragraph.key}
+          >
+            <h1 className="font-bold text-xl md:text-3xl lg:text-4xl text-center text-slate-600">
+              {paragraph.title}
+            </h1>
             {paragraph.description.map((desc) => (
-              <h5 className="text-base md:text-xl text-leading my-8" key={desc.id}>{desc.segment}</h5>))}
+              <h5
+                className="text-base md:text-xl text-leading my-8"
+                key={desc.id}
+              >
+                {desc.segment}
+              </h5>
+            ))}
           </div>
         ))}
       </div>
     </section>
   </Layout>
-)
+);
 
 export default AboutPage;

@@ -19,13 +19,14 @@ export default function NewsPage() {
             <div className="mb-4">
               「含笑半步顛」是用蜂蜜、川貝、桔梗，加上天山雪蓮配製而成，不需冷藏，也沒有防腐劑，除了毒性猛烈之外，味道還很好吃。吃了「含笑半步顛」的朋友，顧名思義，絕不能走半步路，或是面露笑容，否則也會全身爆炸而死。
             </div>
-            <div className="mb-4">各大連鎖藥妝店皆有販售 實在是居家旅行　殺人滅口　必備良藥！</div>
+            <div className="mb-4">
+              各大連鎖藥妝店皆有販售 實在是居家旅行　殺人滅口　必備良藥！
+            </div>
           </blockquote>
           <cite className="block mt-4 font-bold text-right">
             – 那麼在哪裡才能買的到呢？
           </cite>
         </div>
-
       </section>
     </Layout>
   );

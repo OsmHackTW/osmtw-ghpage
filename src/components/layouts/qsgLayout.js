@@ -29,7 +29,11 @@ function Layout({ title, children }) {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      d={`${isExpanded ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}`}
+                      d={`${
+                        isExpanded
+                          ? "M6 18L18 6M6 6l12 12"
+                          : "M4 6h16M4 12h16M4 18h16"
+                      }`}
                     />
                   </svg>
                 </button>
@@ -98,17 +102,27 @@ function Layout({ title, children }) {
                     </Link>
                   </li>
                   <li>
-                    <a className="block mt-4 p-3 no-underline w-full text-sm lg:inline-block lg:mt-0 text-slate-700 hover:bg-slate-300"
-                      href="https://www.openstreetmap.org/copyright/zh-TW" target="_blank" rel="noopener noreferrer">
+                    <a
+                      className="block mt-4 p-3 no-underline w-full text-sm lg:inline-block lg:mt-0 text-slate-700 hover:bg-slate-300"
+                      href="https://www.openstreetmap.org/copyright/zh-TW"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <div className="flex gap-2">
-                        <div className="flex flex-col"><span>開放街圖版權與授權條款</span><span>Copyright and License of OSM</span> </div>
+                        <div className="flex flex-col">
+                          <span>開放街圖版權與授權條款</span>
+                          <span>Copyright and License of OSM</span>{" "}
+                        </div>
                         <ExtLinkIcon />
                       </div>
                     </a>
                   </li>
                 </ul>
                 <div className="py-4 ml-8 lg:ml-16 lg:my-24 flex-1 overflow-auto font-bold">
-                  <Link href="/" className="no-underline lg:inline-block lg:mt-0 p-3 text-slate-400 hover:text-slate-500">
+                  <Link
+                    href="/"
+                    className="no-underline lg:inline-block lg:mt-0 p-3 text-slate-400 hover:text-slate-500"
+                  >
                     回到主頁
                   </Link>
                 </div>
@@ -120,18 +134,14 @@ function Layout({ title, children }) {
           <div className="flex-1 p-2 md:py-2 md:px-12 antialiased w-full xl:h-5/6 items-center justify-center">
             <div className="text-slate-900">
               <div className="bg-slate-50 flex flex-col flex-wrap p-6 max-w-7xl mx-auto overflow-hidden">
-                <h2 className="text-3xl font-semibold mb-6">
-                  {title}
-                </h2>
+                <h2 className="text-3xl font-semibold mb-6">{title}</h2>
                 <hr className="h-0.5 px-1 my-4 bg-slate-300" />
                 {children}
               </div>
             </div>
           </div>
-
         </div>
       </main>
-
     </div>
   );
 }

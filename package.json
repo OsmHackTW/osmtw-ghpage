@@ -1,6 +1,6 @@
 {
   "name": "osmtw",
-  "version": "4.0.1b",
+  "version": "4.0.2",
   "author": "osmhacktw",
   "description": "Taiwan Community of the OpenStreetMap 台灣開放街圖社群網站",
   "license": "0BSD",
@@ -10,19 +10,22 @@
     "開放街圖",
     "OpenStreetMap 台灣",
     "台灣開放街圖",
+    "開放街圖台灣",
     "OSMTW",
     "廣泛運用的圖資",
     "自由開放的圖資",
-    "gatsby"
+    "nextjs"
   ],
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "deploy": "next build --prefix-paths && gh-pages -d public",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "export": "next export",
     "lint": "next lint",
     "start": "next start",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "ci": "rm -fr node_modules && yarn install --frozen-lockfile"
   },
   "dependencies": {
     "@mdx-js/mdx": "^2.0.0",

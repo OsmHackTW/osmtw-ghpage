@@ -1,12 +1,12 @@
-const colors = require('tailwindcss/colors');
+const colors = require("tailwindcss/colors");
 
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   media: false, // or 'media' or 'class'
   theme: {
     colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
+      transparent: "transparent",
+      current: "currentColor",
       red: colors.red,
       blue: colors.blue,
       green: colors.emerald,
@@ -20,25 +20,24 @@ module.exports = {
       purple: colors.purple,
       pink: colors.pink,
       teal: colors.teal,
-      'fern-green': {
-        DEFAULT: '#4F7942',
-        50: '#C9DEC3',
-        100: '#BAD5B2',
-        200: '#9DC391',
-        300: '#7FB170',
-        400: '#659A54',
-        500: '#4F7942',
-        600: '#395830',
-        700: '#24371E',
-        800: '#0E160C',
-        900: '#000000',
+      "fern-green": {
+        DEFAULT: "#4F7942",
+        50: "#C9DEC3",
+        100: "#BAD5B2",
+        200: "#9DC391",
+        300: "#7FB170",
+        400: "#659A54",
+        500: "#4F7942",
+        600: "#395830",
+        700: "#24371E",
+        800: "#0E160C",
+        900: "#000000",
       },
     },
     extend: {},
   },
   variants: {
-    extend: {
-    },
+    extend: {},
   },
-  plugins: ['gatsby-plugin-postcss'],
+  plugins: ["gatsby-plugin-postcss"],
 };

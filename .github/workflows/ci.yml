@@ -14,32 +14,40 @@ jobs:
   ci:
     runs-on: ${{ matrix.os }}
 
+    env:
+      NODE_ENV: production
+
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [14]
+        node-version: [14]
 
     steps:
       - name: Checkout 🛎
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
 
       - name: Cache  💾
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ github.workspace }}/.next/cache
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Install and Build 🔧 
-        uses: actions/setup-node@v1
-      - run: yarn install
-      - run: yarn build
+      - name: Install and Build 🔧
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: |
+          yarn ci
+          yarn build
+          yarn export
+          touch ./out/.nojekyll
         env:
           CI: true
+          NODE_ENV: production
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+        uses: JamesIves/github-pages-deploy-action@4.2.5
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: src/out # The folder the action should deploy.
+          FOLDER: out # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch

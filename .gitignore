@@ -1,7 +1,8 @@
 # directory
 node_modules
+.cache
 .next
-.github
+out
 
 # log and cache
 .env

@@ -11,9 +11,7 @@ function Layout({ children }) {
         <link rel="manifest" href="/assets/manifest/manifest.json" />
       </Header>
 
-      <main className="flex-1 w-full">
-        {children}
-      </main>
+      <main className="flex-1 w-full">{children}</main>
 
       <Footer />
     </div>
