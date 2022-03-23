@@ -1,6 +1,6 @@
 <h1>
     <a href="https://osm.tw" target="_blank">
-      <img alt="Tailwind CSS" height="96" src="https://avatars2.githubusercontent.com/u/5605266?s=96&v=4">
+      <img alt="OpenStreetMap Taiwan Community 開放街圖台灣社群" height="96" src="https://avatars2.githubusercontent.com/u/5605266?s=96&v=4">
     </a><br>
     開放街圖台灣社群網站 OpenStreetMap Taiwan Community website 
 </h1>
@@ -11,7 +11,7 @@
 
 This is the repo of the new-new website design for OpenStreetMap Taiwan Community (OSMTW).
 
-Still patching everywhere with massive 'copy & paste' NEXT.JS and tailwindcss. Tada! :tada:
+Still patching everywhere with massive 'copy & paste' Next.js and tailwindcss. Tada! :tada:
 
 開放街圖台灣社群網站第四版因工友貪新忘旧改以 NEXTJS 搭配 tailwindcss 「拼貼」而成，希望各位看官勿鞭。 :bow:
 
@@ -38,9 +38,9 @@ If the website is doomed, Run like hell! And contact any active coummnity member
 
 
 
-| [![OpenStreetMap Taiwan](https://avatars2.githubusercontent.com/u/5605266?s=200&v=4)](https://github.com/OsmHackTW) | Active members of<br/>the OpenStreetMap Taiwan Community<br/><br/>開放街圖台灣社群活躍分子<br/><br/>Khai-hòng-ke-tôo Tâi-uân Siā-kûn ua̍h-hiánn hūn-tsú|
+| [![OpenStreetMap Taiwan](https://avatars2.githubusercontent.com/u/5605266?s=128&v=4)](https://github.com/OsmHackTW) | Active members of<br/>the OpenStreetMap Taiwan Community<br/><br/>開放街圖台灣社群活躍分子<br/><br/>Khai-hòng-ke-tôo Tâi-uân Siā-kûn ua̍h-hiánn hūn-tsú|
 | -------- | :-------- |
 
-| [![Chichun](https://avatars2.githubusercontent.com/u/40767?s=200&v=4)](https://github.com/chihchun) | [![Supaplextw](https://avatars2.githubusercontent.com/u/1209326?s=200&v=4)](https://github.com/Supaplextw) | [![littlebtc](https://avatars.githubusercontent.com/u/82419?s=200&v=4)](https://github.com/littlebtc) | [![s8321414](https://avatars.githubusercontent.com/u/9457283?s=200&v=4)](https://github.com/s8321414) | [![mcdlee](https://avatars3.githubusercontent.com/u/1043761?s=200&v=4)](https://github.com/mcdlee/) | [![louisliutw](https://avatars2.githubusercontent.com/u/1419049?s=200&v=4)](https://github.com/louisliutw/) | [![assanges](https://avatars2.githubusercontent.com/u/4113063?s=200&v=4)](https://github.com/assanges/) |
+| [![Chichun](https://avatars2.githubusercontent.com/u/40767?s=96&v=4)](https://github.com/chihchun) | [![Supaplextw](https://avatars2.githubusercontent.com/u/5605266?s=96&v=4)](https://github.com/Supaplextw) | [![littlebtc](https://avatars.githubusercontent.com/u/82419?s=96&v=4)](https://github.com/littlebtc) | [![s8321414](https://avatars.githubusercontent.com/u/9457283?s=96&v=4)](https://github.com/s8321414) | [![mcdlee](https://avatars3.githubusercontent.com/u/1043761?s=96&v=4)](https://github.com/mcdlee/) | [![louisliutw](https://avatars2.githubusercontent.com/u/1419049?s=96&v=4)](https://github.com/louisliutw/) | [![assanges](https://avatars2.githubusercontent.com/u/4113063?s=96&v=4)](https://github.com/assanges/) |
 | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | [Rex Tsai](https://about.me/chihchun) | [Dennis Chen](https://github.com/Supaplextw) | [Hsiao-Ting Yu](https://github.com/littlebtc) | [Jeff Huang](https://github.com/s8321414)   | [Sin-Di Lee](https://github.com/mcdlee/) | [Louis Liu](https://github.com/louisliutw/) | [Sean Young](https://github.com/assanges/) |
