@@ -1,7 +1,9 @@
 # directory
 node_modules
 .cache
+.next
 public
+out 
 
 # log and cache
 .ENV
