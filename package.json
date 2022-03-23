@@ -19,7 +19,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "yarn develop",
+    "lint": "yarn lint",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
@@ -27,7 +28,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "autoprefixer": "^10.4.0",
+    "autoprefixer": "^10.4.4",
     "gatsby": "^2.26.1",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-google-analytics": "^2.9.0",
@@ -38,10 +39,10 @@
     "gatsby-plugin-react-helmet": "^3.8.0",
     "gatsby-plugin-sharp": "^2.12.2",
     "gatsby-plugin-sitemap": "^2.10.0",
-    "gatsby-source-custom-api": "^2.3.2",
+    "gatsby-source-custom-api": "^2.3.5",
     "gatsby-source-filesystem": "^2.9.1",
     "gatsby-transformer-sharp": "^2.10.1",
-    "prop-types": "^15.7.2",
+    "prop-types": "^15.8.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0"
@@ -50,14 +51,14 @@
     "cssnano": "^5.1.5",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "gh-pages": "^3.2.3",
-    "postcss": "^8.4.5",
+    "gh-pages": "^3.2.3
+    "postcss": "^8.4.12",
     "prettier": "^2.6.0",
-    "tailwindcss": "^3.0.7"
+    "tailwindcss": "^3.0.23"
   },
   "repository": {
     "type": "git",
