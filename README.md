@@ -5,7 +5,7 @@
     開放街圖台灣社群網站 OpenStreetMap Taiwan Community website 
 </h1>
 
-![powered by NEXT.JS](https://badgen.net/badge//powered%20by/NEXT.JS/blue) ![powered by tailwindcss](https://badgen.net/badge//powered%20by/tailwindcss/cyan) ![last commit](https://badgen.net/github/last-commit/osmhacktw/osmtw-ghpage/master) ![yaru](https://badgen.net/github/dependabot/ubuntu/yaru) ![MIT-0](https://badgen.net/badge/license/0BSD/blue)
+![powered by Next.JS](https://badgen.net/badge//powered%20by/Next.js/blue) ![powered by tailwindcss](https://badgen.net/badge//powered%20by/tailwindcss/cyan) ![last commit](https://badgen.net/github/last-commit/osmhacktw/osmtw-ghpage) ![yaru](https://badgen.net/github/dependabot/ubuntu/yaru) ![MIT-0](https://badgen.net/badge/license/0BSD/blue)
 
 ## :moyai: What is this stuff? 這是蝦米碗糕?
 
@@ -25,7 +25,7 @@ Still patching everywhere with massive 'copy & paste' NEXT.JS and tailwindcss. T
 
 ## :electric_plug: Built with 成分
 
-- [**NEXT.JS**](https://github.com/vercel/next.js) - The React Framework gives you the best developer experience with all the features you need for production. [Learn more for your next project.](https://nextjs.org/learn /)
+- [**Next.js**](https://github.com/vercel/next.js) - The React Framework gives you the best developer experience with all the features you need for production. [Learn more for your next project.](https://nextjs.org/learn/)
 - [**tailwindcss**](https://github.com/tailwindlabs/tailwindcss/) - A utility-first CSS framework for rapidly building custom user interfaces. For full documentation, visit [tailwindcss.com](https://tailwindcss.com/).
 
 ## :rotating_light: In case of Emergency 遇緊急情況時
