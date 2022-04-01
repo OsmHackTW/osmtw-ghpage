@@ -27,11 +27,11 @@
     "prepare": "husky install",
     "ci": "rm -fr node_modules && yarn install --frozen-lockfile"
   },
-  "dependencies": {
-    "@mdx-js/mdx": "^2.1.0",
+  "dependencies": 
+    "@mdx-js/mdx": "^2.1.1",
     "@mdx-js/react": "^2.1.1",
     "autoprefixer": "^10.4.4",
-    "next": "^12.1.2",
+    "next": "^12.1.4",
     "prop-types": "^15.8.1",
     "react": "18",
     "react-dom": "18",
