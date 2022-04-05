@@ -46,7 +46,7 @@ jobs:
           NODE_ENV: production
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
