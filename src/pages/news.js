@@ -1,33 +1,174 @@
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable max-len */
 import React from "react";
+import useSWR from "swr";
+import { parseString, processors } from "xml2js";
+import { ExtLinkIcon } from "../components/util";
+
+
 import Layout from "../components/layouts/layout";
 import SEO from "../components/seo";
 
-export default function NewsPage() {
+const WEEKLY_OSM_FEED = "https://weeklyosm.eu/zh/feed";
+const CORS_PROXY = `https://thingproxy.freeboard.io/fetch/${WEEKLY_OSM_FEED}`;
+
+const NewsPage = () => {
   return (
     <Layout>
-      <SEO title="" keywords={["", ""]} />
-
+      <SEO keywords={["新聞公告", "週刊OSM", "News", "Weekly OSM"]} title="新聞公告 News - 週刊OSM Weekly OSM" />
       <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center">
         <div className="py-32" />
         <div className="md:w-2/3 mx-auto">
-          <blockquote className="pl-4 text-l leading-loose text-justify border-l-4 border-slate-900">
-            <div className="mb-4">
-              「一日喪命散」是用七種不同的毒蟲，再加上鶴頂紅，提煉七七四十九日而成的，無色無味，殺人於無影無蹤。吃了「一日喪命散」的人，一天之內會武功全失，筋脈逆流，胡思亂想，而致走火入魔，最後會血管爆裂而死。
-            </div>
-            <div className="mb-4">
-              「含笑半步顛」是用蜂蜜、川貝、桔梗，加上天山雪蓮配製而成，不需冷藏，也沒有防腐劑，除了毒性猛烈之外，味道還很好吃。吃了「含笑半步顛」的朋友，顧名思義，絕不能走半步路，或是面露笑容，否則也會全身爆炸而死。
-            </div>
-            <div className="mb-4">
-              各大連鎖藥妝店皆有販售 實在是居家旅行　殺人滅口　必備良藥！
-            </div>
-          </blockquote>
-          <cite className="block mt-4 font-bold text-right">
-            – 那麼在哪裡才能買的到呢？
-          </cite>
+          <div className="break-all text-justify">
+            <WeeklyOsmFeed />
+          </div>
         </div>
       </section>
     </Layout>
   );
-}
+};
+
+const fetcher = (...args) => fetch(...args).then((res) => res.text());
+const stripNS = processors.stripPrefix;
+
+const WeeklyOsmFeed = () => {
+  let response = {};
+  const { data, error } = useSWR(CORS_PROXY, fetcher);
+  parseString(data, { tagNameProcessors: [stripNS] }, (err, result) => {
+    console.dir(result);
+    response = result;
+  });
+
+  const feed = { ...response?.rss.channel[0].item[0] }; // lastest issue
+
+  if (error) return (<><h3>發生未知的錯誤 Error while fetching :{`(`}</h3><p></p><pre>{JSON.stringify(error)}</pre></>);
+  if (!data) return <h3>載入中…… Loading...</h3>;
+
+  return feed === null || feed.length === 0 ? (
+    <h3>好像還沒更新 Nothing shows here :(</h3>
+  ) : (
+    <>
+      <section className="flex flex-col items-center justify-center my-8">
+        <div className="relative w-full flex py-8">
+          <div className="w-5xl px-4 py-5 mx-auto sm:max-w-xl md:w-full lg:max-w-screen-2xl rounded-t">
+            <div className="flex flex-col w-3xl md:w-6xl p-2 mb-8">
+              <div id="weeklyosm-title">
+                <h2 className="uppercase text-4xl text-semibold">
+                  📰{feed.title}
+                </h2>
+                <h3 className="uppercase text-xl p-2">{feed.pubDate.toString().slice(0, 16)}</h3>
+              </div>
+              <div className="flex flex-col py-8">
+                <div id="feedContent" dangerouslySetInnerHTML={{ __html: feed.encoded }} />
+                <style>
+                  {/* Thanks to Dom (dcode) for his table style! 
+                    * https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l
+                    */}
+                  {`
+                    #feedContent a::after { 
+                      content: ${ExtLinkIcon};
+                      position: absolute;
+                    }
+
+                     #feedContent a { 
+                       color: #009879;
+                       font-weight: 600;
+                    }
+
+                    #feedContent p:first-child { 
+                      color: #777777;
+                      font-size: 0.95rem;
+                      font-weight: 500;
+                      padding: 16px 8px;
+                    }
+                    
+                    #feedContent p:nth-last-child(2) { 
+                      color: #555555;
+                      font-size: 0.85rem;
+                      font-weight: 500;
+                      padding: 16px ;
+                    }
+
+                    #feedContent p:last-child { 
+                      color: #555555;
+                      font-size: 1rem;
+                      font-weight: 500;
+                      padding: 16px ;
+                    }
+
+                    #feedContent .wp-caption p { 
+                      font-weight: 500;
+                      padding: 12px 8px;
+                    }
+
+                    #feedContent h2 {
+                      padding: 8px;
+                      color: #33333;
+                      font-size: 2rem;
+                      font-weight: 600;
+                    }
+
+                    #feedContent ul {                    
+                      padding: 8px;
+                    }
+                    #feedContent li { 
+                      padding-left: 8px;
+                      list-style-position: inside;
+                      list-style-type: circle;
+                    }   
+                                        
+                    #feedContent table {
+                        border-collapse: collapse;
+                        border-radius:6px;
+                        margin: 8px 0;
+                        padding: 8px 0;
+                        font-size: 0.9rem;
+                        font-family: sans-serif;
+                        min-width: 800px;
+                        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+                    }
+                    
+                    #feedContent thead tr {
+                        background-color: #009879;
+                        color: #ffffff;                        
+                        font-size: 1.25em;
+                        text-align: left;
+                    }
+
+                    #feedContent th, #feedContent  td {
+                        padding: 16px 12px;
+                    }
+
+                    #feedContent tbody tr {
+                        border-bottom: 1px solid #dddddd;
+                    }
+
+                    #feedContent tbody tr:nth-of-type(even) {
+                        background-color: #d8dee5;
+                    } #feedContent tbody tr:nth-of-type(odd) {
+                        background-color: #f3f3f3;
+                    }
+
+                    #feedContent tbody tr:last-of-type {
+                        border-bottom: 2px solid #009879;
+                    }
+                    
+                    #feedContent th:first-of-type {
+                      border-top-left-radius: 10px;
+                    }
+                    #feedContent th:last-of-type {
+                      border-top-right-radius: 10px;
+                    }
+                   
+                  `}
+                </style>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default NewsPage;

@@ -5,7 +5,7 @@
     開放街圖台灣社群網站 OpenStreetMap Taiwan Community website 
 </h1>
 
-![powered by Next.JS](https://badgen.net/badge//powered%20by/Next.js/blue) ![powered by tailwindcss](https://badgen.net/badge//powered%20by/tailwindcss/cyan) ![last commit](https://badgen.net/github/last-commit/osmhacktw/osmtw-ghpage) ![yaru](https://badgen.net/github/dependabot/ubuntu/yaru) ![MIT-0](https://badgen.net/badge/license/0BSD/blue)
+![powered by Next.JS](https://badgen.net/badge//powered%20by/Next.js/blue) ![powered by tailwindcss](https://badgen.net/badge//powered%20by/tailwindcss/cyan) ![last commit](https://badgen.net/github/last-commit/osmhacktw/osmtw-ghpage) ![yaru](https://badgen.net/github/dependabot/ubuntu/yaru) ![0BSD](https://badgen.net/badge/license/0BSD/blue)
 
 ## :moyai: What is this stuff? 這是蝦米碗糕?
 
