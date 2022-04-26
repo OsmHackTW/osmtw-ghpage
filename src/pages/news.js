@@ -2,69 +2,54 @@
 /* eslint-disable max-len */
 import React from "react";
 import useSWR from "swr";
-import { parseString, processors } from "xml2js";
 import { ExtLinkIcon } from "../components/util";
-
-
 import Layout from "../components/layouts/layout";
 import SEO from "../components/seo";
 
-const WEEKLY_OSM_FEED = "https://weeklyosm.eu/zh/feed";
-const CORS_PROXY = `https://thingproxy.freeboard.io/fetch/${WEEKLY_OSM_FEED}`;
-
-const NewsPage = () => {
-  return (
-    <Layout>
-      <SEO keywords={["新聞公告", "週刊OSM", "News", "Weekly OSM"]} title="新聞公告 News - 週刊OSM Weekly OSM" />
-      <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center">
-        <div className="py-32" />
-        <div className="md:w-2/3 mx-auto">
-          <div className="break-all text-justify">
-            <WeeklyOsmFeed />
-          </div>
+const NewsPage = () => (
+  <Layout>
+    <SEO keywords={["新聞公告", "週刊OSM", "News", "Weekly OSM"]} title="新聞公告 News - 週刊OSM Weekly OSM" />
+    <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center">
+      <div className="py-32" />
+      <div className="md:w-2/3 mx-auto">
+        <div className="break-all text-justify">
+          <WeeklyOsmFeed />
         </div>
-      </section>
-    </Layout>
-  );
-};
+      </div>
+    </section>
+  </Layout>
+);
 
-const fetcher = (...args) => fetch(...args).then((res) => res.text());
-const stripNS = processors.stripPrefix;
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
+const WEEKLY_OSM_JSON = `https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fweeklyosm.eu%2Fzh%2Ffeed`;
 
 const WeeklyOsmFeed = () => {
-  let response = {};
-  const { data, error } = useSWR(CORS_PROXY, fetcher);
-  parseString(data, { tagNameProcessors: [stripNS] }, (err, result) => {
-    console.dir(result);
-    response = result;
-  });
+  const { data, error } = useSWR(WEEKLY_OSM_JSON, fetcher);
 
-  const feed = { ...response?.rss.channel[0].item[0] }; // lastest issue
-
-  if (error) return (<><h3>發生未知的錯誤 Error while fetching :{`(`}</h3><p></p><pre>{JSON.stringify(error)}</pre></>);
+  if (error) return <><h3>發生未知的錯誤 Error while fetching :\(</h3><p/><pre>{JSON.stringify(error)}</pre></>;
   if (!data) return <h3>載入中…… Loading...</h3>;
 
-  return feed === null || feed.length === 0 ? (
-    <h3>好像還沒更新 Nothing shows here :(</h3>
-  ) : (
-    <>
-      <section className="flex flex-col items-center justify-center my-8">
-        <div className="relative w-full flex py-8">
-          <div className="w-5xl px-4 py-5 mx-auto sm:max-w-xl md:w-full lg:max-w-screen-2xl rounded-t">
-            <div className="flex flex-col w-3xl md:w-6xl p-2 mb-8">
-              <div id="weeklyosm-title">
-                <h2 className="uppercase text-4xl text-semibold">
-                  📰{feed.title}
-                </h2>
-                <h3 className="uppercase text-xl p-2">{feed.pubDate.toString().slice(0, 16)}</h3>
-              </div>
-              <div className="flex flex-col py-8">
-                <div id="feedContent" dangerouslySetInnerHTML={{ __html: feed.encoded }} />
-                <style>
-                  {/* Thanks to Dom (dcode) for his table style! 
+  const feed = data.items[0]; // lastest issue
+  return feed === null || feed.length === 0 ?
+    <h3>好像還沒更新 Nothing shows here :\(</h3>
+    :
+    <section className="flex flex-col items-center justify-center my-8">
+      <div className="relative w-full flex py-8">
+        <div className="w-5xl px-4 py-5 mx-auto sm:max-w-xl md:w-full lg:max-w-screen-2xl rounded-t">
+          <div className="flex flex-col w-3xl md:w-6xl p-2 mb-8">
+            <div id="weeklyosm-title">
+              <h2 className="uppercase text-4xl text-semibold">
+                📰{feed.title}
+              </h2>
+              <h3 className="uppercase text-xl p-2">{feed.pubDate.toString().slice(0, 10)}</h3>
+            </div>
+            <div className="flex flex-col py-8">
+              <div id="feedContent" dangerouslySetInnerHTML={{ __html: feed.content }} />
+              <style>
+                {/* Thanks to Dom (dcode) for his table style! 
                     * https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l
                     */}
-                  {`
+                {`
                     #feedContent a::after { 
                       content: ${ExtLinkIcon};
                       position: absolute;
@@ -161,14 +146,12 @@ const WeeklyOsmFeed = () => {
                     }
                    
                   `}
-                </style>
-              </div>
+              </style>
             </div>
           </div>
         </div>
-      </section>
-    </>
-  );
+      </div>
+    </section>
 };
 
 export default NewsPage;
