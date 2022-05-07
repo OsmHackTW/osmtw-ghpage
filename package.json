@@ -30,7 +30,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^2.1.1",
     "@mdx-js/react": "^2.1.1",
-    "autoprefixer": "^10.4.5",
+    "autoprefixer": "^10.4.7",
     "next": "^12.1.6",
     "prop-types": "^15.8.1",
     "react": "18",
@@ -43,14 +43,14 @@
     "cssnano": "5.1.7",
     "eslint": "^8.14.0",
     "eslint-config-airbnb": "19",
-    "eslint-config-next": "^12.1.5",
+    "eslint-config-next": "^12.1.6",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.4",
     "gh-pages": "^3.2.3",
     "husky": "^7.0.0",
-    "postcss": "^8.4.12",
+    "postcss": "^8.4.13",
     "prettier": "^2.6.2"
   },
   "repository": {
