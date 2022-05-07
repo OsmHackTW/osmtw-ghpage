@@ -7,7 +7,7 @@ function Layout({ title, children }) {
   const [isExpanded, toggleExpansion] = useState(false);
   return (
     <div className="flex flex-col min-h-screen bg-white text-slate-900 z-50">
-      <div className="border-b shadow z-40">
+      <div className="border-b shadow z-40 fixed bg-white w-full">
         <header className="w-full 2xl:w-3/4 mx-auto px-2 lg:px-8">
           <div className="flex flex-col sm:flex-row p-4 lg:py-5 justify-around sm:items-stretch sm:justify-start">
             <div className="flex flex-row justify-around ">
@@ -48,15 +48,15 @@ function Layout({ title, children }) {
         </header>
       </div>
 
-      <main className="flex flex-1 w-full mx-auto">
+      <main className="flex flex-1 w-full overflow-y-auto mx-auto mt-16">
         <div className="min-h-screen bg-white mt-0 lg:w-1/3 ">
           <aside className="w-full">
             <nav
               className={`${isExpanded ? "inline z-30" : "hidden"}
-              py-2 lg:block lg:items-center fixed min-h-screen h-full lg:relative flex flex-col w-11/12 lg:w-full bg-slate-100 border-r`}
+              py-2 lg:block lg:items-center min-h-screen w-full fixed bg-slate-100 md:border-r`}
             >
-              <div className="static w-full pl-4 xl:mt-8 2xl:pl-48 mx-auto">
-                <ul className="py-4 ml-8 lg:ml-16 flex-1 overflow-auto font-bold">
+              <div className="static w-full pl-4 md:mt-4 xl:mt-8 2xl:pl-48 mx-auto">
+                <ul className="py-4 ml-4 lg:ml-10 flex-1 overflow-auto font-bold">
                   <li>
                     <Link
                       href="/qsg/get-started/"
@@ -76,7 +76,7 @@ function Layout({ title, children }) {
                     </Link>
                   </li>
                 </ul>
-                <ul className="py-4 ml-8 lg:ml-16 flex-1 overflow-auto font-bold">
+                <ul className="py-4 ml-4 lg:ml-10 flex-1 overflow-auto font-bold">
                   {landingPageComponents.quickStartGuide.map((item) => (
                     <li key={item.role}>
                       <Link
@@ -90,7 +90,7 @@ function Layout({ title, children }) {
                     </li>
                   ))}
                 </ul>
-                <ul className="py-4 ml-8 lg:ml-16 flex-1 overflow-auto font-bold">
+                <ul className="py-4 ml-4 lg:ml-10 flex-1 overflow-auto font-bold">
                   <li>
                     <Link
                       activeClassName="border-t border-b border-l bg-slate-50 text-fern-green-500 hover:bg-slate-50"
@@ -118,7 +118,7 @@ function Layout({ title, children }) {
                     </a>
                   </li>
                 </ul>
-                <div className="py-4 ml-8 lg:ml-16 lg:my-24 flex-1 overflow-auto font-bold">
+                <div className="py-4 ml-4 lg:ml-10 lg:my-24 flex-1 overflow-auto font-bold">
                   <Link
                     href="/"
                     className="no-underline lg:inline-block lg:mt-0 p-3 text-slate-400 hover:text-slate-500"
@@ -130,8 +130,8 @@ function Layout({ title, children }) {
             </nav>
           </aside>
         </div>
-        <div className="bg-slate-50 p-2 w-full lg:w-3/4 xl:pr-64 container relative mx-auto min-h-screen">
-          <div className="flex-1 p-2 md:py-2 md:px-12 antialiased w-full xl:h-5/6 items-center justify-center">
+        <div className="bg-slate-50 w-full lg:w-3/4 xl:pr-64 container relative mx-auto min-h-screen">
+          <div className="flex-1 p-2 antialiased w-full items-center justify-center mt-4">
             <div className="text-slate-900">
               <div className="bg-slate-50 flex flex-col flex-wrap p-6 max-w-7xl mx-auto overflow-hidden">
                 <h2 className="text-3xl font-semibold mb-6">{title}</h2>

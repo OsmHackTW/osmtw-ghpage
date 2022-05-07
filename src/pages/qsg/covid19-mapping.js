@@ -7,7 +7,7 @@ import { qsgCOVID19MappingComponents } from "../../components/glaube";
 import { ExtLinkIcon, Accordion } from "../../components/util";
 
 const QsgCovid19MappingPage = () => (
-  <Layout>
+  <Layout title="COVID-19 圖資更新">
     <SEO
       title="入門指南 Quick Start Guide"
       keywords={[
@@ -20,11 +20,9 @@ const QsgCovid19MappingPage = () => (
         "台灣開放街圖",
       ]}
     />
-    <div className="flex-1 p-2 md:py-2 md:px-12 antialiased w-full xl:h-5/6 items-center justify-center">
+    <div className="flex-1 antialiased w-full xl:h-5/6 items-center justify-center">
       <div className="text-slate-900">
-        <div className="bg-slate-50 flex flex-col flex-wrap p-6 max-w-7xl mx-auto overflow-hidden">
-          <h2 className="text-3xl font-semibold mb-6">COVID-19 圖資更新</h2>
-          <hr className="h-0.5 px-1 my-4 bg-slate-300" />
+        <div className="bg-slate-50 flex flex-col flex-wrap max-w-7xl mx-auto overflow-auto">
           <h4 className="my-2 font-semibold text-xl text-slate-600">
             進行POI資訊相關更新
           </h4>
@@ -41,7 +39,7 @@ const QsgCovid19MappingPage = () => (
             </a>
             <ExtLinkIcon />
           </p>
-          <div className="my-6">
+          <div className="my-6 w-full">
             {qsgCOVID19MappingComponents.accordionCOVID19Content.map(
               ({ title, content }) => (
                 <Accordion key={title} title={title} content={content} />
