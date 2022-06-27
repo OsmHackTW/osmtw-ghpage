@@ -55,6 +55,10 @@ const uriComponents = {
     ],
     communityLinks: [
       {
+        url: "https://community.openstreetmap.org/c/communities/tw/42",
+        title: "OpenStreetMap Community 社群討論板",
+      },
+      {
         url: "https://github.com/OsmHackTW/",
         title: "Github",
       },

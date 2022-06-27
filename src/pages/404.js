@@ -21,31 +21,27 @@ const NotFoundPage = () => (
           <h2 className="text-lg text-slate-600 text-center py-3">
             [工商時間 AD]
           </h2>
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 lg:p-8">
             {/* 工商 - 這是一個<a>包起來的圖卡 AD here - this an <a> wrapped card */}
-            <div className="hidden max-w-3xl mx-auto rounded-lg overflow-hidden shadow-lg my-2 bg-white dark:bg-slate-600">
+            <div className="max-w-4xlmx-auto rounded-lg overflow-hidden shadow-lg my-2 bg-white">
               <a
-                href="https://coscup.org/2021/zh-TW/landing"
+                href="https://coscup.org/2022"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {/* 圖檔 Hero image here */}
                 <img
                   className="w-full overflow-hidden"
-                  src="https://coscup.org/2021/assets/og.65c2d8e3.png"
+                  src="https://coscup.org/2022/assets/banner.24fd488a.svg"
                   alt="COSCUP 2021"
                 />
                 <div className="px-6 pt-4 space-y-3">
                   {/* 字字字字 Descripion here */}
                   <h3 className="font-bold text-xl md:text-2xl lg:text-3xl">
-                    COSCUP x RubyConf Taiwan 2021 is here!
+                    COSCUP x KCD Taiwan 2022
                   </h3>
                   <p className="text-base md:text-lg lg:text-xl">
-                    開源人年會 COSCUP 已邁向第 16
-                    年，今年仍舊聚集著開源社群們的熱情，更與 RubyConf Taiwan
-                    一起合辦，吸引更多國內外同好關注與參與。今年將於 7/31~8/1
-                    於台灣科技大學舉辦，有豐富多元的 22
-                    軌議程，在地社群與國際社群之參與交流，希望能有更多開源開放的火花。
+                    COSCUP x KCD 2022 重磅回歸實體！近 30 軌議程，真的是太狂啦！
                   </p>
                 </div>
                 <div className="px-6 py-4 space-y-3">
