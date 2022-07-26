@@ -47,21 +47,21 @@ const OsmCalEvent = () => {
       <li className="flex flex-row mb-4" key={event.id}>
         <a
           href={event.url}
-          className="cursor-pointer border-slate-200  hover:bg-slate-50 shadow border select-none bg-white rounded-md flex flex-1 items-center p-4"
+          className="cursor-pointer border-slate-200 text-slate-700 hover:bg-slate-50 shadow border select-none bg-white rounded-md flex flex-1 items-center p-4 dark:bg-slate-600 dark:text-slate-200 dark:hover:bg-slate-700"
         >
           <div className="flex-1 pl-1 md:mr-16">
             <div className="text-xl font-medium mb-2">
               {event.name}
               <ExtLinkIcon />
             </div>
-            <div className="text-slate-700  text-lg">
+            <div className="text-lg">
               {event.date.start.split("T")[0]}{" "}
               {event.date.start.split("T")[1].split("", 5)}
             </div>
-            <div className="text-slate-700 text-sm">
+            <div className="text-sm">
               {event.location?.venue}
             </div>
-            <div className="text-slate-700  text-sm">
+            <div className="text-sm">
               {event.location?.short}
             </div>
           </div>
@@ -88,16 +88,16 @@ const DummyEvent = () =>
     <li className="flex flex-row mb-4">
       <a
         href="https://osmcal.org/?in=TW"
-        className="cursor-pointer border-slate-200  hover:bg-slate-50 shadow border select-none bg-white rounded-md flex flex-1 items-center p-4"
+        className="cursor-pointer border-slate-200 text-slate-700 hover:bg-slate-50 shadow border select-none bg-white rounded-md flex flex-1 items-center p-4 "
       >
         <div className="flex-1 pl-1 md:mr-16">
           <div className="text-xl font-medium mb-2">
             督促小B作PTX導入工具大會 (Dummy)
             <ExtLinkIcon />
           </div>
-          <div className="text-slate-700 text-lg">8th March</div>
-          <div className="text-slate-700 text-sm">MozSpace</div>
-          <div className="text-slate-700 text-sm">Huashan, Taipei, Taiwan</div>
+          <div className="text-lg">8th March</div>
+          <div className="text-sm">MozSpace</div>
+          <div className="text-sm">Huashan, Taipei, Taiwan</div>
         </div>
         <div className="ml-2 flex-shrink-0 flex">
           <div className="px-2 py-1 inline-flex text-base leading-5 font-semibold rounded-full bg-red-100 text-red-800">

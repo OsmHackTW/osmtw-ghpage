@@ -6,7 +6,7 @@ import { aboutPageComponents } from "../components/glaube";
 const AboutPage = () => (
   <Layout>
     <SEO keywords={["OSM", "開放街圖"]} title="什麼是開放街圖" />
-    <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center">
+    <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center dark:text-slate-200">
       <div className="w-full xl:w-2/3 mx-auto px-4 sm:px-8 ">
         {aboutPageComponents.aboutOSM.map((paragraph) => (
           <div
@@ -14,7 +14,7 @@ const AboutPage = () => (
             id={paragraph.key}
             key={paragraph.key}
           >
-            <h1 className="font-bold text-xl md:text-3xl lg:text-4xl text-center text-slate-600">
+            <h1 className="font-bold text-xl md:text-3xl lg:text-4xl text-center text-slate-600 dark:text-slate-100">
               {paragraph.title}
             </h1>
             {paragraph.description.map((desc) => (

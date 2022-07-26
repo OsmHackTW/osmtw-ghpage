@@ -106,6 +106,15 @@
 .iframe--stretch {
   min-height: 900px;
   height: 100%;
-  min-width: 900px;
   width: 100% !important;
+}
+
+a.text--fern-green {
+  @apply text-fern-green-600;
+}
+
+@media (prefers-color-scheme: dark) {
+  a.text--fern-green {
+    @apply text-fern-green-200;
+  }
 }

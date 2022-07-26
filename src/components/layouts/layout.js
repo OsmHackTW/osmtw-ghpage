@@ -6,7 +6,7 @@ import Footer from "./footer";
 
 function Layout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen bg-slate-200 font-sans text-slate-900">
+    <div className="flex flex-col min-h-screen bg-slate-200 font-sans text-slate-900 dark:bg-slate-700 dark:text-slate-200">
       <Header>
         <link rel="manifest" href="/assets/manifest/manifest.json" />
       </Header>

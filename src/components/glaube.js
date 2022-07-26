@@ -176,7 +176,7 @@ const aboutPageComponents = {
               採用
               <a
                 href="https://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ"
-                className="text-fern-green-600"
+                className="text--fern-green"
                 aria-label=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -470,7 +470,7 @@ const privacyPageComponents = {
             以收集有關使用者的資訊，透過分析使用者與之互動來進一步改善網站，這當中可能包括使用者概略的位置資訊。
             有關本站如何使用 Google Analytics 的更多資訊，請瀏覽以下網址：
             <a
-              className="text-fern-green-600"
+              className="text--fern-green"
               href="https://www.google.com/analytics/terms/us.html"
               target="_blank"
               rel="noopener noreferrer"
@@ -484,7 +484,7 @@ const privacyPageComponents = {
             選擇退出附加元件 (Google Analytics Opt-out Browser Add-on) 下載，
             請瀏覽以下網址：
             <a
-              className="text-fern-green-600"
+              className="text--fern-green"
               href="https://tools.google.com/dlpage/gaoptout?hl=zh-tw"
               target="_blank"
               rel="noopener noreferrer"

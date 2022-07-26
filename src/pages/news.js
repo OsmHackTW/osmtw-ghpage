@@ -30,11 +30,11 @@ const WeeklyOsmFeed = () => {
 
   const feed = data.items[0]; // lastest issue
   return feed === null || feed.length === 0 ?
-    <h3>好像還沒更新 Nothing shows here :\(</h3>
+    <h3>好像還沒更新 Nothing shows here &#40;;´･д･｀&#41;</h3>
     :
     <section className="flex flex-col items-center justify-center my-8">
       <div className="relative w-full flex py-8">
-        <div className="w-5xl px-4 py-5 mx-auto sm:max-w-xl md:w-full lg:max-w-screen-2xl rounded-t">
+        <div className="w-full px-4 py-5 mx-auto lg:max-w-screen-xl rounded-t dark:text-white">
           <div className="flex flex-col w-3xl md:w-6xl md:p-2 mb-8">
             <div id="weeklyosm-title">
               <h2 className="uppercase text-4xl text-semibold">
@@ -42,25 +42,50 @@ const WeeklyOsmFeed = () => {
               </h2>
               <h3 className="uppercase text-xl p-2">{feed.pubDate.toString().slice(0, 10)}</h3>
             </div>
-            <div className="flex flex-col py-8">
+            <div className="flex flex-col py-8 ">
+              {/* so bio much hazard very dangerous */}
               <div id="feedContent" dangerouslySetInnerHTML={{ __html: feed.content }} />
               <style>
                 {/* Thanks to Dom (dcode) for his table style! 
-                    * https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l
-                    */}
+                  * https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l
+                  */}
                 {`
+                  #feedContent {
+                    --theme-primary: #777777;
+                    --theme-secondary: #009879;
+                    --theme-auxilary: #555555;
+                    --theme-background: #009879;
+                    --theme-table-odd-color: #f3f3f3;
+                    --theme-table-even-color: #d8dee5;
+                  }
+
+                  @media (prefers-color-scheme: dark) {
+                    #feedContent {
+                      --theme-primary: #ffffff;
+                      --theme-secondary: #46a19d;
+                      --theme-auxilary: #ffffff;
+                      --theme-background: #1f2937;
+                      --theme-table-odd-color: #64748b;
+                      --theme-table-even-color: #4b5563;
+                    } 
+
+                    #feedContent li img { 
+                      filter: invert(100%);
+                    }   
+                  }
+
                   #feedContent a::after { 
-                    content: ${<ExtLinkIcon/>};
+                    content: ${<ExtLinkIcon />};
                     position: absolute;
                   }
 
                   #feedContent a { 
-                    color: #009879;
+                    color: var(--theme-secondary);
                     font-weight: 600;
                   }
 
-                  #feedContent p:first-child { 
-                    color: #777777;
+                  #feedContent p:first-of-type { 
+                    color: var(--theme-primary);
                     font-size: 0.95rem;
                     font-weight: 500;
                     padding: 16px 8px;
@@ -68,7 +93,7 @@ const WeeklyOsmFeed = () => {
                   
                   #feedContent p:nth-last-child(2), 
                   #feedContent p:last-child { 
-                    color: #555555;
+                    color: var(--theme-auxilary);
                     font-size: 0.85rem;
                     font-weight: 500;
                     padding: 16px;
@@ -101,7 +126,7 @@ const WeeklyOsmFeed = () => {
                     list-style-position: inside;
                     list-style-type: circle;
                   }   
-                                      
+                                                
                   #feedContent table {
                     border-collapse: collapse;                   
                     border-radius:6px;
@@ -115,8 +140,8 @@ const WeeklyOsmFeed = () => {
                   }
 
                   #feedContent table th { 
-                    min-width: 50px;                    
-                    font-size: 0.5rem;
+                    min-width: 72px;                    
+                    font-size: 0.65rem;
                   }
 
                   @media only screen and (min-width: 600px) {
@@ -134,14 +159,19 @@ const WeeklyOsmFeed = () => {
                   }
 
                   #feedContent thead tr {
-                    background-color: #009879;
+                    background-color: var(--theme-background);
                     color: #ffffff;                        
                     font-size: 1.25em;
                     text-align: left;
                   }
 
-                  #feedContent th, #feedContent td {
+                  #feedContent th {
                     padding: 16px 12px;
+                  }
+
+                  #feedContent td {
+                    padding: 16px 12px;
+                    color: var(--theme-auxilary);
                   }
                   
                   #feedContent td:first-child { 
@@ -153,13 +183,13 @@ const WeeklyOsmFeed = () => {
                   }
 
                   #feedContent tbody tr:nth-of-type(even) {
-                    background-color: #d8dee5;
+                    background-color: var(--theme-table-even-color);
                   } 
                   #feedContent tbody tr:nth-of-type(odd) {
-                    background-color: #f3f3f3;
+                    background-color: var(--theme-table-odd-color);
                   }
                   #feedContent tbody tr:last-of-type {
-                    border-bottom: 2px solid #009879;
+                    border-bottom: 2px solid var(--theme-background);
                   }
                   
                   #feedContent th:first-of-type {

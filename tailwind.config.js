@@ -19,6 +19,7 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.purple,
       pink: colors.pink,
+      sky: colors.sky,
       teal: colors.teal,
       "fern-green": {
         DEFAULT: "#4F7942",
