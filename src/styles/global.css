@@ -109,12 +109,12 @@
   width: 100% !important;
 }
 
-a.text--fern-green {
-  @apply text-fern-green-600;
+a.text--fernGreen {
+  @apply text-fernGreen-600;
 }
 
 @media (prefers-color-scheme: dark) {
-  a.text--fern-green {
-    @apply text-fern-green-200;
+  a.text--fernGreen {
+    @apply text-fernGreen-200;
   }
 }

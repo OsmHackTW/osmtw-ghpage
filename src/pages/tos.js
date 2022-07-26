@@ -67,13 +67,13 @@ export default function TosPage() {
                     className={`bg-${articleIndex % 2 ? "slate-100 " : "white"
                       } dark:bg-slate-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6`}
                   >
-                    <dt className="flex md:flex-col text-base font-semibold text-fern-green-600 dark:text-fern-green-200">
+                    <dt className="flex md:flex-col text-base font-semibold text-fernGreen-600 dark:text-fernGreen-200">
                       <span className="pb-1">{article.section_zh}</span>
                       <span className="pb-1 px-2 md:px-0">
                         {article.section_en}
                       </span>
                     </dt>
-                    <dd className="flex flex-col mt-1 text-sm text-fern-green-800 sm:mt-0 sm:col-span-2 dark:text-slate-100">
+                    <dd className="flex flex-col mt-1 text-sm text-fernGreen-800 sm:mt-0 sm:col-span-2 dark:text-slate-100">
                       <span className="pb-2">{article.text_zh}</span>
                       <span className="pb-2">{article.text_en}</span>
                     </dd>

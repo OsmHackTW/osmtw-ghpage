@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <div>
-      <header className="bg-fern-green-200 flex flex-row justify-between w-full px-2 lg:px-8 text-slate-900">
+      <header className="bg-fernGreen-200 flex flex-row justify-between w-full px-2 lg:px-8 text-slate-900">
         <div className="flex flex-col flex-1 sm:flex-row items-center p-4 max-w-7xl mx-auto md:py-5 sm:items-stretch sm:justify-start">
           <div className=" sm:w-full md:w-1/6 lg:w-1/3 w-full self-start flex flex-row flex-no-wrap justify-between items-center">
             <Link href="/">
@@ -72,7 +72,7 @@ export default function Header() {
                 ))}
               </nav>
             </div>
-            <div className="hidden sm:hidden md:block md:w-1/4 float-right flex flex-no-wrap justify-between items-center mt-1">
+            <div className="sm:hidden md:block md:w-1/4 float-right flex flex-no-wrap justify-between items-center mt-1">
               <a
                 href="https://osm.org/"
                 className="px-4 py-2 rounded-full font-semibold tracking-wide bg-green-800 text-white outline-none focus:outline-none"

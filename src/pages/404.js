@@ -46,16 +46,16 @@ const NotFoundPage = () => (
                 </div>
                 <div className="px-6 py-4 space-y-3">
                   {/* 標籤 Hashtag here */}
-                  <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold bg-fern-green-50 mr-2">
+                  <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold bg-fernGreen-50 mr-2">
                     #COSCUP
                   </span>
-                  <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold bg-fern-green-50 mr-2">
+                  <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold bg-fernGreen-50 mr-2">
                     #全亞洲最熱情
                   </span>
-                  <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold bg-fern-green-50 mr-2">
+                  <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold bg-fernGreen-50 mr-2">
                     #志工主辦
                   </span>
-                  <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold bg-fern-green-50 mr-2">
+                  <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold bg-fernGreen-50 mr-2">
                     #活力滿點
                   </span>
                 </div>

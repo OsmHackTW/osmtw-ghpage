@@ -176,7 +176,7 @@ const aboutPageComponents = {
               採用
               <a
                 href="https://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ"
-                className="text--fern-green"
+                className="text--fernGreen"
                 aria-label=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -238,29 +238,29 @@ const aboutPageComponents = {
 const contactPageComponents = {
   communityButton: [
     {
+      href: "https://community.openstreetmap.org/c/communities/tw/42",
+      title: "OpenStreetMap Community",
+      bgColor: "teal",
+    },
+    {
       href: "https://www.facebook.com/groups/OpenStreetMap.TW/",
       title: "Facebook Group",
-      colorBg: "blue",
+      bgColor: "pink",
     },
     {
       href: "https://m.me/openstreetmaptaiwan",
       title: "Messenger",
-      colorBg: "pink",
-    },
-    {
-      href: "https://osm-tw.signup.team/",
-      title: "Slack",
-      colorBg: "amber",
+      bgColor: "green",
     },
     {
       href: "https://t.me/joinchat/Aqu2IgnTuIidMfREdNmomQ/",
       title: "Telegram",
-      colorBg: "indigo",
+      bgColor: "pink",
     },
     {
-      href: "https://webchat.oftc.net/?channels=#osm-tw",
-      title: "IRC Channel",
-      colorBg: "green",
+      href: "https://osm-tw.signup.team/",
+      title: "Slack",
+      bgColor: "teal",
     },
   ],
 };
@@ -470,7 +470,7 @@ const privacyPageComponents = {
             以收集有關使用者的資訊，透過分析使用者與之互動來進一步改善網站，這當中可能包括使用者概略的位置資訊。
             有關本站如何使用 Google Analytics 的更多資訊，請瀏覽以下網址：
             <a
-              className="text--fern-green"
+              className="text--fernGreen"
               href="https://www.google.com/analytics/terms/us.html"
               target="_blank"
               rel="noopener noreferrer"
@@ -484,7 +484,7 @@ const privacyPageComponents = {
             選擇退出附加元件 (Google Analytics Opt-out Browser Add-on) 下載，
             請瀏覽以下網址：
             <a
-              className="text--fern-green"
+              className="text--fernGreen"
               href="https://tools.google.com/dlpage/gaoptout?hl=zh-tw"
               target="_blank"
               rel="noopener noreferrer"

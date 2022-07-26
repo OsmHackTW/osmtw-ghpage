@@ -21,7 +21,7 @@ module.exports = {
       pink: colors.pink,
       sky: colors.sky,
       teal: colors.teal,
-      "fern-green": {
+      fernGreen: {
         DEFAULT: "#4F7942",
         50: "#C9DEC3",
         100: "#BAD5B2",
@@ -34,11 +34,19 @@ module.exports = {
         800: "#0E160C",
         900: "#000000",
       },
+      aozora: {
+        DEFAULT: "#50b8e7",
+        50: "#edf7fc",
+        100: "#cae9f7",
+        200: "#dcf0fa",
+        300: "#b9e2f5",
+        400: "#84cdee",
+        500: "#50b8e7",
+        600: "#48a5cf",
+        700: "#3880a1",
+        800: "#285c73",
+        900: "#10242e",
+      },
     },
-    extend: {},
   },
-  variants: {
-    extend: {},
-  },
-  plugins: ["gatsby-plugin-postcss"],
 };

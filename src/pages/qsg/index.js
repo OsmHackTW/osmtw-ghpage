@@ -66,7 +66,7 @@ const QSGIndexPage = () => {
                 >
                   {landingPageComponents.quickStartGuide.map((item) => (
                     <Link
-                      className="block md:inline pr-8 font-medium text-lg text-fern-green-400 hover:text-fern-green-600"
+                      className="block md:inline pr-8 font-medium text-lg text-fernGreen-400 hover:text-fernGreen-600"
                       key={item.role}
                       href={item.route}
                     >
@@ -91,7 +91,7 @@ const QSGIndexPage = () => {
               <div className="sm:text-center lg:text-left">
                 <h1 className="text-4xl font-extrabold text-slate-900 sm:text-5xl md:text-6xl space-y-3">
                   <span className="block">以開源圖資豐富</span>
-                  <span className="block text-fern-green-600">數位體驗</span>
+                  <span className="block text-fernGreen-600">數位體驗</span>
                 </h1>
                 <h4 className="mt-3 text-base text-slate-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                   無論你是首次使用 OpenStreetMap
@@ -102,15 +102,15 @@ const QSGIndexPage = () => {
                   <div className="justify-center font-bold text-white">
                     <Link
                       href="/qsg/get-started/"
-                      className="w-full flex rounded-full shadow px-8 py-3 bg-fern-green-600 hover:bg-fern-green-700 md:py-4 md:text-lg md:px-10"
+                      className="w-full flex rounded-full shadow px-8 py-3 bg-fernGreen-600 hover:bg-fernGreen-700 md:py-4 md:text-lg md:px-10"
                     >
                       開始行動
                     </Link>
                   </div>
-                  <div className="justify-center font-medium text-fern-green-700 mt-3 sm:mt-0 sm:ml-3">
+                  <div className="justify-center font-medium text-fernGreen-700 mt-3 sm:mt-0 sm:ml-3">
                     <a
                       href="https://www.openstreetmap.org/"
-                      className="w-full flex rounded-full shadow px-8 py-3 bg-fern-green-100 hover:bg-fern-green-200 md:py-4 md:text-lg md:px-10"
+                      className="w-full flex rounded-full shadow px-8 py-3 bg-fernGreen-100 hover:bg-fernGreen-200 md:py-4 md:text-lg md:px-10"
                     >
                       OpenStreetMap.org
                       <ExtLinkIcon />

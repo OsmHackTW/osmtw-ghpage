@@ -32,7 +32,7 @@ const QsgCovid19MappingPage = () => (
             像是機關的門禁或流量管制、以及店家的特別營業時間等，希望使用者都能夠獲得最適切且及時的資訊。
             您也可以前往 OpenStreetMap Wiki 的相關頁面了解更多：
             <a
-              className="underline text-fern-green-600"
+              className="underline text-fernGreen-600"
               href="https://wiki.openstreetmap.org/wiki/COVID-19_-_How_to_Map"
             >
               COVID-19 - How to Map

@@ -33,7 +33,7 @@ const QsgGetStartedPage = () => (
               className="flex flex-col lg:flex-row border rounded shadow-md my-3 p-4 justify-between"
             >
               <div>
-                <h2 className="text-fern-green-500">{item.role}</h2>
+                <h2 className="text-fernGreen-500">{item.role}</h2>
                 <h2 className="text-sm text-slate-400">
                   {item.route.replace("/qsg", "")}
                 </h2>

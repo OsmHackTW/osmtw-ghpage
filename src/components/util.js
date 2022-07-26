@@ -30,7 +30,7 @@ const OsmtwGuideTitle = () => (
     <span className="block h-10 w-10">
       <img src={logo} alt="OSMTW 開放街圖台灣" aria-label="開放街圖台灣LOGO" />
     </span>
-    <span className="px-4 text-xl font-semibold text-fern-green-500 inlne">
+    <span className="px-4 text-xl font-semibold text-fernGreen-500 inlne">
       入門指南
     </span>
   </h1>

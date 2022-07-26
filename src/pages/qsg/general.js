@@ -26,7 +26,7 @@ const QsgGeneralPage = () => (
         OsmAnd 是以 OpenStreetMap 為基底，在Android及iOS系統上的導航應用程式。
       </p>
       <p className="my-1 mb-4">
-        <a className="underline text-fern-green-600" href="http://osmand.net/">
+        <a className="underline text-fernGreen-600" href="http://osmand.net/">
           http://osmand.net/
         </a>
         <ExtLinkIcon />
@@ -38,7 +38,7 @@ const QsgGeneralPage = () => (
       </p>
       <p className="my-1 mb-4">
         <a
-          className="underline text-fern-green-600"
+          className="underline text-fernGreen-600"
           href="https://mapcomplete.osm.be/"
         >
           https://mapcomplete.osm.be/
@@ -52,7 +52,7 @@ const QsgGeneralPage = () => (
       </p>
       <p className="my-1 mb-4">
         <a
-          className="underline text-fern-green-600"
+          className="underline text-fernGreen-600"
           href="https://play.google.com/store/apps/details?id=de.westnordost.streetcomplete"
         >
           {" "}
@@ -60,7 +60,7 @@ const QsgGeneralPage = () => (
         </a>
         &nbsp;-&nbsp;
         <a
-          className="underline text-fern-green-600"
+          className="underline text-fernGreen-600"
           href="https://github.com/streetcomplete/StreetComplete/"
         >
           GitHub

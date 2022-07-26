@@ -47,10 +47,10 @@ const PrivacyPage = () => (
                     index % 2 ? "slate-100" : "white"
                   }  dark:bg-slate-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6`}
                 >
-                  <dt className="text-base font-semibold text-fern-green-600 dark:text-fern-green-200">
+                  <dt className="text-base font-semibold text-fernGreen-600 dark:text-fernGreen-200">
                     {article.section}
                   </dt>
-                  <dd className="mt-1 text-sm text-fern-green-800 sm:mt-0 sm:col-span-2 dark:text-slate-200">
+                  <dd className="mt-1 text-sm text-fernGreen-800 sm:mt-0 sm:col-span-2 dark:text-slate-200">
                     {article.text}
                     {article.point ? (
                       <ul className="border border-slate-200 mt-4 rounded-md divide-y divide-slate-200">
