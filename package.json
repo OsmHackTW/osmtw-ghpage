@@ -28,7 +28,7 @@
     "ci": "rm -fr node_modules && yarn install --frozen-lockfile"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^2.1.2",
+    "@mdx-js/mdx": "^2.1.4",
     "@mdx-js/react": "^2.1.2",
     "autoprefixer": "^10.4.7",
     "next": "^12.2.2",
