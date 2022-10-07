@@ -74,10 +74,10 @@
     unist-util-visit "^4.0.0"
     vfile "^5.0.0"
 
-"@mdx-js/react@^2.1.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-2.1.2.tgz#02972f170cd3ad9113ce448245c5f636bb3e750d"
-  integrity sha512-52e3DTJBrjsw3U51ZCdZ3N1IBaqnbzLIngCSXpKtiYiGr7PIqp3/P/+kym0MPTwBL/y9ZBmCieD8FyrXuEDrRw==
+"@mdx-js/react@^2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-2.1.4.tgz#9ea62ff768a22e923fa59df7065d7e9a13f58756"
+  integrity sha512-PRwLjoAxhSA6xTB2+FA5CPGUCOsIK3bJD0RYsoju+nUIyOpIZUSw6SJChfILByLizzxqslE0R+l8IjARo0N+hA==
   dependencies:
     "@types/mdx" "^2.0.0"
     "@types/react" ">=16"
