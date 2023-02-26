@@ -92,7 +92,7 @@ function Footer() {
                   4.0）授權使用。
                 </div>
                 <div className="text-slate-500 text-xs">
-                  Content is available under Creative Commons Attribution 4.0
+                  Contents are available under Creative Commons Attribution 4.0
                   International license unless otherwise noted.
                 </div>
               </div>
