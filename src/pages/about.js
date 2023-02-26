@@ -14,16 +14,19 @@ const AboutPage = () => (
             id={paragraph.key}
             key={paragraph.key}
           >
-            <h1 className="font-bold text-xl md:text-3xl lg:text-4xl text-center text-slate-600 dark:text-slate-100">
+            <h2 className="my-8 font-bold text-xl md:text-3xl lg:text-4xl text-center text-slate-600 dark:text-slate-100">
               {paragraph.title}
-            </h1>
+            </h2>
             {paragraph.description.map((desc) => (
-              <h5
-                className="text-base md:text-xl text-leading my-8"
-                key={desc.id}
-              >
-                {desc.segment}
-              </h5>
+              <React.Fragment key={desc.id}>
+                {desc.subtitle ?
+                  <h4 className="text-base my-4 tracking-widest font-semibold uppercase">
+                    {desc.subtitle}
+                  </h4> :
+                  null
+                }
+                <div className="py-4">{desc.segment}</div>
+              </React.Fragment>
             ))}
           </div>
         ))}

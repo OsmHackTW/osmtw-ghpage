@@ -218,7 +218,7 @@ const aboutPageComponents = {
                 《開放資料庫授權》（ODbL）
                 <ExtLinkIcon />
               </a>
-              <span className="text-slate-600 text-sm mx-1">(英語)</span>
+              <span className="text-slate-600 dark:text-slate-400 text-sm mx-1">(英語)</span>
               方式授權釋出，沒有版權費用、許可證費用、使用費用及其他一切費用，
               您可以將圖資用於個人、社群、教育、商業、政府以及其他任何可以想到的應用用途。
             </div>
@@ -234,14 +234,112 @@ const aboutPageComponents = {
       title: "在哪裡可以使用 OSM 呢？",
       key: "whentouse",
       description: [
-        { segment: "有很多但窩不知道名字 (施工中 WIP)" },
+        {
+          subtitle: "Software",
+          segment: (
+            <ul className="ml-6 list-disc">
+              <li>
+                <a href="https://osmand.net" class="text--fernGreen" target="_blank" rel="noreferer noopener">OsmAnd</a><ExtLinkIcon />
+                <br />
+                <span className="text-sm">離線地圖與導航應用程式 (Android/iOS)</span>
+              </li>
+              <li>
+                <a href="https://github.com/labexp/osmtracker-android" class="text--fernGreen" target="_blank" rel="noreferer noopener">OSMTracker</a><ExtLinkIcon />
+                <br />
+                <span className="text-sm">用於記錄 GPX 軌蹟的離線 GPS 工具 (Android)</span>
+              </li>
+            </ul>
+          )
+        },
+        {
+          subtitle: "Tools",
+          segment: (
+            <ul className="ml-6 list-disc">
+              <li>
+                <a href="https://openmaptiles.org/" class="text--fernGreen" target="_blank" rel="noreferer noopener">OpenMapTiles</a><ExtLinkIcon />
+                <br />
+                <span className="text-sm">自帶有 50 種以上語言的自架地圖圖磚開源服務</span>
+              </li>
+              <li>
+                <a href="http://overpass-turbo.eu/" class="text--fernGreen" target="_blank" rel="noreferer noopener">overpass-turbo</a><ExtLinkIcon />
+                <br />
+                <span className="text-sm">基於 Overpass API 的線上 OpenStreetMap 資料探勘工具</span>
+              </li>
+            </ul>
+          )
+        },
+        {
+          subtitle: "Libraries",
+          segment: (
+            <>
+              <h5>Java</h5>
+              <ul className="ml-6 list-disc my-4">
+                <li>
+                  <a href="https://github.com/opentripplanner/OpenTripPlanner" class="text--fernGreen" target="_blank" rel="noreferer noopener">OpenTripPlanner</a><ExtLinkIcon />
+                  <br />
+                  <span className="text-sm">開源行程規劃及分析工具</span>
+                </li>
+                <li>
+                  <a href="https://github.com/graphhopper/graphhopper" class="text--fernGreen" target="_blank" rel="noreferer noopener">GraphHopper</a><ExtLinkIcon />
+                  <br />
+                  <span className="text-sm">基於 OpenStreetMap 資料的開源路徑規劃整合方案</span>
+                </li>
+              </ul>
+              <h5>JavaScript</h5>
+              <ul className="ml-6 list-disc my-4">
+                <li>
+                  <a href="https://github.com/tanrax/openstreetmap-tag-map" class="text--fernGreen" target="_blank" rel="noreferer noopener">openstreetmap-tag-map</a><ExtLinkIcon />
+                  <br />
+                  <span className="text-sm">為 Riot.js 提供以國家及區域參數建立 iframe OSM 地圖的標籤</span>
+                </li>
+                <li>
+                  <a href="https://leafletjs.com/" class="text--fernGreen" target="_blank" rel="noreferer noopener">Leaflet</a><ExtLinkIcon />
+                  <br />
+                  <span className="text-sm">開源且支援行動裝置的互動式地圖元件庫</span>
+                </li>
+                <li>
+                  <a href="https://openlayers.org/" class="text--fernGreen" target="_blank" rel="noreferer noopener">OpenLayers</a><ExtLinkIcon />
+                  <br />
+                  <span className="text-sm"></span>高性能的地圖渲染元件庫</li>
+                <li>
+                  <a href="https://maplibre.org/projects/#js" class="text--fernGreen" target="_blank" rel="noreferer noopener">MapLibre GL JS</a><ExtLinkIcon />
+                  <br />
+                  <span className="text-sm"></span>支援 GPU 加速運算的向量地圖渲染元件庫</li>
+              </ul>
+              <h5>Python</h5>
+              <ul className="ml-6 list-disc my-4">
+                <li>
+                  <a href="https://github.com/gboeing/osmnx" class="text--fernGreen" target="_blank" rel="noreferer noopener">osmnx</a><ExtLinkIcon />
+                  <br />
+                  <span className="text-sm">街道路網視覺化工具</span>
+                </li>
+                <li>
+                  <a href="https://github.com/chrieke/prettymapp" class="text--fernGreen" target="_blank" rel="noreferer noopener">prettymapp</a><ExtLinkIcon />
+                  <br />
+                  <span className="text-sm">以 OpenStreetMap 資料來產生精美地圖</span>
+                </li>
+                <li>
+                  <a href="https://github.com/mvexel/overpass-api-python-wrapper" class="text--fernGreen" target="_blank" rel="noreferer noopener">overpass-wrapper</a><ExtLinkIcon />
+                  <br />
+                  <span className="text-sm">OpenStreetMap Overpass API Python wrapper</span>
+                </li>
+                <li>
+                  <a href="https://github.com/metaodi/osmapi" class="text--fernGreen" target="_blank" rel="noreferer noopener">osmapi</a><ExtLinkIcon />
+                  <br />
+                  <span className="text-sm">OpenStreetMap API Python wrapper</span>
+                </li>
+                <li>
+                  <a href="https://github.com/mapnik/python-mapnik" class="text--fernGreen" target="_blank" rel="noreferer noopener">python-mapnik</a><ExtLinkIcon />
+                  <br />
+                  <span className="text-sm">mapnik Python wrapper</span>
+                </li>
+              </ul>
+            </>
+          )
+        },
         {
           segment: (
-            <img
-              src="https://i.imgur.com/duLQ96O.gif"
-              width="320"
-              alt="IDK meme"
-            />
+            <p className="text-sm my-8">更多請瀏覽：<a href="https://github.com/osmlab/awesome-openstreetmap" class="text--fernGreen" target="_blank" rel="noreferer noopener">osmlab/awesome-openstreetmap</a><ExtLinkIcon /></p>
           ),
         },
         // Link to /qsg/general { segment: "" }
@@ -257,7 +355,7 @@ const aboutPageComponents = {
         },
         {
           segment:
-            "台灣開放街圖社群則是始於2010年，是由一群志同道合的在地圖客組成。台灣社群目前在網路上多個活躍據點，包括 Facebook、Slack、Telegram、郵件論壇等。無論是想深入了解開放街圖或是對畫圖有疑難雜症欲尋求解方，歡迎隨時加入討論。",
+            "台灣開放街圖社群則是始於2010年，是由一群志同道合的在地圖客組成。台灣社群目前在網路上多個活躍據點，包括 Facebook、Telegram、郵件論壇等。無論是想深入了解開放街圖或是對畫圖有疑難雜症欲尋求解方，歡迎隨時加入討論。",
         },
         {
           segment:
