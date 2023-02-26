@@ -1,6 +1,7 @@
 /* eslint-disable no-irregular-whitespace */
 import React from "react";
 import useSWR from "swr";
+import { useTheme } from 'next-themes';
 import { ExtLinkIcon } from "../components/util";
 import Layout from "../components/layouts/layout";
 import SEO from "../components/seo";
@@ -24,7 +25,7 @@ const WEEKLY_OSM_JSON = `https://api.rss2json.com/v1/api.json?rss_url=https%3A%2
 
 const WeeklyOsmFeed = () => {
   const { data, error } = useSWR(WEEKLY_OSM_JSON, fetcher);
-
+  const { theme } = useTheme();
   if (error) return <><h3>發生未知的錯誤 Error while fetching :\(</h3><p /><pre>{JSON.stringify(error)}</pre></>;
   if (!data) return <h3>載入中…… Loading...</h3>;
 
@@ -49,32 +50,31 @@ const WeeklyOsmFeed = () => {
                 {/* Thanks to Dom (dcode) for his table style! 
                   * https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l
                   */}
-                {`
-                  #feedContent {
+                {theme === "light" ? 
+                  `#feedContent {
                     --theme-primary: #777777;
                     --theme-secondary: #009879;
                     --theme-auxilary: #555555;
                     --theme-background: #009879;
                     --theme-table-odd-color: #f3f3f3;
                     --theme-table-even-color: #d8dee5;
-                  }
-
-                  @media (prefers-color-scheme: dark) {
-                    #feedContent {
+                  }`
+                  :
+                  `#feedContent {
                       --theme-primary: #ffffff;
                       --theme-secondary: #46a19d;
                       --theme-auxilary: #ffffff;
                       --theme-background: #1f2937;
                       --theme-table-odd-color: #64748b;
                       --theme-table-even-color: #4b5563;
-                    } 
+                    }
 
-                    #feedContent li img { 
+                    #feedContent li img {
                       filter: invert(100%);
-                    }   
-                  }
-
-                  #feedContent a::after { 
+                    }
+                `}
+                {`
+                  #feedContent a::after {
                     content: ${<ExtLinkIcon />};
                     position: absolute;
                   }
@@ -111,7 +111,6 @@ const WeeklyOsmFeed = () => {
                     padding: 8px;    
                   }
 
-                 
                   #feedContent li img {   
                     display: inline-block;
                     padding: 0 4px;

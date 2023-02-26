@@ -6,7 +6,7 @@ import { ExtLinkIcon, OsmtwGuideTitle, Link } from "../../components/util";
 
 const LandingImg = "../assets/images/RN990586_2000.jpg";
 
-const QSGIndexPage = () => {
+const QsgIndexPage = () => {
   const [isExpanded, toggleExpansion] = useState(false);
   return (
     <div className="antialiased text-slate-900 h-full items-center justify-center">
@@ -136,4 +136,4 @@ const QSGIndexPage = () => {
   );
 };
 
-export default QSGIndexPage;
+export default QsgIndexPage;

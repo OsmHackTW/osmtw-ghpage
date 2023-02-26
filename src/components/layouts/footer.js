@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="bg-slate-800">
       <div className="max-w-7xl py-4 md:pt-16 m-auto text-slate-800 flex flex-wrap justify-left">
-        <div className="p-5 sm:w-4/12 md:w-4/12">
+        <div className="p-5 w-full md:w-1/3">
           <div className="bg-teal-800 text-white p-3 mb-4">
             <div className="sm:text-2-xl md:text-s sm:text-2-xl lg:text-2xl font-medium mb-2">
               OpenStreetMap Taiwan
@@ -20,12 +20,12 @@ function Footer() {
             年，是內容自由且所有人都能夠編輯的世界地圖協作計劃。
             經過多年的發展，世界各地的地理圖資逐漸增加，部分地區圖資的詳細程度甚至可用以一般商業應用。
           </div>
-          <div className="flex flex-row px-1 my-2 w-full item-center">
+          <div className="w-full flex flex-row px-1 my-2 gap-8 item-center whitespace-pre-line">
             {uriComponents.footerLink.infoLinks.map((link) => (
               <Link
                 className="w-1/2 flex text-slate-200 hover:text-slate-100 text-xs font-medium duration-700"
                 key={link.title}
-                href={link.route}
+                href={link.path}
               >
                 {link.title}
               </Link>
@@ -33,68 +33,51 @@ function Footer() {
           </div>
         </div>
 
-        <div className="p-5 sm:w-8/12 md:w-8/12 m-auto text-slate-800 flex flex-wrap justify-left">
-          <div className="p-2 w-1/2 sm:w-4/12 md:w-4/12">
-            <div className="text-xs uppercase text-blue-100 font-medium mb-4">
-              了解更多 Find out more
-            </div>
-            {uriComponents.footerLink.sitemapLinks.map((link) => (
-              <Link
-                className="my-2 block text-slate-200 hover:text-slate-100 text-sm font-medium duration-700"
-                key={link.title}
-                href={link.route}
-              >
-                {link.title}
-              </Link>
-            ))}
-          </div>
-
-          <div className="p-2 w-1/2 sm:w-4/12 md:w-4/12">
-            <div className="text-xs uppercase text-blue-100 font-medium mb-4">
-              台灣社群據點 Community Hubs
-            </div>
-            {uriComponents.footerLink.communityLinks.map((href) => (
-              <a
-                className="my-3 block text-slate-200 hover:text-slate-100 text-sm font-medium duration-700"
-                href={href.url}
-                rel="noopener noreferrer"
-                target="_blank"
-                key={href.title}
-              >
-                {href.title}
-                <ExtLinkIcon />
-              </a>
-            ))}
-          </div>
-
-          <div className="p-2 w-1/2 sm:w-4/12 md:w-4/12">
-            <div className="text-xs uppercase text-blue-100 font-medium mb-4">
-              法律事項 Legal Stuff
-            </div>
-            {uriComponents.footerLink.legalLinks.map((link) => (
-              <Link
-                className="my-2 block text-slate-200 hover:text-slate-100 text-sm font-medium duration-700"
-                key={link.title}
-                href={link.route}
-              >
-                {link.title}
-              </Link>
-            ))}
-            <a
-              className="my-2 block text-slate-200 hover:text-slate-100 text-xs font-medium duration-700"
-              href="https://www.openstreetmap.org/copyright/zh-TW"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="flex gap-2">
-                <div className="flex flex-col">
-                  <span>開放街圖版權與授權條款</span>
-                  <span>Copyright and License of OSM</span>{" "}
-                </div>
-                <ExtLinkIcon />
+        <div className="p-5 w-full md:w-2/3 m-auto text-slate-800 flex flex-wrap justify-left">
+          {uriComponents.footerSection.map((section) => (
+            <div className="p-2 w-full my-4 md:w-1/3 md:my-0" key={section.title}>
+              <div className="text-xs uppercase underline tracking-widest text-blue-100 font-medium mb-4">
+                {section.title}
               </div>
-            </a>
-          </div>
+              {(uriComponents.footerLink[section.list]).map((link) => (
+                <React.Fragment key={link.title}>
+                  {link.isExternal === true ?
+                    <a
+                      className="my-3 block whitespace-pre-wrap text-slate-200 hover:text-slate-100 text-sm font-medium duration-700"
+                      href={link.path}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      {link.title}
+                      <ExtLinkIcon />
+                    </a>
+                    :
+                    <Link
+                      className="my-2 block text-slate-200 hover:text-slate-100 text-sm font-medium duration-700"
+                      href={link.path}
+                    >
+                      {link.title}
+                    </Link>
+                  }
+                </React.Fragment>
+              ))}
+              {section.title === "法律事項 Legal Stuff" ?
+                <a
+                  className="my-8 block text-slate-200 hover:text-slate-100 text-xs font-medium duration-700"
+                  href="https://www.openstreetmap.org/copyright/zh-TW"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex gap-2">
+                    <div className="flex flex-col">
+                      <span>開放街圖版權與授權條款</span>
+                      <span>Copyright and License of OSM</span>
+                    </div>
+                    <ExtLinkIcon />
+                  </div>
+                </a> : null}
+            </div>
+          ))}
         </div>
       </div>
       {/* copyright section 版權告示 */}

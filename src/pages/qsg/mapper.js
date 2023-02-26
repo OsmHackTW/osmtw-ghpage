@@ -4,7 +4,7 @@ import Layout from "../../components/layouts/qsgLayout";
 import { ExtLinkIcon, EnIcon, Link } from "../../components/util";
 import SEO from "../../components/seo";
 
-const MapperPage = () => (
+const QsgMapperPage = () => (
   <Layout title="新手圖客">
     <SEO
       title="入門指南 Quick Start Guide"
@@ -90,4 +90,4 @@ const MapperPage = () => (
   </Layout>
 );
 
-export default MapperPage;
+export default QsgMapperPage;

@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { landingPageComponents } from "../glaube";
 import { OsmtwGuideTitle, ExtLinkIcon, Link } from "../util";
 
 function Layout({ title, children }) {
+  const [mounted, setMounted] = useState(false);
   const [isExpanded, toggleExpansion] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
     <div className="flex flex-col min-h-screen bg-white text-slate-900 z-50">
       <div className="border-b shadow z-40 fixed bg-white w-full">
@@ -29,11 +37,10 @@ function Layout({ title, children }) {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      d={`${
-                        isExpanded
+                      d={`${isExpanded
                           ? "M6 18L18 6M6 6l12 12"
                           : "M4 6h16M4 12h16M4 18h16"
-                      }`}
+                        }`}
                     />
                   </svg>
                 </button>

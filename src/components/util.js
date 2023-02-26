@@ -6,7 +6,7 @@ const logo = "/assets/images/logo.png";
 
 // common components 共通元件
 const Link = ({ href, children, ...props }) => (
-  <NextLink href={href}>
+  <NextLink passHref legacyBehavior href={href}>
     <a {...props}>{children}</a>
   </NextLink>
 );

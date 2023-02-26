@@ -20,77 +20,111 @@ const uriComponents = {
       title: "入門指南 ",
     },
   ],
+  footerSection: [
+    {
+      title: "了解更多 Find out more",
+      list: "sitemapLinks"
+    },
+    {
+      title: "台灣社群據點 Community Hubs",
+      list: "communityLinks"
+    },
+    {
+      title: "法律事項 Legal Stuff",
+      list: "legalLinks"
+    }
+  ],
   footerLink: {
     infoLinks: [
       {
-        route: "/about#community",
-        title: "關於台灣社群 TW Community",
+        path: "/about#community",
+        title: "關於台灣社群\nThe Taiwan Community",
+        isExternal: false
       },
       {
-        route: "/contact",
-        title: "聯絡我們 Contact",
+        path: "/contact",
+        title: "聯絡我們\nContact Us",
+        isExternal: false
       },
     ],
     sitemapLinks: [
       {
-        route: "/about#whatis",
+        path: "/about#whatis",
         title: "什麼是 OSM",
+        isExternal: false
       },
       {
-        route: "/events",
+        path: "/events",
         title: "活動資訊 - Events",
+        isExternal: false
       },
       {
-        route: "/news",
+        path: "/news",
         title: "新聞公告 - News",
+        isExternal: false
       },
       {
-        route: "/qsg",
+        path: "/qsg",
         title: "入門指南 - Get Started",
+        isExternal: false
       },
       {
-        route: "/faq",
+        path: "/faq",
         title: "常見問答集 - FAQ",
       },
     ],
     communityLinks: [
       {
-        url: "https://community.openstreetmap.org/c/communities/tw/42",
-        title: "OpenStreetMap Community 社群討論板",
+        path: "https://community.openstreetmap.org/c/communities/tw/42",
+        title: "OpenStreetMap Community\n社群討論板",
+        isExternal: true
       },
       {
-        url: "https://github.com/OsmHackTW/",
-        title: "Github",
+        path: "https://github.com/OsmHackTW/",
+        title: "GitHub",
+        isExternal: true
       },
       {
-        url: "https://www.facebook.com/openstreetmaptaiwan/",
+        path: "https://www.facebook.com/openstreetmaptaiwan/",
         title: "facebook",
+        isExternal: true
       },
       {
-        url: "https://hackmd.io/@osm-tw",
+        path: "https://t.me/joinchat/Aqu2IgnTuIidMfREdNmomQ/",
+        title: "telegram",
+        isExternal: true
+      },
+      {
+        path: "https://hackmd.io/@osm-tw",
         title: "HackMD 協作筆記",
+        isExternal: true
       },
       {
-        url: "https://trello.com/osmtw/",
+        path: "https://trello.com/osmtw/",
         title: "Trello 協作看板",
+        isExternal: true
       },
       {
-        url: "https://lists.openstreetmap.org/listinfo/talk-tw",
+        path: "https://lists.openstreetmap.org/listinfo/talk-tw",
         title: "郵件論壇 Mailing List",
+        isExternal: true
       },
     ],
     legalLinks: [
       {
-        route: "/tos",
+        path: "/tos",
         title: "使用條款 - Terms of Service",
+        isExternal: false
       },
       {
-        route: "/coc",
+        path: "/coc",
         title: "社群守則 - Code of Conduct",
+        isExternal: false
       },
       {
-        route: "/privacy",
+        path: "/privacy",
         title: "隱私權聲明 - Privacy Statment",
+        isExternal: false
       },
     ],
   },
@@ -101,7 +135,7 @@ const landingPageComponents = {
   feature: [
     {
       heading: "廣獲採用",
-      desc: " OSM 圖資廣獲包括 Amazon、Apple、BBC、facebook、Garmin、Uber、精靈寶可夢GO、法國航空、劍橋大學、維基百科等具領導地位的組織採用，在不同領域當中都深受歡迎。",
+      desc: " OSM 圖資廣獲包括 Amazon、Apple、BBC、facebook、Garmin、Uber、精靈寶可夢GO、中華郵政、法國航空、劍橋大學、維基百科等具領導地位的組織採用，在不同領域當中都深受歡迎。",
       SVGpath:
         "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
     },
