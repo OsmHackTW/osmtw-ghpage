@@ -184,6 +184,10 @@ const landingPageComponents = {
 };
 
 // About page components 關於頁面構成
+
+// className="text--fernGreen" 的超链接文本，在暗色界面里完全看不清，难以和背景分辨
+// 示例可见 https://imgur.com/a/GqZZE19
+
 const aboutPageComponents = {
   aboutOSM: [
     {
