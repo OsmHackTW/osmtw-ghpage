@@ -111,33 +111,6 @@ export default function Header() {
           </div>
         </div>
       </header>
-
-      {/* COVID-19 Alert */}
-      <div
-        className="bg-yellow-300 text-slate-800 px-1 py-2 md:p-3"
-        role="alert"
-      >
-        <div className="container items-center flex flex-row w-full lg:w-11/12 lg:max-w-5xl m-auto px-2 lg:px-0 leading-none">
-          <span className="h-8 w-8 md:h-6 md:w-6">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2.25"
-                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </span>
-          <span className="w-11/12 mx-auto ml-2 text-left text-xs font-semibold leading-5 md:text-sm">
-            預防感染 COVID-19 （武漢肺炎），請留意
-            <a href="https://www.cdc.gov.tw/" className="underline">
-              中央疫情中心最新公告防疫政策
-              <ExtLinkIcon />
-            </a>
-            ，配合防疫措施及注意個人衛生習慣，一同防疫大作戰！
-          </span>
-        </div>
-      </div>
     </div>
   );
 }

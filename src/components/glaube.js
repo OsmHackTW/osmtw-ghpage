@@ -1,5 +1,8 @@
 import { ExtLinkIcon, Pre } from "./util";
 
+const signUpIllustration = "assets/images/sign-up-illustration.png";
+// Derivative from https://github.com/openstreetmap/openstreetmap-website/blob/master/app/assets/images/sign-up-illustration.svg
+
 const uriComponents = {
   learnMore: "了解更多",
   headerLink: [
@@ -184,6 +187,10 @@ const landingPageComponents = {
 };
 
 // About page components 關於頁面構成
+
+// className="text--fernGreen" 的超链接文本，在暗色界面里完全看不清，难以和背景分辨
+// 示例可见 https://imgur.com/a/GqZZE19
+
 const aboutPageComponents = {
   aboutOSM: [
     {
@@ -193,7 +200,7 @@ const aboutPageComponents = {
         {
           segment: (
             <img
-              src="https://www.openstreetmap.org/assets/sign-up-illustration-6e149801aa318824882161d5c98349db7dc76885b2f829ca6edb068913393c49.png"
+              src={signUpIllustration}
               alt="OpenStreetMap"
             />
           ),

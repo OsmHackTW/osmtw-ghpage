@@ -115,6 +115,6 @@ a.text--fernGreen {
 
 @media (prefers-color-scheme: dark) {
   a.text--fernGreen {
-    @apply text-fernGreen-200;
+    @apply text-aozora-600;
   }
 }

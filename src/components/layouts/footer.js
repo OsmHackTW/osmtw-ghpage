@@ -106,7 +106,7 @@ function Footer() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              View Source on Github
+              在 Github 上查看原始碼
             </a>
           </div>
         </div>
