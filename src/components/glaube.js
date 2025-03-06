@@ -202,6 +202,7 @@ const aboutPageComponents = {
             <img
               src={signUpIllustration}
               alt="OpenStreetMap"
+              className="mx-auto"
             />
           ),
         },
