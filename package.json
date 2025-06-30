@@ -52,7 +52,7 @@
     "gh-pages": "^6.1.1",
     "husky": "^8.0.1",
     "postcss": "^8.4.31",
-    "prettier": "^3.1.1"
+    "prettier": "^3.6.2"
   },
   "repository": {
     "type": "git",
