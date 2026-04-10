@@ -42,7 +42,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          yarn ci
+          yarn install --immutable
           yarn build
           yarn export
           touch ./out/.nojekyll
