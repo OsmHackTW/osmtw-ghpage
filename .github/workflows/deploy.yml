@@ -44,7 +44,6 @@ jobs:
         run: |
           yarn install --immutable
           yarn build
-          yarn export
           touch ./out/.nojekyll
         env:
           CI: true

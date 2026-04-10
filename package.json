@@ -22,7 +22,6 @@
     "dev": "next dev",
     "deploy": "next build --prefix-paths && gh-pages -d public",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "export": "next export",
     "lint": "eslint .",
     "start": "next start",
     "prepare": "husky install",
