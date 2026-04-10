@@ -5078,7 +5078,7 @@ __metadata:
     postcss: "npm:^8.5.6"
     prettier: "npm:^3.8.2"
     prop-types: "npm:^15.8.1"
-    react: "npm:18"
+    react: "npm:19"
     react-dom: "npm:18"
     react-helmet: "npm:^6.1.0"
     swr: "npm:^2.1.5"
@@ -5718,12 +5718,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:18":
-  version: 18.2.0
-  resolution: "react@npm:18.2.0"
-  dependencies:
-    loose-envify: "npm:^1.1.0"
-  checksum: 10c0/b562d9b569b0cb315e44b48099f7712283d93df36b19a39a67c254c6686479d3980b7f013dc931f4a5a3ae7645eae6386b4aa5eea933baa54ecd0f9acb0902b8
+"react@npm:19":
+  version: 19.2.5
+  resolution: "react@npm:19.2.5"
+  checksum: 10c0/4b5f231dbef92886f602533c9ce3bde04d99f0e71dfb5d794c43e02726efaad0421c08688f75fc98a6d6e1dc017372e1af7abbfecdc86a79968f461675931a7a
   languageName: node
   linkType: hard
 
