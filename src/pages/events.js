@@ -2,17 +2,17 @@ import React from "react";
 import useSWR from "swr";
 import Layout from "../components/layouts/layout";
 import { ExtLinkIcon } from "../components/util";
-import SEO from "../components/seo";
+import PageMeta from "../components/metadata";
 
 const EventPage = () => (
   <Layout>
-    <SEO
+    <PageMeta
       keywords={["近期活動", "Upcoming Events"]}
       title="近期活動 Upcoming Events"
     />
     <section className="flex flex-col items-center justify-center my-8">
       <div className="relative w-full flex py-8">
-        <div className="w-5xl px-4 py-5 mx-auto sm:max-w-xl md:w-full lg:max-w-screen-xl rounded-t">
+        <div className="w-5xl px-4 py-5 mx-auto sm:max-w-xl md:w-full lg:max-w-(--breakpoint-xl) rounded-t">
           <div className="flex flex-col w-3xl md:w-6xl p-2 mb-8">
             <h3 className="uppercase text-xl px-0.5">Upcoming Events</h3>
             <h2 className="uppercase text-4xl text-semibold">近期活動</h2>
@@ -65,13 +65,12 @@ const OsmCalEvent = () => {
               {event.location?.short}
             </div>
           </div>
-          <div className="ml-2 flex-shrink-0 flex">
+          <div className="ml-2 shrink-0 flex">
             <div
-              className={`px-2 py-1 inline-flex text-base- leading-5 font-semibold rounded-full ${
-                event.cancelled === true
-                  ? "bg-red-100 text-red-800"
-                  : "bg-green-100 text-green-800"
-              }`}
+              className={`px-2 py-1 inline-flex text-base- leading-5 font-semibold rounded-full ${event.cancelled === true
+                ? "bg-red-100 text-red-800"
+                : "bg-green-100 text-green-800"
+                }`}
             >
               {event.cancelled === true ? "活期取消" : "如期舉辦"}
             </div>
@@ -99,7 +98,7 @@ const DummyEvent = () =>
           <div className="text-sm">MozSpace</div>
           <div className="text-sm">Huashan, Taipei, Taiwan</div>
         </div>
-        <div className="ml-2 flex-shrink-0 flex">
+        <div className="ml-2 shrink-0 flex">
           <div className="px-2 py-1 inline-flex text-base leading-5 font-semibold rounded-full bg-red-100 text-red-800">
             無時間表
           </div>

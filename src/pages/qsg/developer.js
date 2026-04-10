@@ -1,14 +1,12 @@
-/* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable max-len */
 import React from "react";
 import Layout from "../../components/layouts/qsgLayout";
-import SEO from "../../components/seo";
+import PageMeta from "../../components/metadata";
 import { ExtLinkIcon, EnIcon } from "../../components/util";
 
 export default function QsgDeveloperPage() {
   return (
     <Layout title="開發者">
-      <SEO
+      <PageMeta
         title="入門指南 Quick Start Guide"
         keywords={[
           "OpenStreetMap",
@@ -33,7 +31,7 @@ export default function QsgDeveloperPage() {
             className="font-bold text-lg text-slate-600"
             href="https://switch2osm.org/"
           >
-            Switch<span className="text-fernGreen-500">2OSM</span>
+            Switch<span className="text-warabi-500">2OSM</span>
           </a>
           <ExtLinkIcon />
           <EnIcon />
@@ -46,7 +44,7 @@ export default function QsgDeveloperPage() {
           只要一小時起！從其他圖資供應商轉換至 OpenStreetMap
           並不需很長時間。您可以利用&nbsp;
           <a
-            className="underline text-fernGreen-500"
+            className="underline text-warabi-500"
             href="http://leafletjs.com/"
           >
             Leaflet
@@ -55,7 +53,7 @@ export default function QsgDeveloperPage() {
           <EnIcon />
           和一系列供應商提供的
           <a
-            className="underline text-fernGreen-500"
+            className="underline text-warabi-500"
             href="https://switch2osm.org/providers/"
           >
             免費圖磚
@@ -88,7 +86,7 @@ export default function QsgDeveloperPage() {
                 href="https://switch2osm.org/serving-tiles/"
               >
                 <span className="text-slate-600">Switch</span>
-                <span className="text-fernGreen-500">2OSM</span>
+                <span className="text-warabi-500">2OSM</span>
               </a>{" "}
               - 自架圖磚
               <ExtLinkIcon />

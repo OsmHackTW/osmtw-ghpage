@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import SEO from "../../components/seo";
+import Link from 'next/link'
+import PageMeta from "../../components/metadata";
 import Footer from "../../components/layouts/footer";
-import { landingPageComponents } from "../../components/glaube";
-import { ExtLinkIcon, OsmtwGuideTitle, Link } from "../../components/util";
+import { landingPageComponents } from "../../components/landingData";
+import { ExtLinkIcon, OsmtwGuideTitle } from "../../components/util";
 
 const LandingImg = "../assets/images/RN990586_2000.jpg";
 
@@ -10,7 +11,7 @@ const QsgIndexPage = () => {
   const [isExpanded, toggleExpansion] = useState(false);
   return (
     <div className="antialiased text-slate-900 h-full items-center justify-center">
-      <SEO
+      <PageMeta
         title="入門指南 Quick Start Guide"
         keywords={[
           "OpenStreetMap",
@@ -49,24 +50,22 @@ const QsgIndexPage = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      d={`${
-                        isExpanded
-                          ? "M6 18L18 6M6 6l12 12"
-                          : "M4 6h16M4 12h16M4 18h16"
-                      }`}
+                      d={`${isExpanded
+                        ? "M6 18L18 6M6 6l12 12"
+                        : "M4 6h16M4 12h16M4 18h16"
+                        }`}
                     />
                   </svg>
                 </button>
               </div>
               <div className="w-full md:w-3/4 flex flex-row flex-no-wrap justify-around self-center place-items-center no-underline">
                 <nav
-                  className={`${
-                    isExpanded ? "block" : "hidden"
-                  } px-2 md:block md:items-center w-full md:w-auto sm:w-auto md:self-end space-y-1`}
+                  className={`${isExpanded ? "block" : "hidden"
+                    } px-2 md:block md:items-center w-full md:w-auto sm:w-auto md:self-end space-y-1`}
                 >
                   {landingPageComponents.quickStartGuide.map((item) => (
                     <Link
-                      className="block md:inline pr-8 font-medium text-lg text-fernGreen-400 hover:text-fernGreen-600"
+                      className="block md:inline pr-8 font-medium text-lg text-warabi-400 hover:text-warabi-600"
                       key={item.role}
                       href={item.route}
                     >
@@ -91,7 +90,7 @@ const QsgIndexPage = () => {
               <div className="sm:text-center lg:text-left">
                 <h1 className="text-4xl font-extrabold text-slate-900 sm:text-5xl md:text-6xl space-y-3">
                   <span className="block">以開源圖資豐富</span>
-                  <span className="block text-fernGreen-600">數位體驗</span>
+                  <span className="block text-warabi-600">數位體驗</span>
                 </h1>
                 <h4 className="mt-3 text-base text-slate-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                   無論你是首次使用 OpenStreetMap
@@ -102,15 +101,15 @@ const QsgIndexPage = () => {
                   <div className="justify-center font-bold text-white">
                     <Link
                       href="/qsg/get-started/"
-                      className="w-full flex rounded-full shadow px-8 py-3 bg-fernGreen-600 hover:bg-fernGreen-700 md:py-4 md:text-lg md:px-10"
+                      className="w-full flex rounded-full shadow px-8 py-3 bg-warabi-600 hover:bg-warabi-700 md:py-4 md:text-lg md:px-10"
                     >
                       開始行動
                     </Link>
                   </div>
-                  <div className="justify-center font-medium text-fernGreen-700 mt-3 sm:mt-0 sm:ml-3">
+                  <div className="justify-center font-medium text-warabi-700 mt-3 sm:mt-0 sm:ml-3">
                     <a
                       href="https://www.openstreetmap.org/"
-                      className="w-full flex rounded-full shadow px-8 py-3 bg-fernGreen-100 hover:bg-fernGreen-200 md:py-4 md:text-lg md:px-10"
+                      className="w-full flex rounded-full shadow px-8 py-3 bg-warabi-100 hover:bg-warabi-200 md:py-4 md:text-lg md:px-10"
                     >
                       OpenStreetMap.org
                       <ExtLinkIcon />

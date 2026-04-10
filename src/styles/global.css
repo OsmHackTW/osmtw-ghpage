@@ -1,16 +1,42 @@
 /* ./src/styles/global.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/* override system preference */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* aozora */
+  --color-aozora-500: #50b8e7;
+  --color-aozora-50: #edf7fc;
+  --color-aozora-100: #cae9f7;
+  --color-aozora-200: #dcf0fa;
+  --color-aozora-300: #b9e2f5;
+  --color-aozora-400: #84cdee;
+  --color-aozora-600: #48a5cf;
+  --color-aozora-700: #3880a1;
+  --color-aozora-800: #285c73;
+  --color-aozora-900: #10242e;
+  /* warabi */
+  --color-warabi-500: #4f7942;
+  --color-warabi-50: #c9dec3;
+  --color-warabi-100: #bad5b2;
+  --color-warabi-200: #9dc391;
+  --color-warabi-300: #7fb170;
+  --color-warabi-400: #659a54;
+  --color-warabi-600: #395830;
+  --color-warabi-700: #24371e;
+  --color-warabi-800: #0e160c;
+  --color-warabi-900: #000000;
+}
 
 .bg-osmtw-landing-hero {
-  background-image: url("/assets/images/hero-landing.png");
+  background-image: url('/assets/images/hero-landing.png');
   background: cover center;
 }
 
 .osmtw-osmcontributors--bottom-left::before {
   display: inline-block;
-  content: "© OpenStreetMap contributors";
+  content: '© OpenStreetMap contributors';
   color: #555;
   font-size: 0.75rem;
   font-weight: normal;
@@ -24,7 +50,7 @@
 
 .osmtw-osmcontributors--bottom-right::before {
   display: inline-block;
-  content: "© OpenStreetMap contributors";
+  content: '© OpenStreetMap contributors';
   color: #555;
   font-size: 0.75rem;
   font-weight: normal;
@@ -38,7 +64,7 @@
 
 .osmtw-osmcontributors--top-left::before {
   display: inline-block;
-  content: "© OpenStreetMap contributors";
+  content: '© OpenStreetMap contributors';
   color: #555;
   font-size: 0.75rem;
   font-weight: normal;
@@ -51,7 +77,8 @@
 
 .highlight-yellow {
   font-weight: bolder;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       104deg,
       rgba(255, 226, 80, 0) 0.9%,
       rgba(255, 226, 80, 1.25) 2.4%,
@@ -71,14 +98,16 @@
   box-decoration-break: clone;
   margin: 0;
   border-radius: 5px;
-  text-shadow: -12px 12px 9.8px rgba(255, 226, 80, 0.7),
+  text-shadow:
+    -12px 12px 9.8px rgba(255, 226, 80, 0.7),
     18px -15px 7.3px rgba(240, 240, 240, 0.8),
     -15px -21px 27px rgba(240, 240, 240, 0.8);
 }
 
 .highlight-green {
   font-weight: bolder;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       104deg,
       rgba(130, 255, 173, 0) 0.9%,
       rgba(130, 255, 173, 1.25) 2.4%,
@@ -98,7 +127,8 @@
   box-decoration-break: clone;
   margin: 0;
   border-radius: 5px;
-  text-shadow: -12px 12px 9.8px rgba(130, 255, 173, 0.7),
+  text-shadow:
+    -12px 12px 9.8px rgba(130, 255, 173, 0.7),
     21px -18.1px 7.3px rgba(240, 240, 240, 0.8),
     -18.1px -24.6px 30px rgba(240, 240, 240, 0.8);
 }
@@ -109,12 +139,33 @@
   width: 100% !important;
 }
 
-a.text--fernGreen {
-  @apply text-fernGreen-600;
+a.text--warabi {
+  @apply text-warabi-600;
 }
 
 @media (prefers-color-scheme: dark) {
-  a.text--fernGreen {
+  a.text--warabi {
     @apply text-aozora-600;
   }
+}
+
+/* Legal pages (tos, privacy) */
+.legal-page-section {
+  @apply antialiased text-slate-900 py-2 h-full flex items-center justify-center dark:text-slate-200;
+}
+
+.legal-card {
+  @apply bg-white shadow overflow-hidden sm:rounded-lg dark:bg-slate-800;
+}
+
+.legal-row {
+  @apply px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6;
+}
+
+.legal-term {
+  @apply text-base font-semibold text-warabi-600 dark:text-warabi-200;
+}
+
+.legal-body {
+  @apply mt-1 text-sm sm:mt-0 sm:col-span-2 dark:text-slate-200;
 }

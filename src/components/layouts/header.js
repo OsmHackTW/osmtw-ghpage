@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from 'next-themes';
-import { uriComponents } from "../glaube";
-import { ExtLinkIcon, Link } from "../util";
+import Link from 'next/link';
+import { uriComponents } from "../navData";
+import { ExtLinkIcon } from "../util";
 
 const logo = "/assets/images/logo.png";
 
@@ -30,11 +31,11 @@ export default function Header() {
 
   return (
     <div>
-      <header className="bg-fernGreen-200 flex flex-row justify-between w-full px-2 lg:px-8 text-slate-900">
+      <header className="bg-warabi-200 flex flex-row justify-between w-full px-2 lg:px-8 text-slate-900">
         <div className="flex flex-col flex-1 sm:flex-row items-center p-2 max-w-7xl mx-auto md:p-4 sm:items-stretch sm:justify-start align-middle">
           <div className="sm:w-full md:w-1/6 lg:w-1/3 w-full self-start flex flex-row flex-no-wrap justify-between items-center">
             <Link href="/">
-              <h1 className="flex flex-grow-0 no-underline">
+              <h1 className="flex grow-0 no-underline">
                 <img
                   className="block h-10 w-auto"
                   src={logo}
@@ -90,19 +91,19 @@ export default function Header() {
                   </Link>
                 ))}
                 <button
-                type="button"
-                className="block mt-4 no-underline md:inline-block md:mt-0 md:ml-6"
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                title="深色模式切換 Dark Mode On/Off"
-              >
-                {themeToogleIcon(theme)}
-              </button>
+                  type="button"
+                  className="block mt-4 no-underline md:inline-block md:mt-0 md:ml-6"
+                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                  title="深色模式切換 Dark Mode On/Off"
+                >
+                  {themeToogleIcon(theme)}
+                </button>
               </nav>
             </div>
             <div className="hidden float-right md:w-1/4 md:flex flex-no-wrap justify-between items-center">
               <a
                 href="https://osm.org/"
-                className="px-4 py-2 rounded-full font-semibold tracking-wide bg-green-800 text-white outline-none focus:outline-none"
+                className="px-4 py-2 rounded-full font-semibold tracking-wide bg-green-800 text-white outline-hidden focus:outline-hidden"
               >
                 OSM.org
                 <ExtLinkIcon />

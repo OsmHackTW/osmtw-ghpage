@@ -1,11 +1,11 @@
 import React from "react";
 
 import Layout from "../components/layouts/layout";
-import SEO from "../components/seo";
+import PageMeta from "../components/metadata";
 
 const CocPage = () => (
   <Layout>
-    <SEO
+    <PageMeta
       title="社群守則 Code of Conduct"
       keywords={["社群守則", "Code of Conduct"]}
     />

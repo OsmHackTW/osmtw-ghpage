@@ -1,13 +1,11 @@
-/* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable max-len */
 import React from "react";
 import Layout from "../../components/layouts/qsgLayout";
-import SEO from "../../components/seo";
+import PageMeta from "../../components/metadata";
 import { ExtLinkIcon } from "../../components/util";
 
 const QsgGeneralPage = () => (
   <Layout title="一般使用者">
-    <SEO
+    <PageMeta
       title="入門指南 Quick Start Guide"
       keywords={[
         "OpenStreetMap",
@@ -26,7 +24,7 @@ const QsgGeneralPage = () => (
         OsmAnd 是以 OpenStreetMap 為基底，在Android及iOS系統上的導航應用程式。
       </p>
       <p className="my-1 mb-4">
-        <a className="underline text-fernGreen-600" href="http://osmand.net/">
+        <a className="underline text-warabi-600" href="http://osmand.net/">
           http://osmand.net/
         </a>
         <ExtLinkIcon />
@@ -38,7 +36,7 @@ const QsgGeneralPage = () => (
       </p>
       <p className="my-1 mb-4">
         <a
-          className="underline text-fernGreen-600"
+          className="underline text-warabi-600"
           href="https://mapcomplete.osm.be/"
         >
           https://mapcomplete.osm.be/
@@ -52,7 +50,7 @@ const QsgGeneralPage = () => (
       </p>
       <p className="my-1 mb-4">
         <a
-          className="underline text-fernGreen-600"
+          className="underline text-warabi-600"
           href="https://play.google.com/store/apps/details?id=de.westnordost.streetcomplete"
         >
           {" "}
@@ -60,7 +58,7 @@ const QsgGeneralPage = () => (
         </a>
         &nbsp;-&nbsp;
         <a
-          className="underline text-fernGreen-600"
+          className="underline text-warabi-600"
           href="https://github.com/streetcomplete/StreetComplete/"
         >
           GitHub

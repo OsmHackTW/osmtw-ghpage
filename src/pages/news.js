@@ -1,14 +1,13 @@
-/* eslint-disable no-irregular-whitespace */
 import React from "react";
 import useSWR from "swr";
 import { useTheme } from 'next-themes';
 import { ExtLinkIcon } from "../components/util";
 import Layout from "../components/layouts/layout";
-import SEO from "../components/seo";
+import PageMeta from "../components/metadata";
 
 const NewsPage = () => (
   <Layout>
-    <SEO keywords={["新聞公告", "週刊OSM", "News", "Weekly OSM"]} title="新聞公告 News - 週刊OSM Weekly OSM" />
+    <PageMeta keywords={["新聞公告", "週刊OSM", "News", "Weekly OSM"]} title="新聞公告 News - 週刊OSM Weekly OSM" />
     <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center">
       <div className="py-32" />
       <div className="md:w-3/4 mx-auto">
@@ -35,7 +34,7 @@ const WeeklyOsmFeed = () => {
     :
     <section className="flex flex-col items-center justify-center my-8">
       <div className="relative w-full flex py-8">
-        <div className="w-full px-4 py-5 mx-auto lg:max-w-screen-xl rounded-t dark:text-white">
+        <div className="w-full px-4 py-5 mx-auto lg:max-w-(--breakpoint-xl) rounded-t dark:text-white">
           <div className="flex flex-col w-3xl md:w-6xl md:p-2 mb-8">
             <div id="weeklyosm-title">
               <h2 className="uppercase text-4xl text-semibold">
@@ -50,7 +49,7 @@ const WeeklyOsmFeed = () => {
                 {/* Thanks to Dom (dcode) for his table style! 
                   * https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l
                   */}
-                {theme === "light" ? 
+                {theme === "light" ?
                   `#feedContent {
                     --theme-primary: #777777;
                     --theme-secondary: #009879;

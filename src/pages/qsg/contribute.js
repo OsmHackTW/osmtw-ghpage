@@ -1,11 +1,12 @@
 import React from "react";
+import Link from 'next/link'
 import Layout from "../../components/layouts/qsgLayout";
-import { ExtLinkIcon, Link } from "../../components/util";
-import SEO from "../../components/seo";
+import { ExtLinkIcon } from "../../components/util";
+import PageMeta from "../../components/metadata";
 
 const ContributePage = () => (
   <Layout title="參與並支持台灣開放街圖社群">
-    <SEO
+    <PageMeta
       title="入門指南 Quick Start Guide"
       keywords={[
         "OpenStreetMap",
@@ -21,7 +22,7 @@ const ContributePage = () => (
     />
     <div>
       <p className="my-4">
-        <span className="font-semibold text-lg text-fernGreen-500">
+        <span className="font-semibold text-lg text-warabi-500">
           OpenStreetMap 開放街圖{" "}
         </span>
         是一個非盈利、由社群驅動、自由且開放的專案。
@@ -39,7 +40,7 @@ const ContributePage = () => (
           </Link>{" "}
           <h2 className="text-sm text-slate-400">/mapper</h2>
         </div>
-        <div className="text-fernGreen-500 border rounded shadow-md my-3 p-4">
+        <div className="text-warabi-500 border rounded shadow-md my-3 p-4">
           <a
             className="flex flex-col lg:flex-row justify-between"
             href="https://ocf.neticrm.tw/civicrm/contribute/transact?id=16"

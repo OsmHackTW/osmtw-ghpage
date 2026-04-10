@@ -1,15 +1,8 @@
-/* eslint-disable import/no-named-default */
 import React, { useState } from "react";
-import { default as NextLink } from "next/link";
 
 const logo = "/assets/images/logo.png";
 
 // common components 共通元件
-const Link = ({ href, children, ...props }) => (
-  <NextLink passHref legacyBehavior href={href}>
-    <a {...props}>{children}</a>
-  </NextLink>
-);
 
 const ExtLinkIcon = () => (
   <svg
@@ -25,12 +18,12 @@ const ExtLinkIcon = () => (
 const EnIcon = () => <span className="text-xs text-slate-400">(英語)</span>;
 
 const OsmtwGuideTitle = () => (
-  <h1 className="flex flex-grow-0 place-items-center ">
+  <h1 className="flex grow-0 place-items-center ">
     <span className="sr-only">入門指南</span>
     <span className="block h-10 w-10">
       <img src={logo} alt="OSMTW 開放街圖台灣" aria-label="開放街圖台灣LOGO" />
     </span>
-    <span className="px-4 text-xl font-semibold text-fernGreen-500 inlne">
+    <span className="px-4 text-xl font-semibold text-warabi-500 inlne">
       入門指南
     </span>
   </h1>
@@ -62,4 +55,4 @@ const Pre = ({ content }) => (
   <span className="font-mono bg-indigo-50 mx-0.5">{content}</span>
 );
 
-export { ExtLinkIcon, EnIcon, OsmtwGuideTitle, Accordion, Pre, Link };
+export { ExtLinkIcon, EnIcon, OsmtwGuideTitle, Accordion, Pre };

@@ -3,7 +3,7 @@ import Head from "next/head";
 import config from "../config";
 
 // eslint-disable-next-line react/prop-types
-export default function SEO({ description, title }) {
+export default function PageMeta({ description, title }) {
   const siteTitle = config.title;
 
   return (

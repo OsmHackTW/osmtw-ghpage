@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { landingPageComponents } from "../glaube";
-import { OsmtwGuideTitle, ExtLinkIcon, Link } from "../util";
+import Link from 'next/link'
+import { landingPageComponents } from "../landingData";
+import { OsmtwGuideTitle, ExtLinkIcon } from "../util";
 
 function Layout({ title, children }) {
   const [mounted, setMounted] = useState(false);
@@ -38,8 +39,8 @@ function Layout({ title, children }) {
                       strokeLinejoin="round"
                       strokeWidth="2"
                       d={`${isExpanded
-                          ? "M6 18L18 6M6 6l12 12"
-                          : "M4 6h16M4 12h16M4 18h16"
+                        ? "M6 18L18 6M6 6l12 12"
+                        : "M4 6h16M4 12h16M4 18h16"
                         }`}
                     />
                   </svg>
@@ -67,7 +68,7 @@ function Layout({ title, children }) {
                   <li>
                     <Link
                       href="/qsg/get-started/"
-                      activeClassName="border-t border-b border-l bg-slate-50 text-fernGreen-500 hover:bg-slate-50"
+                      activeClassName="border-t border-b border-l bg-slate-50 text-warabi-500 hover:bg-slate-50"
                       className="block mt-4 p-3 no-underline w-full lg:inline-block lg:mt-0 text-slate-700 hover:bg-slate-300"
                     >
                       開始之前
@@ -76,7 +77,7 @@ function Layout({ title, children }) {
                   <li>
                     <Link
                       href="/qsg/contribute/"
-                      activeClassName="border-t border-b border-l bg-slate-50 text-fernGreen-500 hover:bg-slate-50"
+                      activeClassName="border-t border-b border-l bg-slate-50 text-warabi-500 hover:bg-slate-50"
                       className="block mt-4 p-3 no-underline w-full lg:inline-block lg:mt-0 text-slate-700 hover:bg-slate-300"
                     >
                       參與貢獻
@@ -87,7 +88,7 @@ function Layout({ title, children }) {
                   {landingPageComponents.quickStartGuide.map((item) => (
                     <li key={item.role}>
                       <Link
-                        activeClassName="border-t border-b border-l bg-slate-50 text-fernGreen-500 hover:bg-slate-50"
+                        activeClassName="border-t border-b border-l bg-slate-50 text-warabi-500 hover:bg-slate-50"
                         className="block mt-4 p-3 no-underline w-full lg:inline-block lg:mt-0 text-slate-700 hover:bg-slate-300"
                         key={item.role}
                         href={item.route}
@@ -98,16 +99,6 @@ function Layout({ title, children }) {
                   ))}
                 </ul>
                 <ul className="py-4 ml-4 lg:ml-10 flex-1 overflow-auto font-bold">
-                  <li>
-                    <Link
-                      activeClassName="border-t border-b border-l bg-slate-50 text-fernGreen-500 hover:bg-slate-50"
-                      className="block mt-4 p-3 no-underline w-full lg:inline-block lg:mt-0 text-slate-700 hover:bg-slate-300"
-                      key="covid-mapping"
-                      href="/qsg/covid19-mapping/"
-                    >
-                      COVID-19 Mapping
-                    </Link>
-                  </li>
                   <li>
                     <a
                       className="block mt-4 p-3 no-underline w-full text-sm lg:inline-block lg:mt-0 text-slate-700 hover:bg-slate-300"

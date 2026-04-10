@@ -1,10 +1,12 @@
 import * as React from "react";
+import Link from 'next/link';
 
 import Layout from "../components/layouts/layout";
-import { uriComponents, landingPageComponents } from "../components/glaube";
-import { ExtLinkIcon, Link } from "../components/util";
+import { uriComponents } from "../components/navData";
+import { landingPageComponents } from "../components/landingData";
+import { ExtLinkIcon } from "../components/util";
 
-import SEO from "../components/seo";
+import PageMeta from "../components/metadata";
 
 const RN990698 = "assets/images/RN990698_2000.jpg";
 const mapLayersd0 = "assets/images/landing_maplayers_d0.png";
@@ -16,7 +18,7 @@ const { learnMore } = uriComponents;
 export default function Home() {
   return (
     <Layout>
-      <SEO
+      <PageMeta
         title="首頁"
         keywords={[
           "OpenStreetMap",
@@ -34,20 +36,20 @@ export default function Home() {
       <section className="flex flex-col items-center">
         <div className="relative w-full flex py-32 md:py-64 bg-cover bg-center bg-no-repeat object-fill bg-osmtw-landing-hero osmtw-osmcontributors--bottom-right">
           <div className="w-full md:w-11/12 lg:w-full xl:w-3/4 mx-auto p-2">
-            <div className="flex-1 text-center md:text-left bg-slate-100 bg-opacity-25 mx-auto px-4 my-4 md:px-16 md:mr-8 lg:ml-16">
+            <div className="flex-1 text-center md:text-left bg-slate-100/25 mx-auto px-4 my-4 md:px-16 md:mr-8 lg:ml-16">
               <div className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-900 leading-none my-4 ">
                 開放街圖・台灣
               </div>
-              <div className="text-2xl lg:text-3xl font-bold tracking-tight text-slate-700 pb-4 md:space-x-4">
+              <div className="text-2xl lg:text-3xl font-bold tracking-tight text-slate-700 pb-4 mb-6 md:space-x-4">
                 <span className="block md:inline">自由開放的圖資</span>
                 <span className="block md:inline">廣泛運用的圖資</span>
               </div>
-              <button
-                type="button"
-                className="my-2 px-6 py-2 md:my-4 md:px-8 md:py-4 rounded-full font-semibold tracking-wide bg-pink-500 text-white outline-none focus:outline-none hover:shadow-lg hover:bg-pink-600 transition duration-200 ease-in-out"
+              <Link
+                href="https://osm.org/"
+                className="my-2 px-6 py-2 md:my-4 md:px-8 md:py-4 rounded-full font-semibold tracking-wide bg-pink-500 text-white outline-hidden focus:outline-hidden hover:shadow-lg hover:bg-pink-600 transition duration-200 ease-in-out"
               >
-                立刻開始使用
-              </button>
+                立刻開始使用 <ExtLinkIcon />
+              </Link>
             </div>
           </div>
         </div>
@@ -56,7 +58,7 @@ export default function Home() {
       {/* Why OSM */}
       <section className="flex flex-col items-center">
         <div className="relative w-full flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
-          <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+          <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-(--breakpoint-xl) md:px-24 lg:px-8 lg:py-20">
             <div className="flex flex-col mb-6 lg:flex-row md:mb-10">
               <div className="w-full mb-8 md:mb-16 lg:w-1/2">
                 <h2 className="max-w-full text-3xl lg:text-4xl xl:text-5xl font-bold highlight-yellow text-slate-900 dark:bg-slate-400 dark:rounded-none xl:max-w-lg">
@@ -121,19 +123,18 @@ export default function Home() {
             >
               <path d="M50 0H100L50 100H0L50 0Z" />
             </svg>
-            {/* eslint-disable jsx-a11y/img-redundant-alt */}
             <img
               className="object-cover w-full h-48 rounded-lg shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
               src={RN990698}
               alt="Photo by Rainny Lin (C) MSF"
             />
           </div>
-          <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
+          <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-(--breakpoint-xl)">
             <div className="lg:my-40 lg:max-w-xl">
               <p className="hidden gap-2 ml-2 py-4 md:flex">
                 {landingPageComponents.hashtag.map((hashtag) => (
                   <React.Fragment
-                    key={hashtag.id}>
+                    key={hashtag}>
                     <span
                       className="px-3 py-px text-sm font-semibold tracking-wider text-indigo-700 uppercase rounded-full border-2 border-indigo-600 hover:border-blue-800 hover:text-blue-800"
                     >
@@ -150,13 +151,13 @@ export default function Home() {
                 <span className="block font-black">自己畫</span>
               </h2>
               <h3 className="p-2 mb-5 text-base text-slate-700 md:text-lg md:pr-16 lg:pr-4 xl:pr-8">
-                地理資訊作為社會共享資源，不應當受個別企業壟斷並完全商業化，就由你我重新奪回地圖的話語權。
+                地理資訊是全民共享的寶貴資源，透過開放協作的力量，讓人人都能參與地圖的建構與維護，攜手打造更完整、更精準的地理世界。
               </h3>
               <div className="flex items-center mb-8">
                 <a
                   href="https://osm.org/"
                   aria-label=""
-                  className="inline-flex items-center justify-center h-12 py-px px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-indigo-600 hover:bg-blue-600 focus:shadow-outline focus:outline-none"
+                  className="inline-flex items-center justify-center h-12 py-px px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-indigo-600 hover:bg-blue-600 focus:shadow-outline focus:outline-hidden"
                 >
                   開始畫圖 <ExtLinkIcon />
                 </a>
@@ -267,7 +268,7 @@ export default function Home() {
                 <div className="p-4 md:w-1/3" key={link.id}>
                   <div className="flex rounded-lg h-full shadow-lg bg-slate-100 p-8 flex-col">
                     <div className="flex items-center mb-3">
-                      <div className="w-12 h-12 mr-3 inline-flex items-center justify-center rounded-full bg-green-500 text-white flex-shrink-0">
+                      <div className="w-12 h-12 mr-3 inline-flex items-center justify-center rounded-full bg-green-500 text-white shrink-0">
                         <svg
                           className="p-2"
                           fill="none"
@@ -285,7 +286,7 @@ export default function Home() {
                         {link.role}
                       </h2>
                     </div>
-                    <div className="flex-grow">
+                    <div className="grow">
                       <p className="leading-relaxed text-normal">
                         {link.desc}
                       </p>
@@ -326,7 +327,7 @@ export default function Home() {
                 馬上開始使用開放街圖！
               </span>
             </h2>
-            <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+            <div className="mt-8 flex lg:mt-0 lg:shrink-0">
               <div className="inline-flex rounded-md shadow">
                 <a
                   href="https://osm.org/"

@@ -1,83 +1,149 @@
 import * as React from "react";
 import Layout from "../components/layouts/layout";
-import SEO from "../components/seo";
-import { tosPageComponents } from "../components/glaube";
+import PageMeta from "../components/metadata";
+import { LegalPageTitle, LegalArticleRow } from "../components/legal";
 
-const acceptance = [
+const lastModified = "2021-12-22";
+
+const preamble = {
+  zh: [
+    ["在", "使用網站服務前，請您務必仔細閱讀本條款及細則。當您進入本網站及使用其任何服務時，即代表您同意、接受並遵守以下之使用條款及細則（下稱此條款）。此條款為您與本網站共同訂立。"],
+    "如您為第三方使用本網站服務，則您將代表第三方接受此條款及承擔責任。除非您明確發出聲明，否則您以任何形式使用本網站服務，包括發布新的產品或服務，均受此條款約束。",
+    "如您不同意、接受或遵守此條款，您將無法使用本網站之任何服務。",
+  ],
+  en: [
+    'Welcome to the OpenStreetMap Taiwan website. By using our website, you are agreeing to comply with and be bound by the following terms and conditions of use (the "agreement"), and notices contained herein and as they may change, from time to time. Please review them carefully.',
+    'If you are entering into this agreement on behalf of third parties, you represent that you have the authority to bind such parties to these Terms and Conditions, in which the case "You" or "Your" shall refer to such parties. If you do not have such authority, or if you disagree with any part of these terms and conditions, please do not use our service.',
+  ],
+};
+
+const articles = [
   {
-    chinese: (<><span className="md:text-4xl">在</span>使用網站服務前，請您務必仔細閱讀本條款及細則。當您進入本網站及使用其任何服務時，即代表您同意、接受並遵守以下之使用條款及細則（下稱此條款）。此條款為您與本網站共同訂立。</>)
+    section: { zh: "定義", en: "Definitions" },
+    text: {
+      zh: "在本條款及細則中，凡提述：",
+      en: "In these Terms and Conditions references to:",
+    },
+    items: {
+      zh: [
+        "「包括」指包括但並不局限於所列詞語的一般涵義；",
+        "「開放街圖」、「OSM」指 OpenStreetMap；",
+        "「開放街圖基金會」、「基金會」、「OSMF」指於2006年8月22日在英格蘭與威爾斯以有限責任公司形式註冊的非營利組織；",
+        "「我們」、「社群」、「台灣社群」、「OSMTW」指開放街圖台灣社群及其成員；",
+        "「您」、「您的」、「你」、「你的」指閣下，即網站使用者。",
+      ],
+      en: [
+        '"including" means including, without limitation to the generality of the surrounding words;',
+        '"our", "ours", "us", "we" and "OSMTW" refer to OpenStreetMap Taiwan Community and its members;',
+        '"you", "your" and "yours" refer to you, visitor.',
+      ],
+    },
   },
-  { chinese: "如您為第三方使用本網站服務，則您將代表第三方接受此條款及承擔責任。除非您明確發出聲明，否則您以任何形式使用本網站服務，包括發布新的產品或服務，均受此條款約束。" },
   {
-    chinese: "如您不同意、接受或遵守此條款，您將無法使用本網站之任何服務。"
+    section: { zh: "一般條款", en: "Terms" },
+    text: {
+      zh: "本服務條款構成您與本網站就您使用本服務之完整合意，取代您先前與本網站間有關本服務所為之任何約定。訪問本網站，即表示您同意接受網站的使用條款、隱私政策，所有適用的法律和法規約束，並同意您有責任遵守任何適用之當地法律。若您不同意這些條款中的任何一項，則無法使用或訪問本網站。本網站內容應受著作權所保護。",
+      en: "By accessing this website, you are agreeing to be bound by these website Terms and Conditions of Use, our Privacy Policy, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright law.",
+    },
   },
   {
-    english:
-      'Welcome to the OpenStreetMap Taiwan website. By using our website, you are agreeing to comply with and be bound by the following terms and conditions of use (the "agreement"), and notices contained herein and as they may change, from time to time. Please review them carefully.',
+    section: { zh: "免責事項", en: "Disclaimer" },
+    text: {
+      zh: "本網站及其內容是按照「現狀」來提供的，OSMTW對其使用、可用性、準確性或表現不作任何明示的或隱含的保証或聲明；包括但不限於對本網站不會中斷或可連續登入的保證。對於本網站所有刊載資料、產品及/或服務的任何適用性之陳述；對其適銷性的非明確保證；對本網站之任何有關服務的特定用途適用性或非侵權性。",
+      en: "The materials on this website are provided 'as is'. OSMTW makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, OSMTW does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its Internet website or otherwise relating to such materials or on any sites linked to this site.",
+    },
   },
   {
-    english:
-      'If you are entering into this agreement on behalf of third parties, you represent that you have the authority to bind such parties to these Terms and Conditions, in which the case "You" or "Your" shall refer to such parties. If you do not have such authority, or if you disagree with any part of these terms and conditions, please do not use our service.',
+    section: { zh: "責任限制", en: "Limitations" },
+    text: {
+      zh: "我們並不會就因使用本網站所引致或與之有關的任何性質的損失、損害或傷害負任何責任，以法律所許可的最大程度為限。此乃適用於所有屬任何性質的損害（包括但不限於直接、間接、附帶的、懲罰性或連帶損害、資料、收入或利潤損失、財產損失或損害及第三方申索）的綜合性賠償責任限制。",
+      en: "In no event shall OSMTW be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption,) arising out of the use or inability to use the materials on OSMTW's Internet site, even if OSMTW or an authorized representative has been notified orally or in writing of the possibility of such damage.",
+    },
+  },
+  {
+    section: { zh: "修訂及勘誤", en: "Revisions and Errata" },
+    text: {
+      zh: "作為推廣開放街之在地公民團體，我們致力確保網站內容的正確性，但網站內容仍有可能出現技術、文字或影像上等錯誤，故我們無法為上述作出任何保証。網站可能隨時或定期會有變動，請您不時查閱有關的材料。",
+      en: "The materials appearing on OSMTW's website could include technical, typographical, or photographic errors. OSMTW does not warrant that any of the materials on its website are accurate, complete, or current. OSMTW may make changes to the materials contained on its website at any time without notice. OSMTW does not, however, make any commitment to update the materials.",
+    },
+  },
+  {
+    section: { zh: "準據法及管轄法院", en: "Governing Laws and Jurisdiction" },
+    text: {
+      zh: "本服務條款之解釋與適用，及其派生之一切爭議，應以中華民國法令為準據法，且以臺灣臺北地方法院為第一審管轄法院。網站的使用適用於一般條款和條件。",
+      en: "Any claim and dispute relating to this agreement shall be governed by the laws of Taiwan (the Republic of China) without regard to its conflict of law provisions. You agree that the Taiwan Taipei District Court shall have the exclusive jurisdiction over all questions and controversies arising out of or in connection with the performance or execution of this Agreement. General Terms and Conditions applicable to Use of a website.",
+    },
+  },
+  {
+    section: { zh: "可分割性", en: "Severability" },
+    text: {
+      zh: "倘若任何具有效司法管轄權的法院或行政機關裁定本條款及細則的任何部分不合法、無效或不能執行，該項裁定並不影響本條款及細則其他部分的執行。",
+      en: "If any part of these Terms and Conditions is held by any court or administrative body of competent jurisdiction to be illegal, void or unenforceable, such determination will not impair the enforceability of the remaining parts of these Terms and Conditions.",
+    },
+  },
+  {
+    section: { zh: "準據文本", en: "Governing Version" },
+    text: {
+      zh: "若本條款及細則的中、英文本有任何歧異，應以中文本為準。",
+      en: "In the event of discrepancies between the English and Chinese versions, the Chinese version shall apply and prevail.",
+    },
   },
 ];
 
-// markup
 export default function TosPage() {
   return (
     <Layout>
-      <SEO
+      <PageMeta
         title="服務約定條款及細則 Terms and Conditions"
         keywords={["服務約定條款及細則", "Terms and Conditions"]}
       />
-      <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center dark:text-slate-200">
-        <div className="w-full xl:w-8/12 2mx-auto px-4 sm:px-8  pb-16">
-          <div className="main-title my-8 md:my-16">
-            <h1 className="font-bold text-xl md:text-4xl lg:text-5xl text-center my-4">
-              服務約定條款及細則
-            </h1>
-            <h1 className="font-bold text-slate-500 text-lg md:text-2xl lg:text-3xl text-center my-4 dark:text-slate-200">
-              Terms and Conditions
-            </h1>
-            <h2 className="font-bold text-slate-400 text-center my-4">
-              {`最新更新日期 Last Modified: ${tosPageComponents.lastModified}`}
-            </h2>
-          </div>
-          <div className="bg-white shadow overflow-hidden sm:rounded-lg dark:bg-slate-800">
+      <section className="legal-page-section">
+        <div className="w-full xl:w-8/12 mx-auto px-4 sm:px-8 pb-16">
+          <LegalPageTitle zh="服務約定條款及細則" en="Terms and Conditions" lastModified={lastModified} />
+          <div className="legal-card">
             <div className="px-4 py-5 sm:px-6">
               <h3 className="flex flex-col text-md md:text-xl leading-6 font-medium text-slate-900 dark:text-slate-200">
-                {acceptance.map((op) => (
-                  <span className="pb-2" key={op.id}>
-                    {op.chinese}
+                {preamble.zh.map((text, i) => (
+                  <span className="pb-2" key={i}>
+                    {Array.isArray(text)
+                      ? <><span className="md:text-4xl">{text[0]}</span>{text[1]}</>
+                      : text
+                    }
                   </span>
                 ))}
               </h3>
-              <h5 className="mt-1 max-w-5xl text-md text-slate-500 dark:text-slate-200">
-                {acceptance.map((op) => (
-                  <span className="pb-2" key={op.id}>
-                    {op.english}
-                  </span>
+              <h5 className="mt-1 max-w-5xl text-md text-slate-600 dark:text-slate-200">
+                {preamble.en.map((text, i) => (
+                  <span className="pb-2 block" key={i}>{text}</span>
                 ))}
               </h5>
             </div>
             <div className="border-t border-slate-200">
               <dl>
-                {tosPageComponents.tosAritcle.map((article, articleIndex) => (
-                  <div
-                    key={article.id}
-                    className={`bg-${articleIndex % 2 ? "slate-100 " : "white"
-                      } dark:bg-slate-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6`}
+                {articles.map((article, i) => (
+                  <LegalArticleRow
+                    key={i}
+                    striped={i % 2 === 1}
+                    term={
+                      <div className="flex md:flex-col">
+                        <span className="pb-1">{article.section.zh}</span>
+                        <span className="pb-1 px-2 md:px-0">{article.section.en}</span>
+                      </div>
+                    }
                   >
-                    <dt className="flex md:flex-col text-base font-semibold text-fernGreen-600 dark:text-fernGreen-200">
-                      <span className="pb-1">{article.section_zh}</span>
-                      <span className="pb-1 px-2 md:px-0">
-                        {article.section_en}
-                      </span>
-                    </dt>
-                    <dd className="flex flex-col mt-1 text-sm text-fernGreen-800 sm:mt-0 sm:col-span-2 dark:text-slate-100">
-                      <span className="pb-2">{article.text_zh}</span>
-                      <span className="pb-2">{article.text_en}</span>
-                    </dd>
-                  </div>
+                    <span className="pb-1">{article.text.zh}</span>
+                    {article.items && (
+                      <ul className="ml-4 list-disc text-xs pb-3 space-y-1">
+                        {article.items.zh.map((item) => <li key={item}>{item}</li>)}
+                      </ul>
+                    )}
+                    <span className="pb-1 mt-2 block">{article.text.en}</span>
+                    {article.items && (
+                      <ul className="ml-4 list-disc text-xs pb-1 space-y-1">
+                        {article.items.en.map((item) => <li key={item}>{item}</li>)}
+                      </ul>
+                    )}
+                  </LegalArticleRow>
                 ))}
               </dl>
             </div>

@@ -1,13 +1,22 @@
 import React from "react";
 import Layout from "../components/layouts/layout";
-import SEO from "../components/seo";
-import { contactPageComponents } from "../components/glaube";
+import PageMeta from "../components/metadata";
+
+const contactPageComponents = {
+  communityButton: [
+    { href: "https://community.openstreetmap.org/c/communities/tw/42", title: "OpenStreetMap Community", bgColor: "teal" },
+    { href: "https://www.facebook.com/groups/OpenStreetMap.TW/", title: "Facebook Group", bgColor: "pink" },
+    { href: "https://m.me/openstreetmaptaiwan", title: "Messenger", bgColor: "green" },
+    { href: "https://t.me/joinchat/Aqu2IgnTuIidMfREdNmomQ/", title: "Telegram", bgColor: "pink" },
+    { href: "https://osm-tw.signup.team/", title: "Slack", bgColor: "teal" },
+  ],
+};
 
 const mthMtg = "assets/images/mth_mtg.jpg";
 
 const ContactPage = () => (
   <Layout>
-    <SEO title="聯絡我們 Contact Us" keywords={["Contact", "聯絡我們"]} />
+    <PageMeta title="聯絡我們 Contact Us" keywords={["Contact", "聯絡我們"]} />
     <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center">
       <div className="container mx-auto">
         <div className="max-w-xl lg:max-w-4xl mx-auto my-6 bg-white md:rounded-lg shadow-sm overflow-hidden">
@@ -67,7 +76,7 @@ const ContactPage = () => (
                       pattern=".{2,}"
                       placeholder="一介圖客 A mapper"
                       required
-                      className="w-full px-3 py-2 placeholder-slate-300 border border-slate-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-slate-600 dark:text-white dark:placeholder-slate-300 dark:border-slate-500 dark:focus:ring-slate-900 dark:focus:border-slate-500"
+                      className="w-full px-3 py-2 placeholder-slate-300 border border-slate-300 rounded-md focus:outline-hidden focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-slate-600 dark:text-white dark:placeholder-slate-300 dark:border-slate-500 dark:focus:ring-slate-900 dark:focus:border-slate-500"
                     />
                   </label>
                 </div>
@@ -79,7 +88,7 @@ const ContactPage = () => (
                     <input
                       placeholder="you@mail.com"
                       required
-                      className="w-full px-3 py-2 placeholder-slate-300 border border-slate-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-slate-600 dark:text-white dark:placeholder-slate-300 dark:border-slate-500 dark:focus:ring-slate-900 dark:focus:border-slate-500"
+                      className="w-full px-3 py-2 placeholder-slate-300 border border-slate-300 rounded-md focus:outline-hidden focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-slate-600 dark:text-white dark:placeholder-slate-300 dark:border-slate-500 dark:focus:ring-slate-900 dark:focus:border-slate-500"
                       type="text"
                       id="courrier"
                       name="_replyto"
@@ -100,7 +109,7 @@ const ContactPage = () => (
                       placeholder="我要問有關... I'd like to ask smth abt..."
                       pattern=".{3,}"
                       required
-                      className="w-full px-3 py-2 placeholder-slate-300 border border-slate-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-slate-600 dark:text-white dark:placeholder-slate-300 dark:border-slate-500 dark:focus:ring-slate-900 dark:focus:border-slate-500"
+                      className="w-full px-3 py-2 placeholder-slate-300 border border-slate-300 rounded-md focus:outline-hidden focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-slate-600 dark:text-white dark:placeholder-slate-300 dark:border-slate-500 dark:focus:ring-slate-900 dark:focus:border-slate-500"
                     />
                   </label>
                 </div>
@@ -116,7 +125,7 @@ const ContactPage = () => (
                       rows="8"
                       maxLength="256"
                       placeholder="您的留言 Your Message"
-                      className="w-full px-3 py-2 placeholder-slate-300 border border-slate-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-slate-600 dark:text-white dark:placeholder-slate-300 dark:border-slate-500 dark:focus:ring-slate-900 dark:focus:border-slate-500"
+                      className="w-full px-3 py-2 placeholder-slate-300 border border-slate-300 rounded-md focus:outline-hidden focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-slate-600 dark:text-white dark:placeholder-slate-300 dark:border-slate-500 dark:focus:ring-slate-900 dark:focus:border-slate-500"
                       required
                     />
                   </label>
@@ -125,7 +134,7 @@ const ContactPage = () => (
                   <button
                     type="submit"
                     value="Send"
-                    className="w-full px-3 py-4 text-white font-bold bg-fernGreen-500 rounded-md hover:bg-fern-green-400ripple waves-light hover:shadow-lg focus:outline-none"
+                    className="w-full px-3 py-4 text-white font-bold bg-warabi-500 rounded-md hover:bg-fern-green-400ripple waves-light hover:shadow-lg focus:outline-hidden"
                   >
                     送出 Submit
                   </button>

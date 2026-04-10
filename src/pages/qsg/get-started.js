@@ -1,12 +1,12 @@
 import React from "react";
+import Link from 'next/link'
 import Layout from "../../components/layouts/qsgLayout";
-import SEO from "../../components/seo";
-import { landingPageComponents } from "../../components/glaube";
-import { Link } from "../../components/util";
+import PageMeta from "../../components/metadata";
+import { landingPageComponents } from "../../components/landingData";
 
 const QsgGetStartedPage = () => (
   <Layout title="開始之前">
-    <SEO
+    <PageMeta
       title="入門指南 Quick Start Guide"
       keywords={[
         "OpenStreetMap",
@@ -33,7 +33,7 @@ const QsgGetStartedPage = () => (
               className="flex flex-col lg:flex-row border rounded shadow-md my-3 p-4 justify-between"
             >
               <div>
-                <h2 className="text-fernGreen-500">{item.role}</h2>
+                <h2 className="text-warabi-500">{item.role}</h2>
                 <h2 className="text-sm text-slate-400">
                   {item.route.replace("/qsg", "")}
                 </h2>

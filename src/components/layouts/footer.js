@@ -1,6 +1,7 @@
 import React from "react";
-import { uriComponents } from "../glaube";
-import { ExtLinkIcon, Link } from "../util";
+import Link from 'next/link'
+import { uriComponents } from "../navData";
+import { ExtLinkIcon } from "../util";
 
 function Footer() {
   return (
