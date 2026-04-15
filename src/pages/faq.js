@@ -113,6 +113,53 @@ const FaqList = [{
   ],
 }]
 
+const SecretFaqs = {
+  key: "secret",
+  title: "🎸 一輩子的 FAQ",
+  faqs: [
+    {
+      question: "畫地圖是一輩子的事嗎？",
+      answer: "是一輩子喔，一輩子。你貢獻的每一條路、每一個節點，都永遠留在地圖上。這就是 OSM 的本質——不會消失的痕跡。",
+    },
+    {
+      question: "那個……我可以加入 OSM 社群嗎？（貓貓喝水",
+      answer: "貴安，當然可以。歡迎你。一直都可以加入的——不需要問，直接來就好了。",
+    },
+    {
+      question: "現在是復權的時刻——我的編輯帳號被鎖了，要怎麼辦？",
+      answer: "等一下，先冷靜下來談談吧。先別急。到 https://community.openstreetmap.org/ 說明情況，社群會一起想辦法的。復權，是遲早的事。",
+    },
+    {
+      question: "我只是想畫地圖，為什麼要在意這麼多規則？（初華看手機",
+      answer: "因為地圖不只是你的，是大家的。就像母雞卡說的——演奏不是為了自己，是為了那個當下所有在場的人。",
+    },
+    {
+      question: "我想在社群裡扮演一個不同的角色，可以嗎？",
+      answer: "面具戴上之後，舞台上的你就是另一個人了。OSM 不是只有畫地圖這一種角色——你可以寫程式、送 PR 給開源工具（像 iD 編輯器、JOSM）；可以做資料分析、把 OSM 資料做成有用的應用；可以寫文件、翻譯、辦活動、回答新手問題。每一種都是真實的貢獻，每一種面具下都是同一張地圖。",
+    },
+    {
+      question: "社群裡有人在吵架，我該怎麼辦？（妳是來找我吵架的嗎.jpg",
+      answer: "還真是高高在上啊。OSM 社群很大，每個人都有自己的堅持，靜靜看著就好。(對健康不好喔🙅) 吵完還是會繼續畫地圖的，這就是開源社群的一輩子。Per aspera ad astra.",
+    },
+    {
+      question: "要怎麼舉報地圖被惡搞啊？這樣太不負責了吧？（不爽世",
+      answer: "我早知道會這樣了，真的很莫名其妙。先試試在變更集（Changeset）留言跟對方溝通，有時候只是不小心畫錯。如果對方擺明惡意、或是長期濫用帳號，就要把證據交給 Data Working Group（DWG）——他們有權封鎖違規帳號。記得附上截圖和 changeset 連結，讓 DWG 好處理。舉報入口：https://www.openstreetmap.org/reports/new",
+    },
+    {
+      question: "之前有個地圖專案做到一半，維護的人不見了……留下來的資料還有意義嗎？",
+      answer: "有意義。OSM 的資料不會因為貢獻者消失就跟著消失——那些節點、道路、標記都還在，等著下一個人繼續。CRYCHIC 解散了，但音樂沒有消失，重女樂團就是從那裡長出來的。",
+    },
+    {
+      question: "怎麼還沒傳完啊——我的 changeset 上傳一直轉圈，是卡住了嗎？",
+      answer: "你等它三分鐘。OSM 伺服器有時候就是慢。不過如果你一次傳了幾千個節點，那建議下次拆小一點——大型 changeset 不只容易 timeout，社群審查起來也很吃力，一旦出錯整批都要追。建議每次只上傳一個邏輯單位的修改（例如一條路、一個區域），並在 changeset 留言寫清楚改了什麼、資料來源是哪裡（記得不能用 Google Maps）。上傳完可以用 OSMCha https://osmcha.org/ 確認自己的變更有沒有問題。真的卡死的話，關掉重開編輯器，通常還是會傳上去的，別急。",
+    },
+    {
+      question: "我在 OSM 社群裡感覺沒有存在感。Quid Faciam?",
+      answer: "Fluctuat Nec Mergitur. 每一個你畫下的節點，都是存在過的證明。就算沒人注意到，地圖記得你來過。",
+    },
+  ],
+};
+
 function renderAnswer(text) {
   const parts = text.split(/(https?:\/\/[^\s）。，、]+)/g);
   return parts.map((part, i) =>
@@ -121,6 +168,8 @@ function renderAnswer(text) {
       : part
   );
 }
+
+const HINT_TEXTS = ["還差 4 次⋯⋯", "還差 3 次⋯⋯", "還差 2 次，你快發現了", "再一次！🎸"];
 
 const FaqSection = ({ list }) => (
   <div id={list.key} className="md:w-3/4 mx-auto space-y-4 py-6 scroll-mt-14">
@@ -143,6 +192,10 @@ const FaqSection = ({ list }) => (
 const faqSections = FaqList.map(({ key, title }) => ({ id: key, label: title }));
 
 const FaqPage = () => {
+  const [titleClicks, setTitleClicks] = useState(0);
+  const unlocked = titleClicks >= 5;
+  const hintText = HINT_TEXTS[titleClicks - 1];
+
   return (
     <Layout>
       <PageMeta keywords={["常見問題", "FAQ"]} title="常見問題集 FAQs" />
@@ -150,10 +203,26 @@ const FaqPage = () => {
       <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center dark:text-slate-200">
         <div className="w-full xl:w-8/12 2mx-auto px-4 sm:px-8 mb-16">
           <div className="main-title my-8 md:my-12">
-           <h1 className="font-bold text-3xl md:text-5xl text-center">
+            <h1
+              className={`font-bold text-3xl md:text-5xl text-center select-none ${unlocked ? "cursor-default" : "cursor-help"}`}
+              onClick={() => { if (!unlocked) setTitleClicks(n => n + 1); }}
+            >
               <span>常見問題集 FAQs</span>
+              {unlocked && (<span> 🎸</span>)}
             </h1>
+            <p
+              key={titleClicks}
+              className={`text-center text-sm py-4 transition-opacity duration-500 ${hintText && !unlocked ? "text-slate-400 animate-pulse" : "opacity-0 pointer-events-none"}`}
+            >
+              {hintText ?? "\u200b"}
+            </p>
           </div>
+
+          {/* 一輩子喔 */}
+          <div className={`transition-all duration-700 ease-in-out overflow-hidden ${unlocked ? "opacity-100 max-h-[9999px]" : "opacity-0 max-h-0"}`}>
+            <FaqSection list={SecretFaqs} />
+          </div>
+
           {FaqList.map((list) => <FaqSection key={list.key} list={list} />)}
         </div>
       </section>
