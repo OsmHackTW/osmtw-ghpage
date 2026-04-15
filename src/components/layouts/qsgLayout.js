@@ -145,6 +145,7 @@ function Layout({ title, children }) {
 }
 
 Layout.propTypes = {
+  title: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 

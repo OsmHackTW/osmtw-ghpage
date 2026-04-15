@@ -1,6 +1,5 @@
 import * as React from "react";
 import Link from 'next/link';
-
 import Layout from "../components/layouts/layout";
 import { uriComponents } from "../components/navData";
 import { landingPageComponents } from "../components/landingData";
@@ -8,10 +7,10 @@ import { ExtLinkIcon } from "../components/util";
 
 import PageMeta from "../components/metadata";
 
-const RN990698 = "assets/images/RN990698_2000.jpg";
-const mapLayersd0 = "assets/images/landing_maplayers_d0.png";
-const mapLayersd1 = "assets/images/landing_maplayers_d1.png";
-const mapLayersd2 = "assets/images/landing_maplayers_d2.png";
+const RN990698 = "/assets/images/RN990698_2000.jpg";
+const mapLayersd0 = "/assets/images/landing_maplayers_d0.png";
+const mapLayersd1 = "/assets/images/landing_maplayers_d1.png";
+const mapLayersd2 = "/assets/images/landing_maplayers_d2.png";
 
 const { learnMore } = uriComponents;
 // markup
@@ -123,11 +122,13 @@ export default function Home() {
             >
               <path d="M50 0H100L50 100H0L50 0Z" />
             </svg>
-            <img
-              className="object-cover w-full h-48 rounded-lg shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
-              src={RN990698}
-              alt="Photo by Rainny Lin (C) MSF"
-            />
+            <div className="relative h-48 md:h-96 lg:h-full w-full">
+              <img
+                className="absolute inset-0 object-cover w-full h-full rounded-lg shadow-lg lg:rounded-none lg:shadow-none"
+                src={RN990698}
+                alt="Photo by Rainny Lin (C) MSF"
+              />
+            </div>
           </div>
           <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-(--breakpoint-xl)">
             <div className="lg:my-40 lg:max-w-xl">
@@ -182,8 +183,6 @@ export default function Home() {
                 <div>
                   <img
                     className="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
-                    height={224}
-                    width={224}
                     src={mapLayersd2}
                     alt=""
                   />
@@ -191,8 +190,6 @@ export default function Home() {
                 <div>
                   <img
                     className="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-                    height={160}
-                    width={160}
                     src={mapLayersd1}
                     alt=""
                   />
@@ -201,8 +198,6 @@ export default function Home() {
               <div className="px-2">
                 <img
                   className="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
-                  height={320}
-                  width={320}
                   src={mapLayersd0}
                   alt=""
                 />

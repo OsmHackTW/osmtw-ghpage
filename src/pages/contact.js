@@ -12,7 +12,7 @@ const contactPageComponents = {
   ],
 };
 
-const mthMtg = "assets/images/mth_mtg.jpg";
+const mthMtg = "/assets/images/mth_mtg.jpg";
 
 const ContactPage = () => (
   <Layout>
@@ -20,11 +20,13 @@ const ContactPage = () => (
     <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center">
       <div className="container mx-auto">
         <div className="max-w-xl lg:max-w-4xl mx-auto my-6 bg-white md:rounded-lg shadow-sm overflow-hidden">
-          <img
-            className="object-cover bg-center w-full h-64"
-            src={mthMtg}
-            alt="月聚 Monthly gathering"
-          />
+          <div className="relative w-full h-64">
+            <img
+              className="absolute inset-0 object-cover w-full h-full"
+              src={mthMtg}
+              alt="月聚 Monthly gathering"
+            />
+          </div>
           <div className="p-4 md:px-12 md:py-6 dark:bg-slate-800">
             <h1 className="my-3 text-3xl font-semibold text-slate-700 dark:text-slate-200">
               聯絡我們 Contact Us

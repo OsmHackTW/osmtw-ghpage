@@ -5,7 +5,7 @@ import Footer from "../../components/layouts/footer";
 import { landingPageComponents } from "../../components/landingData";
 import { ExtLinkIcon, OsmtwGuideTitle } from "../../components/util";
 
-const LandingImg = "../assets/images/RN990586_2000.jpg";
+const LandingImg = "/assets/images/RN990586_2000.jpg";
 
 const QsgIndexPage = () => {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -122,11 +122,13 @@ const QsgIndexPage = () => {
         </div>
         {/* Hero-right: image */}
         <div className="w-full lg:w-2/5 xl:w-1/2 mb-10 lg:mb-0 overflow-hidden">
-          <img
-            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-            src={LandingImg}
-            alt=""
-          />
+          <div className="relative h-56 sm:h-72 md:h-96 lg:h-full w-full">
+            <img
+              className="absolute inset-0 object-cover w-full h-full"
+              src={LandingImg}
+              alt=""
+            />
+          </div>
         </div>
       </div>
 

@@ -1,8 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import Layout from "../components/layouts/layout";
 import PageMeta from "../components/metadata";
-import { uriComponents } from "../components/navData";
 import { ExtLinkIcon } from "../components/util";
 
 const ToolCard = ({ href, name, provider, description, platform }) => (
@@ -26,6 +26,20 @@ const ToolCard = ({ href, name, provider, description, platform }) => (
     )}
   </a>
 );
+
+ToolCard.propTypes = {
+  href: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  provider: PropTypes.string,
+  description: PropTypes.string,
+  platform: PropTypes.arrayOf(PropTypes.string),
+};
+
+ToolCard.defaultProps = {
+  provider: "",
+  description: "",
+  platform: [],
+};
 
 const listOfApps = [{
   title: "OpenStreetMap 相關軟體與工具",

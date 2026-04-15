@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function AnchorBar({ sections }) {
   return (
@@ -20,3 +21,9 @@ export default function AnchorBar({ sections }) {
     </nav>
   );
 }
+
+AnchorBar.propTypes = {
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({ id: PropTypes.string, label: PropTypes.string })
+  ).isRequired,
+};

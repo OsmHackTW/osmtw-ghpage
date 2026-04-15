@@ -1,6 +1,5 @@
 import React from "react";
 import useSWR from "swr";
-import { ExtLinkIcon } from "../components/util";
 import Layout from "../components/layouts/layout";
 import PageMeta from "../components/metadata";
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import Layout from "../components/layouts/layout";
 import PageMeta from "../components/metadata";
 import AnchorBar from "../components/anchorBar";
@@ -189,6 +190,14 @@ const FaqSection = ({ list }) => (
   </div>
 );
 
+FaqSection.propTypes = {
+  list: PropTypes.shape({
+    key: PropTypes.string,
+    title: PropTypes.string,
+    faqs: PropTypes.arrayOf(PropTypes.shape({})),
+  }).isRequired,
+};
+
 const faqSections = FaqList.map(({ key, title }) => ({ id: key, label: title }));
 
 const FaqPage = () => {
@@ -203,15 +212,21 @@ const FaqPage = () => {
       <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center dark:text-slate-200">
         <div className="w-full xl:w-8/12 2mx-auto px-4 sm:px-8 mb-16">
           <div className="main-title my-8 md:my-12">
-            <h1
-              className={`font-bold text-3xl md:text-5xl text-center select-none ${unlocked ? "cursor-default" : "cursor-help"}`}
+            <h1 className="sr-only">常見問題集 FAQs</h1>
+            <button
+              type="button"
+              aria-label="常見問題集 FAQs"
+              aria-expanded={unlocked}
+              aria-controls="secret-faqs"
+              className={`font-bold text-3xl md:text-5xl text-center w-full block select-none bg-transparent border-0 p-0 text-inherit ${unlocked ? "cursor-default" : "cursor-pointer"}`}
               onClick={() => { if (!unlocked) setTitleClicks(n => n + 1); }}
             >
-              <span>常見問題集 FAQs</span>
-              {unlocked && (<span> 🎸</span>)}
-            </h1>
+              <span aria-hidden="true">常見問題集 FAQs{unlocked && " 🎸"}</span>
+            </button>
             <p
               key={titleClicks}
+              aria-live="polite"
+              aria-atomic="true"
               className={`text-center text-sm py-4 transition-opacity duration-500 ${hintText && !unlocked ? "text-slate-400 animate-pulse" : "opacity-0 pointer-events-none"}`}
             >
               {hintText ?? "\u200b"}
@@ -219,7 +234,7 @@ const FaqPage = () => {
           </div>
 
           {/* 一輩子喔 */}
-          <div className={`transition-all duration-700 ease-in-out overflow-hidden ${unlocked ? "opacity-100 max-h-[9999px]" : "opacity-0 max-h-0"}`}>
+          <div id="secret-faqs" className={`transition-all duration-700 ease-in-out overflow-hidden ${unlocked ? "opacity-100 max-h-[9999px]" : "opacity-0 max-h-0"}`}>
             <FaqSection list={SecretFaqs} />
           </div>
 

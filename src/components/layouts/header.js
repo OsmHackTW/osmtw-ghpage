@@ -41,9 +41,6 @@ export default function Header() {
                 <img
                   className="block h-10 w-auto"
                   src={logo}
-                  layout="intrinsic"
-                  height={40}
-                  width={40}
                   alt="OSMTW"
                 />
                 <span className="block h-8 px-4 py-1 w-auto text-xl font-bold tracking-tight">

@@ -1,13 +1,12 @@
 import React from "react";
 import Link from "next/link";
-
 import Layout from "../components/layouts/layout";
 import PageMeta from "../components/metadata";
 import AnchorBar from "../components/anchorBar";
 import { uriComponents } from "../components/navData";
 import { ExtLinkIcon } from "../components/util";
 
-const signUpIllustration = "assets/images/sign-up-illustration.png";
+const signUpIllustration = "/assets/images/sign-up-illustration.png";
 // Derivative from https://github.com/openstreetmap/openstreetmap-website/blob/master/app/assets/images/sign-up-illustration.svg
 
 const aboutPageComponents = {
@@ -117,7 +116,7 @@ const AboutPage = () => (
     <AnchorBar sections={aboutSections} />
     <section className="antialiased text-slate-900 dark:text-slate-200 py-12 md:py-20">
       <div className="w-full max-w-5xl mx-auto px-6 sm:px-10">
-        {aboutPageComponents.aboutOSM.map((paragraph, idx) => (
+        {aboutPageComponents.aboutOSM.map((paragraph) => (
           <div
             className="mb-16 md:mb-24 scroll-mt-20"
             id={paragraph.key}
@@ -170,7 +169,7 @@ const AboutPage = () => (
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
             {usage.examples.map((example) => (
-              <div className="card-base">
+              <div key={example.title} className="card-base">
                 <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-4 ${example.colors.bg}`}>
                   <svg className={`w-6 h-6 ${example.colors.text}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d={example.path} />
@@ -208,7 +207,7 @@ const AboutPage = () => (
       <div className="max-w-4xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         {
           [{ figure: "10萬+", text: "活躍貢獻者" }, { figure: "20年", text: "開放地圖歷史" }, { figure: "免費", text: "開放資料授權" }, { figure: "全球", text: "社群共同維護" }].map((stat) => (
-            <div>
+            <div key={stat.text}>
               <div className="text-4xl font-black">{stat.figure}</div>
               <div className="text-sm mt-1">{stat.text}</div>
             </div>
@@ -227,7 +226,7 @@ const AboutPage = () => (
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {howToContribute.steps.map((step, idx) => (
-            <div className="flex-col-center text-center">
+            <div key={step.title} className="flex-col-center text-center">
               <div className="step-badge">
                 {idx + 1}
               </div>

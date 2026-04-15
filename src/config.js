@@ -1,4 +1,4 @@
-export default {
+const config = {
   siteUrl: "https://osm.tw",
   title: "OpenStreetMap Taiwan 開放街圖台灣",
   author: {
@@ -11,3 +11,5 @@ export default {
     twitter: "osmtw",
   },
 };
+
+export default config;
