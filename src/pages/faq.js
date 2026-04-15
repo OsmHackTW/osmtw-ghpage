@@ -109,7 +109,7 @@ const FaqList = [{
     },
     {
       question: "有問題或想貢獻，怎麼聯絡台灣社群？",
-      answer: "可以到 https://openstreetmap.community/?map=23.68984,121.00137&zoom=7 找到台灣社群的聯絡資訊，或直接在 Facebook 社團發文提問，大家都很歡迎新朋友！",
+      answer: "可以參考頁尾連結，或者到 https://openstreetmap.community/?map=23.68984,121.00137&zoom=7 找到台灣社群的聯絡資訊，或直接在 Facebook 社團發文提問，大家都很歡迎新朋友！",
     },
   ],
 }]

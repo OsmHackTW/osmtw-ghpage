@@ -102,11 +102,6 @@ const uriComponents = {
         isExternal: true
       },
       {
-        path: "https://trello.com/osmtw/",
-        title: "Trello 協作看板",
-        isExternal: true
-      },
-      {
         path: "https://lists.openstreetmap.org/listinfo/talk-tw",
         title: "郵件論壇 Mailing List",
         isExternal: true
