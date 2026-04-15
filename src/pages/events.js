@@ -10,7 +10,7 @@ const EventPage = () => (
       keywords={["近期活動", "Upcoming Events"]}
       title="近期活動 Upcoming Events"
     />
-    <section className="flex flex-col items-center justify-center my-8">
+    <section className="flex-col-center justify-center my-8">
       <div className="relative w-full flex py-8">
         <div className="w-5xl px-4 py-5 mx-auto sm:max-w-xl md:w-full lg:max-w-(--breakpoint-xl) rounded-t">
           <div className="flex flex-col w-3xl md:w-6xl p-2 mb-8">

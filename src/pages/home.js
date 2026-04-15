@@ -33,9 +33,9 @@ export default function Home() {
       />
 
       {/* Hero */}
-      <section className="flex flex-col items-center">
+      <section className="flex-col-center">
         <div className="relative w-full flex py-32 md:py-64 bg-cover bg-center bg-no-repeat object-fill bg-osmtw-landing-hero osmtw-osmcontributors--bottom-right">
-          <div className="w-full md:w-11/12 lg:w-full xl:w-3/4 mx-auto p-2">
+          <div className="w-full max-w-5xl mx-auto p-2">
             <div className="flex-1 text-center md:text-left bg-slate-100/25 mx-auto px-4 my-4 md:px-16 md:mr-8 lg:ml-16">
               <div className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-900 leading-none my-4 ">
                 開放街圖・台灣
@@ -56,7 +56,7 @@ export default function Home() {
       </section>
 
       {/* Why OSM */}
-      <section className="flex flex-col items-center">
+      <section className="flex-col-center">
         <div className="relative w-full flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
           <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-(--breakpoint-xl) md:px-24 lg:px-8 lg:py-20">
             <div className="flex flex-col mb-6 lg:flex-row md:mb-10">
@@ -112,9 +112,9 @@ export default function Home() {
       </section>
 
       {/* Ka-ki-e te-too Ka-ki ue */}
-      <section className="flex flex-col items-center">
+      <section className="flex-col-center">
         <div className="relative w-full flex flex-col-reverse bg-teal-300 py-16 lg:p-0 lg:flex-col">
-          <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
+          <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-1/2 lg:max-w-full lg:absolute xl:px-0">
             <svg
               className="absolute left-0 hidden h-full z-50 text-teal-300 transform -translate-x-1/2 lg:block "
               viewBox="0 0 100 100"
@@ -174,7 +174,7 @@ export default function Home() {
       </section>
 
       {/* Different style */}
-      <section className="flex flex-col items-center py-8 lg:py-48">
+      <section className="flex-col-center py-8 lg:py-48">
         <div className="mx-auto sm:max-w-xl md:max-w-6xl lg:max-w-screen-3xl px-6 md:px-16 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2">
             <div className="flex items-center justify-center md:pr-8 xl:pr-0">
@@ -237,7 +237,7 @@ export default function Home() {
                   <ExtLinkIcon />
                 </a>
                 <span className="text-slate-400 text-xs mx-1">(英語)</span>
-                <blockquote className="flex flex-col py-4 md:py-8 space-y-1 text-xs text-slate-500 dark:text-slate-400">
+                <blockquote className="flex flex-col py-4 md:py-8 space-y-1 text--muted-xs">
                   <div>&copy; OpenStreetMap contributors.</div>
                   <div>
                     Humanitarian Map Tiles style by Humanitarian OpenStreetMap
@@ -252,7 +252,7 @@ export default function Home() {
       </section>
 
       {/* Learn more by role */}
-      <section className="flex flex-col items-center py-4 lg:py-24">
+      <section className="flex-col-center py-4 lg:py-24">
         <div className="relative w-full flex-1 text-left max-w-7xl">
           <div className="container p-5 md:py-16 mx-auto text-slate-600 body-font">
             <div className="flex flex-col text-center w-full mb-12 md:mb-20">
@@ -318,7 +318,7 @@ export default function Home() {
       </section>
 
       {/* CTA Banner */}
-      <section className="flex flex-col items-center">
+      <section className="flex-col-center">
         <div className="w-full flex object-fill bg-green-200">
           <div className="w-full md:w-3/4 xl:w-3/5 2xl:w-2/3 2xl:max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
             <h2 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900">

@@ -18,13 +18,13 @@ const QsgGeneralPage = () => (
       ]}
     />
     <div>
-      <h4 className="my-2 font-semibold text-xl text-slate-600">應用程式</h4>
+      <h4 className="qsg-section-heading">應用程式</h4>
       <h5 className="my-1 font-medium">OsmAnd</h5>
       <p className="my-1 ">
         OsmAnd 是以 OpenStreetMap 為基底，在Android及iOS系統上的導航應用程式。
       </p>
       <p className="my-1 mb-4">
-        <a className="underline text-warabi-600" href="http://osmand.net/">
+        <a className="link--warabi-alt" href="http://osmand.net/">
           http://osmand.net/
         </a>
         <ExtLinkIcon />
@@ -36,7 +36,7 @@ const QsgGeneralPage = () => (
       </p>
       <p className="my-1 mb-4">
         <a
-          className="underline text-warabi-600"
+          className="link--warabi-alt"
           href="https://mapcomplete.osm.be/"
         >
           https://mapcomplete.osm.be/
@@ -50,7 +50,7 @@ const QsgGeneralPage = () => (
       </p>
       <p className="my-1 mb-4">
         <a
-          className="underline text-warabi-600"
+          className="link--warabi-alt"
           href="https://play.google.com/store/apps/details?id=de.westnordost.streetcomplete"
         >
           {" "}
@@ -58,7 +58,7 @@ const QsgGeneralPage = () => (
         </a>
         &nbsp;-&nbsp;
         <a
-          className="underline text-warabi-600"
+          className="link--warabi-alt"
           href="https://github.com/streetcomplete/StreetComplete/"
         >
           GitHub

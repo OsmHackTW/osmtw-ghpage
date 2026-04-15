@@ -32,8 +32,10 @@ export default function Header() {
   return (
     <div>
       <header className="bg-warabi-200 flex flex-row justify-between w-full px-2 lg:px-8 text-slate-900">
-        <div className="flex flex-col flex-1 sm:flex-row items-center p-2 max-w-7xl mx-auto md:p-4 sm:items-stretch sm:justify-start align-middle">
-          <div className="sm:w-full md:w-1/6 lg:w-1/3 w-full self-start flex flex-row flex-no-wrap justify-between items-center">
+        <div className="flex flex-1 flex-col xl:flex-row items-center p-2 max-w-7xl mx-auto md:p-4 sm:items-stretch sm:justify-start">
+
+          {/* Logo + OSM.org pill + hamburger */}
+          <div className="w-full xl:w-1/3 flex flex-row flex-nowrap justify-between items-center">
             <Link href="/">
               <h1 className="flex grow-0 no-underline">
                 <img
@@ -50,66 +52,73 @@ export default function Header() {
                 </span>
               </h1>
             </Link>
-            <button
-              type="button"
-              className="block items-center self-end flex-col justify-center p-2 border border-slate-700 rounded md:hidden"
-              onClick={() => toggleExpansion(!isExpanded)}
-            >
-              <span className="sr-only">Menu</span>
-              <svg
-                className="block h-6 w-6 fill-current"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d={isExpanded
-                    ? "M6 18L18 6M6 6l12 12"
-                    : "M4 6h16M4 12h16M4 18h16"
-                  }
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="w-3/4 md:w-5/6 lg:w-2/3 self-start flex flex-row flex-no-wrap justify-between items-center">
-            <div className="w-full md:w-3/4 self-start flex flex-row flex-no-wrap justify-between items-center">
-              <nav
-                className={`${isExpanded ? "block" : "hidden"}
-                py-2 md:flex md:items-center w-full md:w-auto sm:w-auto md:self-start`}
-              >
-                {uriComponents.headerLink.map((link) => (
-                  <Link
-                    className="block mt-4 no-underline md:inline-block md:mt-0 md:ml-6"
-                    key={link.title}
-                    href={link.route}
-                  >
-                    {link.title}
-                  </Link>
-                ))}
-                <button
-                  type="button"
-                  className="block mt-4 no-underline md:inline-block md:mt-0 md:ml-6"
-                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                  title="深色模式切換 Dark Mode On/Off"
-                >
-                  {themeToogleIcon(theme)}
-                </button>
-              </nav>
-            </div>
-            <div className="hidden float-right md:w-1/4 md:flex flex-no-wrap justify-between items-center">
+            <div className="flex items-center gap-4">
               <a
                 href="https://osm.org/"
-                className="px-4 py-2 rounded-full font-semibold tracking-wide bg-green-800 text-white outline-hidden focus:outline-hidden"
+                className="hidden md:inline-flex xl:hidden px-3 py-2 rounded-full font-semibold tracking-wide bg-green-800 text-white outline-hidden focus:outline-hidden"
               >
                 OSM.org
                 <ExtLinkIcon />
               </a>
+              <button
+                type="button"
+                className="p-2 border border-slate-700 rounded xl:hidden"
+                onClick={() => toggleExpansion(!isExpanded)}
+              >
+                <span className="sr-only">Menu</span>
+                <svg
+                  className="block h-6 w-6 fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d={isExpanded
+                      ? "M6 18L18 6M6 6l12 12"
+                      : "M4 6h16M4 12h16M4 18h16"
+                    }
+                  />
+                </svg>
+              </button>
             </div>
           </div>
+
+          {/* Nav links */}
+          <div className="w-full xl:w-2/3">
+            <nav
+              className={`${isExpanded ? "block" : "hidden"} py-4 xl:flex xl:items-center xl:justify-end w-full`}
+            >
+              <a
+                href="https://osm.org/"
+                className="hidden xl:inline-flex xl:order-last mr-4 px-3 py-2 xl:ml-4 rounded-full font-semibold tracking-wide bg-green-800 text-white outline-hidden focus:outline-hidden"
+              >
+                OSM.org
+                <ExtLinkIcon />
+              </a>
+              {uriComponents.headerLink.map((link) => (
+                <Link
+                  className="block mt-4 no-underline xl:inline-block xl:mt-0 xl:ml-6"
+                  key={link.title}
+                  href={link.route}
+                >
+                  {link.title}
+                </Link>
+              ))}
+              <button
+                type="button"
+                className="block mt-4 xl:inline-block xl:mt-0 xl:ml-6"
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                title="深色模式切換 Dark Mode On/Off"
+              >
+                {themeToogleIcon(theme)}
+              </button>
+            </nav>
+          </div>
+
         </div>
       </header>
     </div>

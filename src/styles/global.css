@@ -139,14 +139,230 @@
   width: 100% !important;
 }
 
-a.text--warabi {
+.text--warabi {
   @apply text-warabi-600;
 }
 
-@media (prefers-color-scheme: dark) {
-  a.text--warabi {
-    @apply text-aozora-600;
+.dark .text--warabi {
+  @apply text-aozora-500;
+}
+
+/* Utility classes */
+.flex-col-center {
+  @apply flex flex-col items-center;
+}
+
+.text--secondary {
+  @apply text-slate-600 dark:text-slate-400;
+}
+
+.text--muted-xs {
+  @apply text-xs text-slate-500 dark:text-slate-400;
+}
+
+.link--warabi {
+  @apply underline text-warabi-500;
+}
+
+.dark a.link--warabi {
+  @apply text-aozora-500;
+}
+
+.link--warabi-alt {
+  @apply underline text-warabi-600;
+}
+
+.qsg-section-heading {
+  @apply my-2 font-semibold text-xl text-slate-600;
+}
+
+.card-base {
+  @apply bg-white dark:bg-slate-600 rounded-xl p-6 shadow-sm;
+}
+
+.step-badge {
+  @apply w-14 h-14 rounded-full bg-warabi-500 text-white flex items-center justify-center text-2xl font-black mb-4;
+}
+
+.form-input {
+  @apply w-full px-3 py-2 placeholder-slate-300 border border-slate-300 rounded-md focus:outline-hidden focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-slate-600 dark:text-white dark:placeholder-slate-300 dark:border-slate-500 dark:focus:ring-slate-900 dark:focus:border-slate-500;
+}
+
+.form-label {
+  @apply block mb-2 text-sm text-slate-600 dark:text-slate-400;
+}
+
+.section-subtitle {
+  @apply border-l-4 border-teal-500 pl-3 mb-4 text-base font-bold text-slate-800 dark:text-slate-100;
+}
+
+.subgroup-badge {
+  @apply inline-flex items-center mt-5 mb-3 px-3 py-1 rounded-full text-xs font-semibold border border-teal-200 dark:border-teal-700 text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-900/30;
+}
+
+/* News page — #feedContent (dangerouslySetInnerHTML RSS feed from weeklyosm.eu) */
+/* Thanks to Dom (dcode) for his table style! https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l */
+
+#feedContent {
+  --feed-primary: #333333;
+  --feed-secondary: #009879;
+  --feed-auxilary: #555555;
+  --feed-background: #009879;
+  --feed-table-odd-color: #f3f3f3;
+  --feed-table-even-color: #d8dee5;
+  max-width: 100vw;
+}
+
+.dark #feedContent {
+  --feed-primary: #ffffff;
+  --feed-secondary: #46a19d;
+  --feed-auxilary: #ffffff;
+  --feed-background: #1f2937;
+  --feed-table-odd-color: #64748b;
+  --feed-table-even-color: #4b5563;
+}
+
+.dark #feedContent li img {
+  filter: invert(100%);
+}
+
+#feedContent a {
+  color: var(--feed-secondary);
+  font-weight: 600;
+}
+
+#feedContent p:first-of-type {
+  color: var(--feed-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 16px 8px;
+}
+
+#feedContent p:nth-last-child(2),
+#feedContent p:last-child {
+  color: var(--feed-auxilary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 16px;
+}
+
+#feedContent .wp-caption img,
+#feedContent .wp-caption-text img {
+  max-width: 92vw !important;
+  height: auto !important;
+  display: block;
+}
+
+#feedContent .wp-caption p {
+  font-weight: 500;
+  padding: 12px 8px;
+}
+
+#feedContent h2 {
+  color: var(--feed-primary);
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 8px;
+}
+
+#feedContent img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+#feedContent li img {
+  display: inline-block;
+  padding: 0 4px;
+}
+
+#feedContent ul {
+  padding: 8px;
+}
+
+#feedContent li {
+  margin: 8px 0;
+  list-style-position: inside;
+  list-style-type: circle;
+}
+
+#feedContent img.wp-smiley {
+  max-height: 24px;
+  padding-bottom: 8px;
+}
+
+#feedContent table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  border-radius: 6px;
+  font-size: 0.65rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#feedContent table th {
+  min-width: 72px;
+  font-size: 0.65rem;
+}
+
+@media only screen and (min-width: 600px) {
+  #feedContent table {
+    margin: 8px 0;
+    padding: 8px 0;
+    font-size: 0.9rem;
   }
+
+  #feedContent table th {
+    min-width: 80px;
+    font-size: 0.9rem;
+  }
+}
+
+#feedContent thead tr {
+  background-color: var(--feed-background);
+  color: #ffffff;
+  font-size: 1.25em;
+  text-align: left;
+}
+
+#feedContent th {
+  padding: 16px 12px;
+}
+
+#feedContent td {
+  padding: 16px 12px;
+  color: var(--feed-auxilary);
+}
+
+#feedContent td:first-child {
+  font-weight: 600;
+}
+
+#feedContent tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+#feedContent tbody tr:nth-of-type(even) {
+  background-color: var(--feed-table-even-color);
+}
+
+#feedContent tbody tr:nth-of-type(odd) {
+  background-color: var(--feed-table-odd-color);
+}
+
+#feedContent tbody tr:last-of-type {
+  border-bottom: 2px solid var(--feed-background);
+}
+
+#feedContent th:first-of-type {
+  border-top-left-radius: 10px;
+}
+
+#feedContent th:last-of-type {
+  border-top-right-radius: 10px;
 }
 
 /* Legal pages (tos, privacy) */

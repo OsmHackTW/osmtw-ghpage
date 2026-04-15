@@ -100,9 +100,9 @@ function Footer() {
             </div>
           </div>
 
-          <div className="md:flex-auto md:flex-row-reverse mt-2 ml-2 flex-row flex text-white">
+          <div className="md:ml-auto mt-2 ml-2">
             <a
-              className="w-1/8 mx-1 text-slate-400 hover:text-slate-100 text-xs font-medium duration-700"
+              className="text-slate-400 hover:text-slate-100 text-xs font-medium duration-700"
               href="https://github.com/OsmHackTW/osmtw-ghpage/"
               rel="noopener noreferrer"
               target="_blank"

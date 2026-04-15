@@ -29,10 +29,10 @@ const ContactPage = () => (
             <h1 className="my-3 text-3xl font-semibold text-slate-700 dark:text-slate-200">
               聯絡我們 Contact Us
             </h1>
-            <h3 className="text-slate-600 dark:text-slate-400">
+            <h3 className="text--secondary">
               您可透過以下渠道與社群交流：{" "}
             </h3>
-            <h3 className="text-slate-600 dark:text-slate-400">
+            <h3 className="text--secondary">
               Contact our community members via the following channels:
             </h3>
             <div className="pt-4 pb-12 space-y-3">
@@ -51,10 +51,10 @@ const ContactPage = () => (
             </div>
           </div>
           <div className="p-4 md:px-12 dark:bg-slate-800">
-            <h3 className="text-slate-600 dark:text-slate-400">
+            <h3 className="text--secondary">
               您也可以填寫此表單與我們的社群成員聯繫：
             </h3>
-            <h3 className="text-slate-600 dark:text-slate-400">
+            <h3 className="text--secondary">
               Or email our community member via this form:
             </h3>
             <div className="pt-4">
@@ -65,7 +65,7 @@ const ContactPage = () => (
               >
                 <div className="mb-6">
                   <label htmlFor="nom">
-                    <span className="block mb-2 text-sm text-slate-600 dark:text-slate-400">
+                    <span className="form-label">
                       姓名 Name
                     </span>
                     <input
@@ -76,19 +76,19 @@ const ContactPage = () => (
                       pattern=".{2,}"
                       placeholder="一介圖客 A mapper"
                       required
-                      className="w-full px-3 py-2 placeholder-slate-300 border border-slate-300 rounded-md focus:outline-hidden focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-slate-600 dark:text-white dark:placeholder-slate-300 dark:border-slate-500 dark:focus:ring-slate-900 dark:focus:border-slate-500"
+                      className="form-input"
                     />
                   </label>
                 </div>
                 <div className="mb-6">
                   <label htmlFor="courrier">
-                    <span className="block mb-2 text-sm text-slate-600 dark:text-slate-400">
+                    <span className="form-label">
                       Email地址 Email address
                     </span>
                     <input
                       placeholder="you@mail.com"
                       required
-                      className="w-full px-3 py-2 placeholder-slate-300 border border-slate-300 rounded-md focus:outline-hidden focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-slate-600 dark:text-white dark:placeholder-slate-300 dark:border-slate-500 dark:focus:ring-slate-900 dark:focus:border-slate-500"
+                      className="form-input"
                       type="text"
                       id="courrier"
                       name="_replyto"
@@ -99,7 +99,7 @@ const ContactPage = () => (
                 </div>
                 <div className="mb-6">
                   <label htmlFor="sujet">
-                    <span className="block mb-2 text-sm text-slate-600 dark:text-slate-400">
+                    <span className="form-label">
                       主旨 Subject
                     </span>
                     <input
@@ -109,13 +109,13 @@ const ContactPage = () => (
                       placeholder="我要問有關... I'd like to ask smth abt..."
                       pattern=".{3,}"
                       required
-                      className="w-full px-3 py-2 placeholder-slate-300 border border-slate-300 rounded-md focus:outline-hidden focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-slate-600 dark:text-white dark:placeholder-slate-300 dark:border-slate-500 dark:focus:ring-slate-900 dark:focus:border-slate-500"
+                      className="form-input"
                     />
                   </label>
                 </div>
                 <div className="mb-6">
                   <label htmlFor="message">
-                    <span className="block mb-2 text-sm text-slate-600 dark:text-slate-400">
+                    <span className="form-label">
                       您的留言 Your message
                     </span>
                     <textarea
@@ -125,7 +125,7 @@ const ContactPage = () => (
                       rows="8"
                       maxLength="256"
                       placeholder="您的留言 Your Message"
-                      className="w-full px-3 py-2 placeholder-slate-300 border border-slate-300 rounded-md focus:outline-hidden focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-slate-600 dark:text-white dark:placeholder-slate-300 dark:border-slate-500 dark:focus:ring-slate-900 dark:focus:border-slate-500"
+                      className="form-input"
                       required
                     />
                   </label>

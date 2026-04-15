@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layouts/layout";
 import PageMeta from "../components/metadata";
-import { LegalPageTitle, LegalArticleRow } from "../components/legal";
+import { LegalPageTitle } from "../components/legal";
 
 const lastModified = "2021-12-22";
 
@@ -54,6 +54,18 @@ const articles = [
         href: "https://tools.google.com/dlpage/gaoptout?hl=zh-tw",
       },
     ],
+  },{
+    section: "附二、Google Analytics",
+    paragraphs: [
+      {
+        text: "本網站使用 Cloudflare Browser Insights 收集網站 Web Vitals 和效能指標，透過分析使用者與之互動來進一步改善網站，這當中可能包括使用者概略的位置資訊。有關本站如何使用 Google Analytics 的更多資訊，請瀏覽：",
+        href: "https://www.google.com/analytics/terms/us.html",
+      },
+      {
+        text: "若您不希望被 Google Analytics 追蹤，Google 有提供 Google Analytics 選擇退出附加元件 (Google Analytics Opt-out Browser Add-on) 下載，請瀏覽：",
+        href: "https://tools.google.com/dlpage/gaoptout?hl=zh-tw",
+      },
+    ],
   },
 ];
 
@@ -66,7 +78,7 @@ const PrivacyPage = () => (
     <section className="legal-page-section">
       <div className="w-full xl:w-8/12 mx-auto px-4 sm:px-8 pb-16">
         <LegalPageTitle zh="隱私權聲明" en="Privacy Statement" lastModified={lastModified} />
-        <div className="legal-card">
+        <div className="legal-card mb-4">
           <div className="px-4 py-5 sm:px-6">
             <h3 className="flex flex-col text-lg md:text-xl leading-6 font-medium text-slate-900 dark:text-slate-200">
               <span className="py-1">我們非常重視您的個人隱私，在使用本網站服務時，敬請詳閲本隱私權聲明，</span>
@@ -76,36 +88,41 @@ const PrivacyPage = () => (
               Your privacy is our highest priority, please refer our privacy policy for more details on how we collect, process and protect personal information you have provided.
             </h5>
           </div>
-          <div className="border-t border-slate-200">
-            <dl>
-              {articles.map((article, i) => (
-                <LegalArticleRow key={i} striped={i % 2 === 1} term={article.section}>
-                  {article.paragraphs
-                    ? article.paragraphs.map((p, j) => (
-                      <p key={j} className={j > 0 ? "mt-4" : ""}>
-                        {p.text}
-                        <a className="text--warabi break-all" href={p.href} target="_blank" rel="noopener noreferrer">
-                          {p.href}
-                        </a>
-                      </p>
-                    ))
-                    : <>
-                      {article.text}
-                      {article.items && (
-                        <ul className="border border-slate-200 mt-4 rounded-md divide-y divide-slate-200">
-                          {article.items.map((item) => (
-                            <li key={item} className="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </>
-                  }
-                </LegalArticleRow>
-              ))}
-            </dl>
-          </div>
+        </div>
+        <div className="grid gap-4">
+          {articles.map((article, i) => (
+            <div key={i} className="legal-card">
+              <div className="px-4 py-4 sm:px-6 border-b border-slate-200 dark:border-slate-700">
+                <h3 className="text-base md:text-lg font-semibold text-slate-900 dark:text-slate-200">
+                  {article.section}
+                </h3>
+              </div>
+              <div className="px-4 py-4 sm:px-6 text-sm text-slate-700 dark:text-slate-300">
+                {article.paragraphs
+                  ? article.paragraphs.map((p, j) => (
+                    <p key={j} className={j > 0 ? "mt-4" : ""}>
+                      {p.text}
+                      <a className="text--warabi break-all" href={p.href} target="_blank" rel="noopener noreferrer">
+                        {p.href}
+                      </a>
+                    </p>
+                  ))
+                  : <>
+                    {article.text}
+                    {article.items && (
+                      <ul className="border border-slate-200 mt-4 rounded-md divide-y divide-slate-200">
+                        {article.items.map((item) => (
+                          <li key={item} className="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                }
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

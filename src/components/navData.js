@@ -17,6 +17,10 @@ const uriComponents = {
       route: "/qsg",
       title: "入門指南 ",
     },
+    {
+      route: "/faq",
+      title: "常見問題",
+    },
   ],
   footerSection: [
     {

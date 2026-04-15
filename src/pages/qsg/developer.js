@@ -19,7 +19,7 @@ export default function QsgDeveloperPage() {
         ]}
       />
       <div>
-        <h4 className="my-2 font-semibold text-xl text-slate-600">
+        <h4 className="qsg-section-heading">
           毋須支付任何費用
         </h4>
         <p className="my-1">
@@ -37,14 +37,14 @@ export default function QsgDeveloperPage() {
           <EnIcon />
         </p>
         <br className="mb-8" />
-        <h4 className="my-2 font-semibold text-xl text-slate-600">
+        <h4 className="qsg-section-heading">
           轉換至 OpenStreetMap 比想像中來得簡單
         </h4>
         <p className="my-1">
           只要一小時起！從其他圖資供應商轉換至 OpenStreetMap
           並不需很長時間。您可以利用&nbsp;
           <a
-            className="underline text-warabi-500"
+            className="link--warabi"
             href="http://leafletjs.com/"
           >
             Leaflet
@@ -53,7 +53,7 @@ export default function QsgDeveloperPage() {
           <EnIcon />
           和一系列供應商提供的
           <a
-            className="underline text-warabi-500"
+            className="link--warabi"
             href="https://switch2osm.org/providers/"
           >
             免費圖磚
