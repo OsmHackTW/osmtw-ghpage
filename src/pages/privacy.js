@@ -3,7 +3,7 @@ import Layout from "../components/layouts/layout";
 import PageMeta from "../components/metadata";
 import { LegalPageTitle } from "../components/legal";
 
-const lastModified = "2021-12-22";
+const lastModified = "2026-04-16";
 
 const articles = [
   {
@@ -55,15 +55,11 @@ const articles = [
       },
     ],
   },{
-    section: "附二、Google Analytics",
+    section: "附二、Cloudflare Browser Insights",
     paragraphs: [
       {
-        text: "本網站使用 Cloudflare Browser Insights 收集網站 Web Vitals 和效能指標，透過分析使用者與之互動來進一步改善網站，這當中可能包括使用者概略的位置資訊。有關本站如何使用 Google Analytics 的更多資訊，請瀏覽：",
-        href: "https://www.google.com/analytics/terms/us.html",
-      },
-      {
-        text: "若您不希望被 Google Analytics 追蹤，Google 有提供 Google Analytics 選擇退出附加元件 (Google Analytics Opt-out Browser Add-on) 下載，請瀏覽：",
-        href: "https://tools.google.com/dlpage/gaoptout?hl=zh-tw",
+        text: "本網站使用 Cloudflare Browser Insights 收集網站載入速度等效能資料，以了解使用者的瀏覽體驗並進一步改善網站。這些資料由 Cloudflare 代為處理，可能包括使用者概略的位置資訊。若您不希望被收集，可在瀏覽器設定中開啟「請勿追蹤」(Do Not Track) 功能，Cloudflare Browser Insights 將會遵循此設定。有關 Cloudflare 如何處理您的資料，請參閱其隱私權政策：",
+        href: "https://www.cloudflare.com/privacypolicy/",
       },
     ],
   },
