@@ -33,7 +33,6 @@
     "@tailwindcss/postcss": "^4.2.2",
     "autoprefixer": "^10.4.21",
     "next": "^15.5.15",
-    "next-themes": "^0.2.1",
     "prop-types": "^15.8.1",
     "react": "19",
     "react-dom": "19",

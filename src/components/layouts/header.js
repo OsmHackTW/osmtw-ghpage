@@ -1,23 +1,36 @@
 import React, { useState, useEffect } from "react";
-import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { uriComponents } from "../navData";
 import { ExtLinkIcon } from "../util";
 
 const logo = "/assets/images/logo.png";
 
-export default function Header() {
-  const [mounted, setMounted] = useState(false);
-  const [isExpanded, toggleExpansion] = useState(false);
-  const { theme, setTheme } = useTheme();
+function useTheme() {
+  const [theme, setThemeState] = useState('light');
 
   useEffect(() => {
-    setMounted(true);
+    const stored = localStorage.getItem('theme');
+    if (stored === 'dark' || stored === 'light') {
+      setThemeState(stored);
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setThemeState('dark');
+    }
   }, []);
 
-  if (!mounted) {
-    return null;
-  }
+  const setTheme = (next) => {
+    setThemeState(next);
+    localStorage.setItem('theme', next);
+    document.documentElement.classList.remove('light', 'dark');
+    document.documentElement.classList.add(next);
+    document.documentElement.style.colorScheme = next;
+  };
+
+  return { theme, setTheme };
+}
+
+export default function Header() {
+  const [isExpanded, toggleExpansion] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   const themeToogleIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

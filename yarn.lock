@@ -4820,17 +4820,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-themes@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "next-themes@npm:0.2.1"
-  peerDependencies:
-    next: "*"
-    react: "*"
-    react-dom: "*"
-  checksum: 10c0/979dec0a2de049ce7d1b5da835e7f7dc3b7ec83ba9e464348f497a52a6a6e5b5c395c97f071f66a63f50f22cce89fb6d19061ec7e75643b0eab215b21794bde7
-  languageName: node
-  linkType: hard
-
 "next@npm:^15.5.15":
   version: 15.5.15
   resolution: "next@npm:15.5.15"
@@ -5074,7 +5063,6 @@ __metadata:
     gh-pages: "npm:^6.1.1"
     husky: "npm:^9.1.7"
     next: "npm:^15.5.15"
-    next-themes: "npm:^0.2.1"
     postcss: "npm:^8.5.6"
     prettier: "npm:^3.8.2"
     prop-types: "npm:^15.8.1"
