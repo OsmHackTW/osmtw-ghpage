@@ -144,7 +144,7 @@ const SecretFaqs = {
     },
     {
       question: "要怎麼舉報地圖被惡搞啊？這樣太不負責了吧？（不爽世",
-      answer: "我早知道會這樣了，真的很莫名其妙。先試試在變更集（Changeset）留言跟對方溝通，有時候只是不小心畫錯。如果對方擺明惡意、或是長期濫用帳號，就要把證據交給 Data Working Group（DWG）——他們有權封鎖違規帳號。記得附上截圖和 changeset 連結，讓 DWG 好處理。舉報入口：https://www.openstreetmap.org/reports/new",
+      answer: "我早知道會這樣了，真的很莫名其妙。先試試在變更集（Changeset）留言跟對方溝通，有時候只是不小心畫錯。如果對方擺明惡意、或是長期濫用帳號，就要把證據交給 Data Working Group（DWG）——他們有權封鎖違規帳號。如果對方明顯惡意或長期濫用帳號，就應將證據交給 Data Working Group（DWG），他們有權封鎖違規帳號。請在使用者的個人資料頁點擊「檢舉此使用者」（或 \"Report this user\"），接著選擇「此使用者是破壞者」（或 \"This user is a vandal\"）來檢舉，系統將會通知 DWG 處理。記得附上違規內容和 Changeset 連結，這樣能更快完成處理哦。了解更多：https://wiki.openstreetmap.org/wiki/Zh-hant:Report_user/",
     },
     {
       question: "之前有個地圖專案做到一半，維護的人不見了……留下來的資料還有意義嗎？",
