@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "cssnano": "7.1.7",
-    "eslint": "^9",
+    "eslint": "^10",
     "eslint-config-airbnb": "19",
     "eslint-config-next": "^16.2.4",
     "eslint-config-prettier": "^10.1.8",
