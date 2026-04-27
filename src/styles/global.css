@@ -156,8 +156,16 @@
   @apply text-slate-600 dark:text-slate-400;
 }
 
+.text--muted {
+  @apply text-slate-500 dark:text-slate-400;
+}
+
 .text--muted-xs {
   @apply text-xs text-slate-500 dark:text-slate-400;
+}
+
+.text--muted-sm {
+  @apply text-sm text-slate-500 dark:text-slate-400;
 }
 
 .link--warabi {
