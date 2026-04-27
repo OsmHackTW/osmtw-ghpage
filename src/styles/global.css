@@ -29,6 +29,11 @@
   --color-warabi-900: #000000;
 }
 
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: auto;
+}
+
 .bg-osmtw-landing-hero {
   background-image: url('/assets/images/hero-landing.png');
   background: cover center;
