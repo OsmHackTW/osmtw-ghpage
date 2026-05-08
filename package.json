@@ -42,7 +42,7 @@
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
-    "cssnano": "7.1.7",
+    "cssnano": "8.0.0",
     "eslint": "^10",
     "eslint-config-airbnb": "19",
     "eslint-config-next": "^16.2.4",
