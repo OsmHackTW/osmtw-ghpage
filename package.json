@@ -30,30 +30,30 @@
   "dependencies": {
     "@mdx-js/mdx": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
-    "@tailwindcss/postcss": "^4.2.4",
-    "autoprefixer": "^10.5.0",
+    "@tailwindcss/postcss": "^4.3.1",
+    "autoprefixer": "^10.5.2",
     "eslint-plugin-react-hooks": "^7.1.1",
     "next": "^15.5.15",
     "prop-types": "^15.8.1",
     "react": "19",
     "react-dom": "19",
     "react-helmet": "^6.1.0",
-    "swr": "^2.4.1",
-    "tailwindcss": "^4.2.4"
+    "swr": "^2.4.2",
+    "tailwindcss": "^4.3.1"
   },
   "devDependencies": {
     "cssnano": "7.1.7",
     "eslint": "^10",
     "eslint-config-airbnb": "19",
-    "eslint-config-next": "^16.2.4",
+    "eslint-config-next": "^16.2.9",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.30.1",
     "gh-pages": "^6.3.0",
     "husky": "^9.1.7",
-    "postcss": "^8.5.13",
-    "prettier": "^3.8.3",
+    "postcss": "^8.5.15",
+    "prettier": "^3.8.5",
     "typescript": "^6.0.3"
   },
   "repository": {
