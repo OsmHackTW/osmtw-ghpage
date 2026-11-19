@@ -6,6 +6,7 @@ import { landingPageComponents } from "../components/landingData";
 import { ExtLinkIcon } from "../components/util";
 
 import PageMeta from "../components/metadata";
+import CommunityStrip from "../components/communityStrip";
 
 const RN990698 = "/assets/images/RN990698_2000.jpg";
 const mapLayersd0 = "/assets/images/landing_maplayers_d0.png";
@@ -311,38 +312,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Banner */}
-      <section className="flex-col-center">
-        <div className="w-full flex object-fill bg-warabi-50">
-          <div className="w-full md:w-3/4 xl:w-3/5 2xl:w-2/3 2xl:max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-            <h2 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900">
-              <span className="block py-2">摩拳擦掌？躍躍欲試？</span>
-              <span className="block text-warabi-700">
-                馬上開始使用開放街圖！
-              </span>
-            </h2>
-            <div className="mt-8 flex lg:mt-0 lg:shrink-0">
-              <div className="inline-flex rounded-md shadow">
-                <a
-                  href="https://osm.org/"
-                  className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-warabi-600 hover:bg-warabi-700"
-                >
-                  開始畫圖
-                  <ExtLinkIcon />
-                </a>
-              </div>
-              <div className="ml-3 inline-flex rounded-md shadow">
-                <Link
-                  href="/qsg"
-                  className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-lg text-warabi-700 bg-white hover:bg-slate-100"
-                >
-                  {learnMore}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CommunityStrip />
     </Layout>
   );
 }

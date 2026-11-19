@@ -5,17 +5,10 @@ import Layout from "../../components/layouts/layout";
 import PageMeta from "../../components/metadata";
 import { qsgSections } from "../../components/qsgData";
 import { ExtLinkIcon } from "../../components/util";
+import HeaderAligned from "../../components/headerAligned";
+import CommunityStrip from "../../components/communityStrip";
 
 const LandingImg = "/assets/images/RN990586_2000.jpg";
-
-const communityLinks = [
-  { label: "聯絡我們", href: "/contact" },
-  {
-    label: "社群討論板",
-    href: "https://community.openstreetmap.org/c/communities/tw/42",
-  },
-  { label: "近期活動", href: "/events" },
-];
 
 function RoleSection({ section }) {
   return (
@@ -89,22 +82,6 @@ RoleSection.propTypes = {
     }),
     items: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,
-};
-
-// Mirrors the header's gutters and max width (layouts/header.js) so page content lines up with the logo.
-function HeaderAligned({ className = "", children }) {
-  return (
-    <div className="px-2 lg:px-8">
-      <div className={`max-w-7xl mx-auto px-2 md:px-4 ${className}`}>
-        {children}
-      </div>
-    </div>
-  );
-}
-
-HeaderAligned.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.node.isRequired,
 };
 
 const QsgIndexPage = () => (
@@ -201,33 +178,7 @@ const QsgIndexPage = () => (
         ))}
     </HeaderAligned>
 
-    {/* Community */}
-    <section className="mt-12 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-600">
-      <HeaderAligned className="py-12 flex flex-wrap items-center justify-between gap-6">
-        <div className="flex flex-col gap-1.5">
-          <h2 className="text-xl font-bold text-slate-900 dark:text-white">
-            需要鬥相共？緊來揣社群！
-          </h2>
-          <p className="text-slate-600 dark:text-slate-300">
-            遇到問題了？歡迎你隨時找社群發問，也歡迎你來參加各類實體活動。
-          </p>
-        </div>
-        <div className="flex flex-wrap gap-3">
-          {communityLinks.map((link) => {
-            const LinkTag = link.href.startsWith("/") ? Link : "a";
-            return (
-              <LinkTag
-                key={link.href}
-                href={link.href}
-                className="inline-flex items-center min-h-11 px-5 rounded-full no-underline border border-slate-500 text-warabi-700 hover:bg-slate-100 dark:border-slate-400 dark:text-slate-100 dark:hover:bg-slate-700"
-              >
-                {link.label}
-              </LinkTag>
-            );
-          })}
-        </div>
-      </HeaderAligned>
-    </section>
+    <CommunityStrip className="mt-12" />
   </Layout>
 );
 
