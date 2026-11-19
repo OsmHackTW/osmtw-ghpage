@@ -211,7 +211,7 @@ const FaqSection = ({ list }) => (
         <h3 className="text-lg lg:text-xl text-slate-600 dark:text-warabi-100 py-3">
           {faq.question}
         </h3>
-        <blockquote className="pl-4 text-l leading-loose text-justify border-l-4 border-slate-900">
+        <blockquote className="pl-4 text-l leading-loose text-justify border-l-4 border-slate-900 dark:border-neutral-100/50">
           {renderAnswer(faq.answer)}
         </blockquote>
       </div>
