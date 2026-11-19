@@ -81,7 +81,7 @@ export default function Home() {
             </div>
             <div className="grid gap-8 row-gap-10 sm:grid-cols-2 lg:grid-cols-4">
               {landingPageComponents.feature.map((link) => (
-                <React.Fragment key={link.id}>
+                <React.Fragment key={link.heading}>
                   <div className="max-w-md">
                     <div className="flex items-center justify-center relative mx-auto w-32 h-32 md:w-24 md:h-24 mb-4 rounded-full bg-red-200">
                       <svg
@@ -163,7 +163,7 @@ export default function Home() {
                   開始畫圖 <ExtLinkIcon />
                 </a>
                 <Link
-                  href="/qsg/mapper/"
+                  href="/qsg#mapper"
                   className="inline-flex items-center font-semibold text-slate-800 transition-colors duration-200 hover:text-blue-600"
                 >
                   {learnMore}
@@ -260,18 +260,18 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap -m-4">
               {landingPageComponents.quickStartGuide.map((link) => (
-                <div className="p-4 md:w-1/3" key={link.id}>
+                <div className="p-4 md:w-1/3" key={link.route}>
                   <div className="flex rounded-lg h-full shadow-lg bg-slate-100 p-8 flex-col">
                     <div className="flex items-center mb-3">
                       <div className="w-12 h-12 mr-3 inline-flex items-center justify-center rounded-full bg-green-500 text-white shrink-0">
                         <svg
                           className="p-2"
-                          fill="none"
+                          fill={link.filled ? "currentColor" : "none"}
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          strokeWidth="2"
+                          strokeWidth={link.strokeWidth ?? 2}
                         >
                           <path d={link.SVGpath} />
                         </svg>
@@ -287,7 +287,6 @@ export default function Home() {
                       </p>
                       <Link
                         className="mt-3 text-green-500 inline-flex items-center"
-                        key={link.title}
                         href={link.route}
                       >
                         {learnMore}

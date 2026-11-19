@@ -250,7 +250,7 @@ const AboutPage = () => (
             立刻註冊 <ExtLinkIcon />
           </a>
           <Link
-            href="/qsg/"
+            href="/qsg"
             className="px-6 py-3 rounded-full font-semibold border-2 border-warabi-600 dark:border-warabi-300 text-warabi-600 dark:text-warabi-300 hover:bg-warabi-50/75 dark:hover:bg-slate-600 transition duration-200"
           >
             {learnMore}

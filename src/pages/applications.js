@@ -60,6 +60,12 @@ const listOfApps = [{
             { name: "Locus Map", href: "https://www.locusmap.app/", description: "專業級戶外地圖應用，支援離線地圖、GPX 軌跡記錄、導航與地理快取，適合登山、單車及野外探險。", platform: ["Android", "iOS"] },
             { name: "綠野遊蹤", href: "https://play.google.com/store/apps/details?id=com.mountain.tracks", description: "國人自製的手機GPS軟體，可匯入GPX檔案，在地圖上描繪路線，登山健行的好幫手", platform: ["Android"] },
             { name: "蛙弟 wadi", href: "https://play.google.com/store/apps/details?id=tw.div.balawu.wadi", description: "國人自製的地圖檔案及GPS檔案的檢視及管理工具，登山健行的好幫手", platform: ["Android"] },
+            { name: "uMap", href: "https://umap.openstreetmap.fr/zh-tw/", description: "在 OSM 上製作自己的地圖，適合整理私人書籤。", platform: ["Web"] },
+            { name: "MapComplete", href: "https://mapcomplete.osm.be/", description: "OSM 比利時推出的主題地圖，可提案新主題。", platform: ["Web"] },
+            { name: "OpenTopoMap", href: "https://opentopomap.org/", description: "以 OSM 資料製作的等高線地形圖。", platform: ["Web"] },
+            { name: "CyclOSM", href: "https://www.cyclosm.org/", description: "為騎車設計的 OSM 地圖樣式，標出自行車道與坡度。", platform: ["Web"] },
+            { name: "OpenRailwayMap", href: "https://www.openrailwaymap.org/", description: "以 OSM 製作的鐵道地圖，標出軌道、車站與號誌。", platform: ["Web"] },
+            { name: "Transitous", href: "https://transitous.org/", description: "以開放資料規劃大眾運輸路線與班次。", platform: ["Web"] },
           ],
         }, {
           subgroup: "應用服務",
@@ -78,6 +84,10 @@ const listOfApps = [{
             { name: "魯地圖 MOI.OSM – Taiwan TOPO", href: "https://rudymap.tw", description: "由社群成員們開發的臺灣登山地圖，具備離線容量小且可呈現多款地圖樣式的優點，結合OSM圖資、山友分享的軌跡檔，以及內政部開放的20米解析度DEM資料製作而成。" },
             { name: "Komoot", href: "https://www.komoot.com/", description: "專為戶外活動設計的路線規劃與導航應用，以 OSM 為基礎，支援單車、登山、健行等多種活動模式，提供詳盡的地形與路面資訊，在台灣單車社群中廣受歡迎。", platform: ["Web", "Android", "iOS"] },
             // { name: "", href: "", provider: "", description: "" },
+            { name: "Waymarked Trails", href: "https://waymarkedtrails.org/", description: "顯示自行車與登山車路線的地圖。", platform: ["Web"] },
+            { name: "BRouter", href: "https://brouter.de/", description: "以 OSM 資料規劃騎車與步行路線的工具。", platform: ["Web", "Android"] },
+            { name: "OpenAndroMaps", href: "https://www.openandromaps.org/en", description: "可下載的離線向量地圖，依地區下載後使用。", platform: ["Android"] },
+            { name: "健行筆記", href: "https://hiking.biji.co/", description: "台灣的健行社群網站，分享路線與經驗。", platform: ["Web"] },
           ]
         },
         {
@@ -93,6 +103,14 @@ const listOfApps = [{
           items: [
             { name: "Every Door", href: "https://every-door.app/", description: "專為新增與修改 OSM 地點資訊設計的行動編輯器，介面直觀，適合快速補充店家、設施等 POI 資料，是貢獻 OSM 的最佳入門工具之一。", platform: ["Android", "iOS"] },
             { name: "StreetComplete", href: "https://streetcomplete.app/", description: "以問答遊戲形式引導使用者補充 OSM 缺漏資訊，無需地圖編輯知識即可輕鬆參與貢獻，每回答一題即完成一筆 OSM 資料更新。", platform: ["Android"] },
+            { name: "JOSM", href: "https://josm.openstreetmap.org/", description: "功能完整的桌面編輯器，適合批次修改大量資料。", platform: ["Desktop"] },
+            { name: "MapRoulette", href: "https://maproulette.org/", description: "小型的引導式修圖任務，不用先學編輯器。", platform: ["Web"] },
+            { name: "HOT Tasking Manager", href: "https://tasks.hotosm.org/", description: "組織化的製圖專案，適合加入團體一起畫。", platform: ["Web"] },
+            { name: "Mapillary", href: "https://www.mapillary.com/", description: "上傳街景照片，協助確認地圖上的地物。", platform: ["Web", "Android", "iOS"] },
+            { name: "Panoramax 台灣站", href: "https://panoramax.osm.tw/", description: "開源的街景照片平台，可上傳與瀏覽街景照片。台灣站由在地社群架設維護，儲存硬碟由熱心人士捐贈，主要收集台灣各地的街景。", platform: ["Web"] },
+            { name: "OSMcha", href: "https://osmcha.org/", description: "檢視地圖編輯紀錄（changeset），快速審查與找出可疑修改。", platform: ["Web"] },
+            { name: "Osmose", href: "https://osmose.openstreetmap.fr/", description: "自動檢查地圖錯誤，列出待修清單。", platform: ["Web"] },
+            { name: "Taginfo", href: "https://taginfo.openstreetmap.org/", description: "查看各種標籤的使用量，幫你選擇常見的標籤。", platform: ["Web"] },
           ]
         },
       ]
@@ -107,6 +125,7 @@ const listOfApps = [{
             { href: "http://overpass-turbo.eu/", name: "overpass-turbo", provider: "", platform: ["Web"], description: "基於 Overpass API 的線上 OpenStreetMap 資料探勘工具，支援以語法查詢特定地物並視覺化結果。" },
             { href: "https://osmcode.org/osmium-tool/", name: "osmium-tool", provider: "", platform: ["C++", "CLI"], description: "處理 OSM 資料檔案的必備命令列工具，支援 .osm.pbf 格式的篩選、合併與格式轉換，是 OSM 資料前處理流程的標準工具。" },
             { href: "https://postgis.net/", name: "PostGIS", provider: "", platform: ["PostgreSQL"], description: "PostgreSQL 的空間資料延伸套件，支援地理空間查詢與分析，是絕大多數 OSM 資料處理管線的核心資料庫解決方案。" },
+            { name: "Geofabrik", href: "https://download.geofabrik.de/", description: "提供各地區 OSM 資料下載，含台灣範圍，適合自架服務。", platform: ["Web"] },
           ],
         },
         {
