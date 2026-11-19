@@ -280,10 +280,10 @@ export default function Home() {
                           <path d={link.SVGpath} />
                         </svg>
                       </div>
-                      <h2 className="text-slate-900 text-xl title-font font-medium">
+                      <h3 className="text-slate-900 text-xl title-font font-medium">
                         我是
                         {link.role}
-                      </h2>
+                      </h3>
                     </div>
                     <div className="grow">
                       <p className="leading-relaxed text-normal">

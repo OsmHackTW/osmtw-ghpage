@@ -22,22 +22,33 @@ function Footer() {
             經過多年的發展，世界各地的地理圖資逐漸增加，部分地區圖資的詳細程度甚至可用以一般商業應用。
           </div>
           <div className="w-full flex flex-row px-1 my-2 gap-8 item-center whitespace-pre-line">
-            {uriComponents.footerLink.infoLinks.map((link) => (
-              <Link
-                className="w-1/2 flex text-neutral-200 hover:text-neutral-100 text-xs font-medium duration-700"
-                key={link.title}
-                href={link.path}
-              >
-                {link.title}
-              </Link>
-            ))}
+            {uriComponents.footerLink.infoLinks.map((link) => {
+              const className =
+                "flex-1 flex text-neutral-200 hover:text-neutral-100 text-xs font-medium duration-700";
+              return link.isExternal ? (
+                <a
+                  className={className}
+                  key={link.title}
+                  href={link.path}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {link.title}
+                  <ExtLinkIcon />
+                </a>
+              ) : (
+                <Link className={className} key={link.title} href={link.path}>
+                  {link.title}
+                </Link>
+              );
+            })}
           </div>
         </div>
 
         <div className="p-5 w-full md:w-2/3 m-auto text-neutral-200 flex flex-wrap justify-left">
           {uriComponents.footerSection.map((section) => (
             <div className="p-2 w-full my-4 md:w-1/3 md:my-0" key={section.title}>
-              <div className="text-xs uppercase underline tracking-widest text-blue-100 font-medium mb-4">
+              <div className="text-xs uppercase underline tracking-widest text-neutral-100 font-medium mb-4">
                 {section.title}
               </div>
               {(uriComponents.footerLink[section.list]).map((link) => (
