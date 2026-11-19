@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-const logo = "/assets/images/logo.png";
 
 // common components 共通元件
 
@@ -16,18 +15,6 @@ const ExtLinkIcon = () => (
 );
 
 const EnIcon = () => <span className="text-xs text-slate-400">(英語)</span>;
-
-const OsmtwGuideTitle = () => (
-  <h1 className="flex grow-0 place-items-center ">
-    <span className="sr-only">入門指南</span>
-    <span className="block h-10 w-10">
-      <img src={logo} width={40} height={40} alt="OSMTW 開放街圖台灣" aria-label="開放街圖台灣LOGO" />
-    </span>
-    <span className="px-4 text-xl font-semibold text-warabi-500 inlne">
-      入門指南
-    </span>
-  </h1>
-);
 
 const Accordion = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false);
@@ -64,4 +51,4 @@ Pre.propTypes = {
   content: PropTypes.node.isRequired,
 };
 
-export { ExtLinkIcon, EnIcon, OsmtwGuideTitle, Accordion, Pre };
+export { ExtLinkIcon, EnIcon, Accordion, Pre };

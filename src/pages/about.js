@@ -224,6 +224,9 @@ const AboutPage = () => (
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
             三步驟加入開放街圖
           </h2>
+          <p className="mt-4 text-slate-600 dark:text-slate-300">
+            台灣開放街圖社群的活躍成員幾乎都是利用空閒時間無償貢獻。不論是更新圖資還是協助推廣，每一項貢獻都有意義！
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {howToContribute.steps.map((step, idx) => (
@@ -247,12 +250,25 @@ const AboutPage = () => (
             立刻註冊 <ExtLinkIcon />
           </a>
           <Link
-            href="/qsg/get-started/"
+            href="/qsg/"
             className="px-6 py-3 rounded-full font-semibold border-2 border-warabi-600 dark:border-warabi-300 text-warabi-600 dark:text-warabi-300 hover:bg-warabi-50/75 dark:hover:bg-slate-600 transition duration-200"
           >
             {learnMore}
           </Link>
         </div>
+        <p className="text-center text-sm text-slate-600 dark:text-slate-300">
+          也歡迎
+          <a
+            href="https://ocf.neticrm.tw/civicrm/contribute/transact?id=16"
+            className="link--warabi mx-1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            捐款支持 Donate
+            <ExtLinkIcon />
+          </a>
+          台灣開放街圖社群的營運及推廣活動。
+        </p>
       </div>
     </section>
   </Layout>
