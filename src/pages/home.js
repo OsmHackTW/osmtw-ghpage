@@ -36,9 +36,9 @@ export default function Home() {
         <div className="relative w-full flex py-32 md:py-64 bg-cover bg-center bg-no-repeat object-fill bg-osmtw-landing-hero osmtw-osmcontributors--bottom-right">
           <div className="w-full max-w-5xl mx-auto p-2">
             <div className="flex-1 text-center md:text-left bg-slate-100/25 mx-auto px-4 my-4 md:px-16 md:mr-8 lg:ml-16">
-              <div className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-900 leading-none my-4 ">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-900 leading-none my-4 ">
                 開放街圖・台灣
-              </div>
+              </h1>
               <div className="text-2xl lg:text-3xl font-bold tracking-tight text-slate-700 pb-4 mb-6 md:space-x-4">
                 <span className="block md:inline">自由開放的圖資</span>
                 <span className="block md:inline">廣泛運用的圖資</span>
@@ -254,9 +254,9 @@ export default function Home() {
               <h2 className="text-2xl text-green-500 dark:text-green-200 tracking-widest font-semibold title-font mb-1">
                 &#35;當地圖不再只是地圖
               </h2>
-              <h1 className="sm:text-4xl text-3xl font-medium title-font text-slate-900 dark:text-white">
+              <p className="sm:text-4xl text-3xl font-medium title-font text-slate-900 dark:text-white">
                 發掘開放街圖的更多潛在的可能性
-              </h1>
+              </p>
             </div>
             <div className="flex flex-wrap -m-4">
               {landingPageComponents.quickStartGuide.map((link) => (

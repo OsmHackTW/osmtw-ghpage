@@ -113,6 +113,7 @@ const aboutSections = [
 const AboutPage = () => (
   <Layout>
     <PageMeta keywords={["OSM", "開放街圖"]} title="什麼是開放街圖" />
+    <h1 className="sr-only">什麼是開放街圖</h1>
     <AnchorBar sections={aboutSections} />
     <section className="antialiased text-slate-900 dark:text-slate-200 py-12 md:py-20">
       <div className="w-full max-w-5xl mx-auto px-6 sm:px-10">

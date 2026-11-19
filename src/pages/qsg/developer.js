@@ -63,7 +63,7 @@ export default function QsgDeveloperPage() {
           ，甚至是自架圖磚服務，發揮無限創意。
         </p>
         <p className="my-1">最常用的圖磚服務供應商有：</p>
-        <p className="my-1">
+        <div className="my-1">
           <ul className="list-disc list-inside ml-1">
             <li>
               <a href="https://www.mapbox.com/">MapBox</a>
@@ -72,7 +72,7 @@ export default function QsgDeveloperPage() {
               ，提供一定次數閲覧的免費方案。
             </li>
             <li>
-              <a href="https://www.klokantech.com/">Klokan Technologies</a>
+              <a href="https://www.maptiler.com/">MapTiler</a>
               <ExtLinkIcon />
               <EnIcon />
               亦有提供免費方案給予非商業行為使用，詳情請瀏覧：
@@ -93,7 +93,7 @@ export default function QsgDeveloperPage() {
               <EnIcon />
             </li>
           </ul>
-        </p>
+        </div>
       </div>
     </Layout>
   );

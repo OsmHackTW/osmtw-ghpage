@@ -15,7 +15,7 @@ const EventPage = () => (
         <div className="w-5xl px-4 py-5 mx-auto sm:max-w-xl md:w-full lg:max-w-(--breakpoint-xl) rounded-t">
           <div className="flex flex-col w-3xl md:w-6xl p-2 mb-8">
             <h3 className="uppercase text-xl px-0.5">Upcoming Events</h3>
-            <h2 className="uppercase text-4xl text-semibold">近期活動</h2>
+            <h1 className="uppercase text-4xl text-semibold">近期活動</h1>
           </div>
           <ul className="flex flex-col">
             <DummyEvent />

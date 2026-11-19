@@ -25,7 +25,7 @@ const QsgMapperPage = () => (
         如果你發現地圖上錯誤，你可以用幾分鐘的時間幫忙標示。
         出遊時，你可以用行動裝置紀錄公路、街道的軌跡，順手紀錄一下實用的地物又更棒了。
         也可以用容易上手的 iD 編輯器進行線上編輯。請參考教學文件，或
-        <Link href="/event" className="link--warabi">
+        <Link href="/events" className="link--warabi">
           參與我們舉辦的活動
         </Link>
         。

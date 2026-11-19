@@ -33,7 +33,7 @@ export default function Header() {
   const { theme, setTheme } = useTheme();
 
   const themeToogleIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round"
         d={theme === 'light' ?
           "M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" :
@@ -50,7 +50,7 @@ export default function Header() {
           {/* Logo + OSM.org pill + hamburger */}
           <div className="w-full xl:w-1/3 flex flex-row flex-nowrap justify-between items-center">
             <Link href="/">
-              <h1 className="flex grow-0 no-underline">
+              <span className="flex grow-0 no-underline">
                 <img
                   className="block h-10 w-auto"
                   src={logo}
@@ -60,7 +60,7 @@ export default function Header() {
                   <span className="block lg:hidden">OSMTW</span>
                   <span className="hidden lg:block">OpenStreetMap 台灣</span>
                 </span>
-              </h1>
+              </span>
             </Link>
             <div className="flex items-center gap-4">
               <a
@@ -73,6 +73,8 @@ export default function Header() {
               <button
                 type="button"
                 className="p-2 border border-slate-700 rounded xl:hidden"
+                aria-expanded={isExpanded}
+                aria-controls="site-nav"
                 onClick={() => toggleExpansion(!isExpanded)}
               >
                 <span className="sr-only">Menu</span>
@@ -100,6 +102,7 @@ export default function Header() {
           {/* Nav links */}
           <div className="w-full xl:w-2/3">
             <nav
+              id="site-nav"
               className={`${isExpanded ? "block" : "hidden"} py-4 xl:flex xl:items-center xl:justify-end w-full`}
             >
               <a
@@ -123,6 +126,7 @@ export default function Header() {
                 className="block mt-4 xl:inline-block xl:mt-0 xl:ml-6"
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                 title="深色模式切換 Dark Mode On/Off"
+                aria-label="深色模式切換 Dark Mode On/Off"
               >
                 {themeToogleIcon(theme)}
               </button>

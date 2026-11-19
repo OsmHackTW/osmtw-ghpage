@@ -111,6 +111,10 @@ const FaqList = [{
       question: "有問題或想貢獻，怎麼聯絡台灣社群？",
       answer: "可以參考頁尾連結，或者到 https://openstreetmap.community/?map=23.68984,121.00137&zoom=7 找到台灣社群的聯絡資訊，或直接在 Facebook 社團發文提問，大家都很歡迎新朋友！",
     },
+    {
+      question: "我的 OSM 帳號被封鎖了，該怎麼辦？",
+      answer: "登入後會看到封鎖說明，上面寫著原因、期限，以及執行封鎖的管理員。請先讀完說明；有疑問可以直接傳訊息給該管理員，或到 https://community.openstreetmap.org/ 說明情況，社群會協助你。",
+    },
   ],
 }]
 
@@ -125,10 +129,6 @@ const SecretFaqs = {
     {
       question: "那個……我可以加入 OSM 社群嗎？（貓貓喝水",
       answer: "貴安，當然可以。歡迎你。一直都可以加入的——不需要問，直接來就好了。",
-    },
-    {
-      question: "現在是復權的時刻——我的編輯帳號被鎖了，要怎麼辦？",
-      answer: "等一下，先冷靜下來談談吧。先別急。到 https://community.openstreetmap.org/ 說明情況，社群會一起想辦法的。復權，是遲早的事。",
     },
     {
       question: "我只是想畫地圖，為什麼要在意這麼多規則？（初華看手機",

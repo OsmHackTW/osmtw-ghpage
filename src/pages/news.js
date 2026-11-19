@@ -6,6 +6,7 @@ import PageMeta from "../components/metadata";
 const NewsPage = () => (
   <Layout>
     <PageMeta keywords={["新聞公告", "週刊OSM", "News", "Weekly OSM"]} title="新聞公告 News - 週刊OSM Weekly OSM" />
+    <h1 className="sr-only">新聞公告 News</h1>
     <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center lg:max-w-(--breakpoint-xl) mx-auto">
       <div className="py-32" />
       <div className="w-full mx-auto">
