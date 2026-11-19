@@ -252,11 +252,14 @@ export default function Home() {
         <div className="relative w-full flex-1 text-left max-w-7xl">
           <div className="container p-5 md:py-16 mx-auto text-slate-600 body-font">
             <div className="flex flex-col text-center w-full mb-12 md:mb-20">
-              <h2 className="text-2xl text-warabi-600 dark:text-warabi-300 tracking-widest font-semibold title-font mb-1">
+              <p className="text-2xl text-warabi-600 dark:text-warabi-300 tracking-widest font-semibold title-font mb-1">
                 &#35;當地圖不再只是地圖
+              </p>
+              <h2 className="sm:text-4xl text-3xl font-medium title-font text-slate-900 dark:text-white">
+                摩拳擦掌？躍躍欲試？
               </h2>
-              <p className="sm:text-4xl text-3xl font-medium title-font text-slate-900 dark:text-white">
-                發掘開放街圖的更多潛在的可能性
+              <p className="mt-3 text-lg text-slate-600 dark:text-slate-300">
+                選一個身分，馬上開始使用開放街圖！
               </p>
             </div>
             <div className="flex flex-wrap -m-4">
