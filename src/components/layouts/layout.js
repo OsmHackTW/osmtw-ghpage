@@ -31,7 +31,7 @@ function BackToTop() {
 
 function Layout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen bg-taupe-200 font-sans text-slate-900 dark:bg-slate-700 dark:text-slate-200">
+    <div className="flex flex-col min-h-screen bg-taupe-200 font-sans text-slate-900 dark:bg-neutral-900 dark:text-neutral-200">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-4 focus:left-4 focus:px-4 focus:py-2 focus:bg-warabi-500 focus:text-white focus:rounded focus:shadow-lg"

@@ -61,7 +61,7 @@ export default function Home() {
           <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-(--breakpoint-xl) md:px-24 lg:px-8 lg:py-20">
             <div className="flex flex-col mb-6 lg:flex-row md:mb-10">
               <div className="w-full mb-8 md:mb-16 lg:w-1/2">
-                <h2 className="max-w-full text-3xl lg:text-4xl xl:text-5xl font-bold highlight-yellow text-slate-900 dark:bg-slate-400 dark:rounded-none xl:max-w-lg">
+                <h2 className="max-w-full text-3xl lg:text-4xl xl:text-5xl font-bold highlight-yellow text-slate-900 dark:text-white xl:max-w-lg">
                   人人可編輯的世界地圖
                 </h2>
               </div>
@@ -84,9 +84,9 @@ export default function Home() {
               {landingPageComponents.feature.map((link) => (
                 <React.Fragment key={link.heading}>
                   <div className="max-w-md">
-                    <div className="flex items-center justify-center relative mx-auto w-32 h-32 md:w-24 md:h-24 mb-4 rounded-full bg-warabi-500">
+                    <div className="flex items-center justify-center relative mx-auto w-32 h-32 md:w-24 md:h-24 mb-4 rounded-full bg-warabi-100 dark:bg-warabi-700">
                       <svg
-                        className="w-24 h-24 md:w-16 md:h-16 text-white"
+                        className="w-24 h-24 md:w-16 md:h-16 text-warabi-700 dark:text-warabi-200"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -205,7 +205,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col justify-center px-5 -mx-4 md:px-0 lg:pl-8 lg:max-w-lg xl:max-w-3xl">
-              <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-warabi-500">
+              <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-warabi-600 dark:bg-warabi-700">
                 <svg
                   className="text-white w-8 h-8"
                   viewBox="0 0 16 16"
@@ -232,7 +232,7 @@ export default function Home() {
                   探索更多地圖樣式
                   <ExtLinkIcon />
                 </a>
-                <span className="text-slate-400 text-xs mx-1">(英語)</span>
+                <span className="text-slate-600 dark:text-neutral-400 text-xs mx-1">(英語)</span>
                 <blockquote className="flex flex-col py-4 md:py-8 space-y-1 text--muted-xs">
                   <div>&copy; OpenStreetMap contributors.</div>
                   <div>
@@ -258,7 +258,7 @@ export default function Home() {
               <h2 className="sm:text-4xl text-3xl font-medium title-font text-slate-900 dark:text-white">
                 摩拳擦掌？躍躍欲試？
               </h2>
-              <p className="mt-3 text-lg text-slate-600 dark:text-slate-300">
+              <p className="mt-3 text-lg text-slate-600 dark:text-neutral-300">
                 選一個身分，馬上開始使用開放街圖！
               </p>
             </div>
@@ -267,7 +267,7 @@ export default function Home() {
                 <div className="p-4 md:w-1/3" key={link.route}>
                   <div className="flex rounded-lg h-full shadow-lg bg-slate-100 p-8 flex-col">
                     <div className="flex items-center mb-3">
-                      <div className="w-12 h-12 mr-3 inline-flex items-center justify-center rounded-full bg-warabi-500 text-white shrink-0">
+                      <div className="w-12 h-12 mr-3 inline-flex items-center justify-center rounded-full bg-warabi-100 text-warabi-700 shrink-0">
                         <svg
                           className="p-2"
                           fill={link.filled ? "currentColor" : "none"}

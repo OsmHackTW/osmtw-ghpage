@@ -9,17 +9,17 @@ import { apps } from "../components/appsData";
 const ToolCard = ({ href, name, provider, description, platform }) => (
   <a
     href={href}
-    className="block bg-white dark:bg-slate-600 rounded-xl p-5 shadow-sm border border-slate-100 dark:border-slate-500 hover:dark:bg-slate-500/65 hover:shadow-md transition no-underline"
+    className="block min-h-[130px] bg-white dark:bg-neutral-800 rounded-xl p-5 shadow-sm border border-slate-100 dark:border-neutral-600 hover:dark:bg-neutral-700/65 hover:shadow-md transition no-underline"
     target="_blank"
     rel="noreferrer noopener"
   >
     <div className="font-semibold text-xl text--warabi">{name} <ExtLinkIcon /></div>
-    <div className="text-base text-warabi-800 dark:text-slate-400 mt-1">{provider}</div>
-    <div className="text-sm text-slate-500 dark:text-slate-400 mt-1">{description}</div>
+    <div className="text-base text-warabi-800 dark:text-neutral-400 mt-1">{provider}</div>
+    <div className="text-sm text-slate-600 dark:text-neutral-400 mt-1">{description}</div>
     {platform?.length > 0 && (
       <div className="flex flex-wrap gap-1 mt-3">
         {platform.map((p) => (
-          <span key={p} className="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300">
+          <span key={p} className="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-neutral-900 text-slate-600 dark:text-neutral-300">
             {p}
           </span>
         ))}
@@ -177,16 +177,16 @@ const AboutPage = () => (
     <h1 className="sr-only">應用場景</h1>
 
     {/* Where to Use */}
-    <section className="antialiased text-slate-900 dark:text-slate-200 py-12 md:py-20">
+    <section className="antialiased text-slate-900 dark:text-neutral-200 py-12 md:py-20">
       <div className="w-full max-w-5xl mx-auto px-6 sm:px-10">
         {listOfApps.map((paragraph) => (
           <div className="mb-16 md:mb-24 scroll-mt-20" id={paragraph.key} key={paragraph.key}>
             <div className="flex items-start gap-4 mb-8">
-              <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl leading-snug text-slate-800 dark:text-slate-100">
+              <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl leading-snug text-slate-800 dark:text-neutral-100">
                 {paragraph.title}
               </h2>
             </div>
-            <div className="mb-8 h-px bg-gradient-to-r from-teal-400 via-slate-200 to-transparent dark:via-slate-600" />
+            <div className="mb-8 h-px bg-gradient-to-r from-teal-400 via-slate-200 to-transparent dark:via-neutral-700" />
             <div className="space-y-10">
               {paragraph.sections.map((section) => (
                 <div key={section.subtitle}>
@@ -194,7 +194,7 @@ const AboutPage = () => (
                     {section.subtitle}
                   </h4>
                   {section.items && (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       {section.items.map((id) => (
                         <ToolCard key={id} {...apps[id]} />
                       ))}
@@ -207,7 +207,7 @@ const AboutPage = () => (
                           {group.subgroup}
                         </h5>
                       )}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {group.items.map((id) => (
                           <ToolCard key={id} {...apps[id]} />
                         ))}
@@ -216,7 +216,7 @@ const AboutPage = () => (
                   ))}
                 </div>
               ))}
-              <p className="text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-sm text-slate-600 dark:text-neutral-400">
                 更多請瀏覽：<a href="https://osm-apps.org/" className="text--warabi" target="_blank" rel="noreferrer noopener">OSM App Catalog</a><ExtLinkIcon />及<a href="https://github.com/osmlab/awesome-openstreetmap" className="text--warabi" target="_blank" rel="noreferrer noopener">osmlab/awesome-openstreetmap</a><ExtLinkIcon />
               </p>
             </div>

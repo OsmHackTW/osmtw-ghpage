@@ -16,14 +16,14 @@ const communityLinks = [
 export default function CommunityStrip({ className = "" }) {
   return (
     <section
-      className={`bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-600 ${className}`}
+      className={`bg-white dark:bg-neutral-700 border-t border-slate-200 dark:border-neutral-600 ${className}`}
     >
       <HeaderAligned className="py-12 flex flex-wrap items-center justify-between gap-6">
         <div className="flex flex-col gap-1.5">
           <h2 className="text-xl font-bold text-slate-900 dark:text-white">
             需要鬥相共？緊來揣社群！
           </h2>
-          <p className="text-slate-600 dark:text-slate-300">
+          <p className="text-slate-600 dark:text-neutral-300">
             遇到問題了？歡迎你隨時找社群發問，也歡迎你來參加各類實體活動。
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function CommunityStrip({ className = "" }) {
               <LinkTag
                 key={link.href}
                 href={link.href}
-                className="inline-flex items-center min-h-11 px-5 rounded-full no-underline border border-slate-500 text-warabi-700 hover:bg-slate-100 dark:border-slate-400 dark:text-slate-100 dark:hover:bg-slate-700"
+                className="inline-flex items-center min-h-11 px-5 rounded-full no-underline border border-slate-500 text-warabi-700 hover:bg-slate-100 dark:border-neutral-400 dark:text-neutral-100 dark:hover:bg-neutral-600"
               >
                 {link.label}
               </LinkTag>

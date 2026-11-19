@@ -27,8 +27,8 @@ const ContactPage = () => (
               alt="月聚 Monthly gathering"
             />
           </div>
-          <div className="p-4 md:px-12 md:py-6 dark:bg-slate-800">
-            <h1 className="my-3 text-3xl font-semibold text-slate-700 dark:text-slate-200">
+          <div className="p-4 md:px-12 md:py-6 dark:bg-neutral-800">
+            <h1 className="my-3 text-3xl font-semibold text-slate-700 dark:text-neutral-200">
               聯絡我們 Contact Us
             </h1>
             <h3 className="text--secondary">
@@ -52,7 +52,7 @@ const ContactPage = () => (
               ))}
             </div>
           </div>
-          <div className="p-4 md:px-12 dark:bg-slate-800">
+          <div className="p-4 md:px-12 dark:bg-neutral-800">
             <h3 className="text--secondary">
               您也可以填寫此表單與我們的社群成員聯繫：
             </h3>
@@ -148,10 +148,10 @@ const ContactPage = () => (
               </form>
             </div>
             <div className="mb-6">
-              <h5 className="text-sm text-slate-500">
+              <h5 className="text-sm text-slate-600 dark:text-neutral-400">
                 收到郵件後，開放街圖台灣社群成員將會儘快與您取得聯繫。謝謝！
               </h5>
-              <h5 className="text-sm text-slate-500">
+              <h5 className="text-sm text-slate-600 dark:text-neutral-400">
                 OSMTW community members will get back to you as soon as
                 available once received. Much obliged!
               </h5>

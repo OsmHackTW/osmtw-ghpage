@@ -14,7 +14,7 @@ const ExtLinkIcon = () => (
   </svg>
 );
 
-const EnIcon = () => <span className="text-xs text-slate-400">(英語)</span>;
+const EnIcon = () => <span className="text-xs text-slate-600 dark:text-neutral-400">(英語)</span>;
 
 const Accordion = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false);

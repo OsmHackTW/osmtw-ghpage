@@ -102,7 +102,7 @@ export default function TosPage() {
           <LegalPageTitle zh="服務約定條款及細則" en="Terms and Conditions" lastModified={lastModified} />
           <div className="legal-card">
             <div className="px-4 py-5 sm:px-6">
-              <h3 className="flex flex-col text-md md:text-xl leading-6 font-medium text-slate-900 dark:text-slate-200">
+              <h3 className="flex flex-col text-md md:text-xl leading-6 font-medium text-slate-900 dark:text-neutral-200">
                 {preamble.zh.map((text, i) => (
                   <span className="pb-2" key={i}>
                     {Array.isArray(text)
@@ -112,7 +112,7 @@ export default function TosPage() {
                   </span>
                 ))}
               </h3>
-              <h5 className="mt-1 max-w-5xl text-md text-slate-600 dark:text-slate-200">
+              <h5 className="mt-1 max-w-5xl text-md text-slate-600 dark:text-neutral-200">
                 {preamble.en.map((text, i) => (
                   <span className="pb-2 block" key={i}>{text}</span>
                 ))}

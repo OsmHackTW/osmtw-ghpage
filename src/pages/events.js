@@ -47,7 +47,7 @@ const OsmCalEvent = () => {
       <li className="flex flex-row mb-4" key={event.id}>
         <a
           href={event.url}
-          className="cursor-pointer border-slate-200 text-slate-700 hover:bg-slate-50 shadow border select-none bg-white rounded-md flex flex-1 items-center p-4 dark:bg-slate-600 dark:text-slate-200 dark:hover:bg-slate-700"
+          className="cursor-pointer border-slate-200 text-slate-700 hover:bg-slate-50 shadow border select-none bg-white rounded-md flex flex-1 items-center p-4 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700"
         >
           <div className="flex-1 pl-1 md:mr-16">
             <div className="text-xl font-medium mb-2">

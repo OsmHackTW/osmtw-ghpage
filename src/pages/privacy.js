@@ -76,11 +76,11 @@ const PrivacyPage = () => (
         <LegalPageTitle zh="隱私權聲明" en="Privacy Statement" lastModified={lastModified} />
         <div className="legal-card mb-4">
           <div className="px-4 py-5 sm:px-6">
-            <h3 className="flex flex-col text-lg md:text-xl leading-6 font-medium text-slate-900 dark:text-slate-200">
+            <h3 className="flex flex-col text-lg md:text-xl leading-6 font-medium text-slate-900 dark:text-neutral-200">
               <span className="py-1">我們非常重視您的個人隱私，在使用本網站服務時，敬請詳閲本隱私權聲明，</span>
               <span className="py-1">了解我們如何蒐集、處理及運用您所提供的個人資料，以及如何保護你的資料安全：</span>
             </h3>
-            <h5 className="mt-1 max-w-2xl text-sm text-slate-500 dark:text-slate-200">
+            <h5 className="mt-1 max-w-2xl text-sm text-slate-600 dark:text-neutral-200">
               Your privacy is our highest priority, please refer our privacy policy for more details on how we collect, process and protect personal information you have provided.
             </h5>
           </div>
@@ -88,12 +88,12 @@ const PrivacyPage = () => (
         <div className="grid gap-4">
           {articles.map((article, i) => (
             <div key={i} className="legal-card">
-              <div className="px-4 py-4 sm:px-6 border-b border-slate-200 dark:border-slate-700">
-                <h3 className="text-base md:text-lg font-semibold text-slate-900 dark:text-slate-200">
+              <div className="px-4 py-4 sm:px-6 border-b border-slate-200 dark:border-neutral-700">
+                <h3 className="text-base md:text-lg font-semibold text-slate-900 dark:text-neutral-200">
                   {article.section}
                 </h3>
               </div>
-              <div className="px-4 py-4 sm:px-6 text-sm text-slate-700 dark:text-slate-300">
+              <div className="px-4 py-4 sm:px-6 text-sm text-slate-700 dark:text-neutral-300">
                 {article.paragraphs
                   ? article.paragraphs.map((p, j) => (
                     <p key={j} className={j > 0 ? "mt-4" : ""}>

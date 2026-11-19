@@ -209,7 +209,7 @@ const FaqPage = () => {
     <Layout>
       <PageMeta keywords={["常見問題", "FAQ"]} title="常見問題集 FAQs" />
       <AnchorBar sections={faqSections} />
-      <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center dark:text-slate-200">
+      <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center dark:text-neutral-200">
         <div className="w-full xl:w-8/12 2mx-auto px-4 sm:px-8 mb-16">
           <div className="main-title my-8 md:my-12">
             <h1 className="sr-only">常見問題集 FAQs</h1>
@@ -227,7 +227,7 @@ const FaqPage = () => {
               key={titleClicks}
               aria-live="polite"
               aria-atomic="true"
-              className={`text-center text-sm py-4 transition-opacity duration-500 ${hintText && !unlocked ? "text-slate-400 animate-pulse" : "opacity-0 pointer-events-none"}`}
+              className={`text-center text-sm py-4 transition-opacity duration-500 ${hintText && !unlocked ? "text-slate-600 dark:text-neutral-400 animate-pulse" : "opacity-0 pointer-events-none"}`}
             >
               {hintText ?? "\u200b"}
             </p>
