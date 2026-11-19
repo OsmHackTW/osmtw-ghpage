@@ -44,6 +44,11 @@ const uriComponents = {
         isExternal: false
       },
       {
+        path: "https://panoramax.osm.tw/",
+        title: "Panoramax 台灣站\nPanoramax Taiwan",
+        isExternal: true
+      },
+      {
         path: "/contact",
         title: "聯絡我們\nContact Us",
         isExternal: false

@@ -37,7 +37,7 @@ const aboutPageComponents = {
               >
                 《開放資料庫授權》（ODbL）<ExtLinkIcon />
               </a>
-              <span className="text-slate-600 dark:text-slate-400 text-sm mx-1">(英語)</span>
+              <span className="text-slate-600 dark:text-neutral-400 text-sm mx-1">(英語)</span>
               方式授權釋出，沒有版權費用、許可證費用、使用費用及其他一切費用，您可以將圖資用於個人、社群、教育、商業、政府以及其他任何可以想到的應用用途。
             </div>
           ),
@@ -113,8 +113,9 @@ const aboutSections = [
 const AboutPage = () => (
   <Layout>
     <PageMeta keywords={["OSM", "開放街圖"]} title="什麼是開放街圖" />
+    <h1 className="sr-only">什麼是開放街圖</h1>
     <AnchorBar sections={aboutSections} />
-    <section className="antialiased text-slate-900 dark:text-slate-200 py-12 md:py-20">
+    <section className="antialiased text-slate-900 dark:text-neutral-200 py-12 md:py-20">
       <div className="w-full max-w-5xl mx-auto px-6 sm:px-10">
         {aboutPageComponents.aboutOSM.map((paragraph) => (
           <div
@@ -124,14 +125,14 @@ const AboutPage = () => (
           >
             {/* Section counter + title */}
             <div className="flex items-start gap-4 mb-8">
-              <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl leading-snug text-slate-800 dark:text-slate-100">
+              <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl leading-snug text-slate-800 dark:text-neutral-100">
                 {paragraph.title}
               </h2>
             </div>
             {/* Divider */}
-            <div className="mb-6 h-px bg-gradient-to-r from-teal-400 via-slate-200 to-transparent dark:via-slate-600" />
+            <div className="mb-6 h-px bg-gradient-to-r from-teal-400 via-slate-200 to-transparent dark:via-neutral-700" />
             {/* Content */}
-            <div className="space-y-5 text-base md:text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+            <div className="space-y-5 text-base md:text-lg leading-relaxed text-slate-700 dark:text-neutral-300">
               {paragraph.description.map((desc) => (
                 <React.Fragment key={desc.id}>
                   {desc.subtitle &&
@@ -149,16 +150,16 @@ const AboutPage = () => (
     </section>
 
     {/* Where to Use */}
-    <section className="antialiased text-slate-900 dark:text-slate-200 pb-12 md:pb-20">
+    <section className="antialiased text-slate-900 dark:text-neutral-200 pb-12 md:pb-20">
       <div className="w-full max-w-5xl mx-auto px-6 sm:px-10">
         <div className="mb-8 scroll-mt-20" id={usage.key} key={usage.key}>
           <div className="flex items-start gap-4 mb-8">
-            <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl leading-snug text-slate-800 dark:text-slate-100">
+            <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl leading-snug text-slate-800 dark:text-neutral-100">
               {usage.title}
             </h2>
           </div>
-          <div className="mb-8 h-px bg-gradient-to-r from-teal-400 via-slate-200 to-transparent dark:via-slate-600" />
-          <div className="space-y-5 text-base md:text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+          <div className="mb-8 h-px bg-gradient-to-r from-teal-400 via-slate-200 to-transparent dark:via-neutral-700" />
+          <div className="space-y-5 text-base md:text-lg leading-relaxed text-slate-700 dark:text-neutral-300">
             <p>
               OSM 的圖資不只是拿來看地圖——它早已悄悄融入你我的日常生活。
               從手機導航、戶外登山、到災難救援的即時地圖繪製，從 Leaflet、MapLibre 等開發者工具，到政府及學術研究的地理分析，全球數以百計的應用程式與服務都建立在這份開放的基礎之上。
@@ -180,11 +181,11 @@ const AboutPage = () => (
               </div>
             ))}
           </div>
-          <div className="border-t border-slate-200 dark:border-slate-600 mt-10 pt-8">
-            <p className="text-center text-sm text-slate-500 dark:text-slate-400 mb-6">以下單位與服務使用 OSM 資料</p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-slate-600 dark:text-slate-300">
+          <div className="border-t border-slate-200 dark:border-neutral-700 mt-10 pt-8">
+            <p className="text-center text-sm text-slate-600 dark:text-neutral-400 mb-6">以下單位與服務使用 OSM 資料</p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-slate-600 dark:text-neutral-300">
               {usage.services.map((org) => (
-                <span key={org} className="px-4 py-2 rounded-full bg-white dark:bg-slate-600/50 shadow-sm border border-slate-200 dark:border-slate-600">
+                <span key={org} className="px-4 py-2 rounded-full bg-white dark:bg-neutral-700/50 shadow-sm border border-slate-200 dark:border-neutral-700">
                   {org}
                 </span>
               ))}
@@ -223,6 +224,9 @@ const AboutPage = () => (
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
             三步驟加入開放街圖
           </h2>
+          <p className="mt-4 text-slate-600 dark:text-neutral-300">
+            台灣開放街圖社群的活躍成員幾乎都是利用空閒時間無償貢獻。不論是更新圖資還是協助推廣，每一項貢獻都有意義！
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {howToContribute.steps.map((step, idx) => (
@@ -231,7 +235,7 @@ const AboutPage = () => (
                 {idx + 1}
               </div>
               <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">{step.title}</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300">
+              <p className="text-sm text-slate-600 dark:text-neutral-300">
                 {step.description}
               </p>
             </div>))}
@@ -246,12 +250,25 @@ const AboutPage = () => (
             立刻註冊 <ExtLinkIcon />
           </a>
           <Link
-            href="/qsg/get-started/"
-            className="px-6 py-3 rounded-full font-semibold border-2 border-warabi-600 dark:border-warabi-300 text-warabi-600 dark:text-warabi-300 hover:bg-warabi-50/75 dark:hover:bg-slate-600 transition duration-200"
+            href="/qsg"
+            className="px-6 py-3 rounded-full font-semibold border-2 border-warabi-600 dark:border-warabi-300 text-warabi-600 dark:text-warabi-300 hover:bg-warabi-50/75 dark:hover:bg-neutral-700 transition duration-200"
           >
             {learnMore}
           </Link>
         </div>
+        <p className="text-center text-sm text-slate-600 dark:text-neutral-300">
+          也歡迎
+          <a
+            href="https://ocf.neticrm.tw/civicrm/contribute/transact?id=16"
+            className="link--warabi mx-1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            捐款支持 Donate
+            <ExtLinkIcon />
+          </a>
+          台灣開放街圖社群的營運及推廣活動。
+        </p>
       </div>
     </section>
   </Layout>

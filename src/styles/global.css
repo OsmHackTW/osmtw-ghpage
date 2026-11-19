@@ -109,6 +109,19 @@ html {
     -15px -21px 27px rgba(240, 240, 240, 0.8);
 }
 
+.dark .highlight-yellow {
+  background: linear-gradient(
+    104deg,
+    rgba(255, 226, 80, 0) 0.9%,
+    rgba(255, 226, 80, 0.45) 2.4%,
+    rgba(255, 226, 80, 0.3) 5.8%,
+    rgba(255, 226, 80, 0.12) 93%,
+    rgba(255, 226, 80, 0.3) 96%,
+    rgba(255, 226, 80, 0) 98%
+  );
+  text-shadow: none;
+}
+
 .highlight-green {
   font-weight: bolder;
   background:
@@ -158,19 +171,19 @@ html {
 }
 
 .text--secondary {
-  @apply text-slate-600 dark:text-slate-400;
+  @apply text-slate-600 dark:text-neutral-400;
 }
 
 .text--muted {
-  @apply text-slate-500 dark:text-slate-400;
+  @apply text-slate-600 dark:text-neutral-400;
 }
 
 .text--muted-xs {
-  @apply text-xs text-slate-500 dark:text-slate-400;
+  @apply text-xs text-slate-600 dark:text-neutral-400;
 }
 
 .text--muted-sm {
-  @apply text-sm text-slate-500 dark:text-slate-400;
+  @apply text-sm text-slate-600 dark:text-neutral-400;
 }
 
 .link--warabi {
@@ -185,12 +198,8 @@ html {
   @apply underline text-warabi-600;
 }
 
-.qsg-section-heading {
-  @apply my-2 font-semibold text-xl text-slate-600;
-}
-
 .card-base {
-  @apply bg-white dark:bg-slate-600 rounded-xl p-6 shadow-sm;
+  @apply bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm;
 }
 
 .step-badge {
@@ -198,15 +207,15 @@ html {
 }
 
 .form-input {
-  @apply w-full px-3 py-2 placeholder-slate-300 border border-slate-300 rounded-md focus:outline-hidden focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-slate-600 dark:text-white dark:placeholder-slate-300 dark:border-slate-500 dark:focus:ring-slate-900 dark:focus:border-slate-500;
+  @apply w-full px-3 py-2 placeholder-slate-300 border border-slate-300 rounded-md focus:outline-hidden focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-neutral-800 dark:text-white dark:placeholder-neutral-400 dark:border-neutral-600 dark:focus:ring-neutral-950 dark:focus:border-neutral-600;
 }
 
 .form-label {
-  @apply block mb-2 text-sm text-slate-600 dark:text-slate-400;
+  @apply block mb-2 text-sm text-slate-600 dark:text-neutral-400;
 }
 
 .section-subtitle {
-  @apply border-l-4 border-teal-500 pl-3 mb-4 text-base font-bold text-slate-800 dark:text-slate-100;
+  @apply border-l-4 border-teal-500 pl-3 mb-4 text-base font-bold text-slate-800 dark:text-neutral-100;
 }
 
 .subgroup-badge {
@@ -380,11 +389,11 @@ html {
 
 /* Legal pages (tos, privacy) */
 .legal-page-section {
-  @apply antialiased text-slate-900 py-2 h-full flex items-center justify-center dark:text-slate-200;
+  @apply antialiased text-slate-900 py-2 h-full flex items-center justify-center dark:text-neutral-200;
 }
 
 .legal-card {
-  @apply bg-white shadow overflow-hidden sm:rounded-lg dark:bg-slate-800;
+  @apply bg-white shadow overflow-hidden sm:rounded-lg dark:bg-neutral-800;
 }
 
 .legal-row {
@@ -396,5 +405,5 @@ html {
 }
 
 .legal-body {
-  @apply mt-1 text-sm sm:mt-0 sm:col-span-2 dark:text-slate-200;
+  @apply mt-1 text-sm sm:mt-0 sm:col-span-2 dark:text-neutral-200;
 }

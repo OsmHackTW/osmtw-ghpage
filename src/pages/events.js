@@ -15,7 +15,7 @@ const EventPage = () => (
         <div className="w-5xl px-4 py-5 mx-auto sm:max-w-xl md:w-full lg:max-w-(--breakpoint-xl) rounded-t">
           <div className="flex flex-col w-3xl md:w-6xl p-2 mb-8">
             <h3 className="uppercase text-xl px-0.5">Upcoming Events</h3>
-            <h2 className="uppercase text-4xl text-semibold">近期活動</h2>
+            <h1 className="uppercase text-4xl text-semibold">近期活動</h1>
           </div>
           <ul className="flex flex-col">
             <DummyEvent />
@@ -47,7 +47,7 @@ const OsmCalEvent = () => {
       <li className="flex flex-row mb-4" key={event.id}>
         <a
           href={event.url}
-          className="cursor-pointer border-slate-200 text-slate-700 hover:bg-slate-50 shadow border select-none bg-white rounded-md flex flex-1 items-center p-4 dark:bg-slate-600 dark:text-slate-200 dark:hover:bg-slate-700"
+          className="cursor-pointer border-slate-200 text-slate-700 hover:bg-slate-50 shadow border select-none bg-white rounded-md flex flex-1 items-center p-4 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700"
         >
           <div className="flex-1 pl-1 md:mr-16">
             <div className="text-xl font-medium mb-2">

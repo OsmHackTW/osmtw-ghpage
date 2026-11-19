@@ -4,11 +4,11 @@ import PageMeta from "../components/metadata";
 
 const contactPageComponents = {
   communityButton: [
-    { href: "https://community.openstreetmap.org/c/communities/tw/42", title: "OpenStreetMap Community", bgColor: "teal" },
-    { href: "https://www.facebook.com/groups/OpenStreetMap.TW/", title: "Facebook Group", bgColor: "pink" },
-    { href: "https://m.me/openstreetmaptaiwan", title: "Messenger", bgColor: "green" },
-    { href: "https://t.me/joinchat/Aqu2IgnTuIidMfREdNmomQ/", title: "Telegram", bgColor: "pink" },
-    { href: "https://osm-tw.signup.team/", title: "Slack", bgColor: "teal" },
+    { href: "https://community.openstreetmap.org/c/communities/tw/42", title: "OpenStreetMap Community" },
+    { href: "https://www.facebook.com/groups/OpenStreetMap.TW/", title: "Facebook Group" },
+    { href: "https://m.me/openstreetmaptaiwan", title: "Messenger" },
+    { href: "https://t.me/joinchat/Aqu2IgnTuIidMfREdNmomQ/", title: "Telegram" },
+    { href: "https://osm-tw.signup.team/", title: "Slack" },
   ],
 };
 
@@ -27,8 +27,8 @@ const ContactPage = () => (
               alt="月聚 Monthly gathering"
             />
           </div>
-          <div className="p-4 md:px-12 md:py-6 dark:bg-slate-800">
-            <h1 className="my-3 text-3xl font-semibold text-slate-700 dark:text-slate-200">
+          <div className="p-4 md:px-12 md:py-6 dark:bg-neutral-800">
+            <h1 className="my-3 text-3xl font-semibold text-slate-700 dark:text-neutral-200">
               聯絡我們 Contact Us
             </h1>
             <h3 className="text--secondary">
@@ -42,17 +42,16 @@ const ContactPage = () => (
                 <a
                   href={button.href}
                   key={button.title}
-                  aria-label=""
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-block bg-${button.bgColor}-500 px-4 py-2 mr-3 text-xs font-medium leading-6 text-center text-white rounded-full shadow`}
+                  className="inline-block bg-warabi-600 hover:bg-warabi-700 dark:hover:bg-warabi-400 px-4 py-2 mr-3 text-xs font-medium leading-6 text-center text-white rounded-full shadow"
                 >
                   {button.title}
                 </a>
               ))}
             </div>
           </div>
-          <div className="p-4 md:px-12 dark:bg-slate-800">
+          <div className="p-4 md:px-12 dark:bg-neutral-800">
             <h3 className="text--secondary">
               您也可以填寫此表單與我們的社群成員聯繫：
             </h3>
@@ -136,7 +135,7 @@ const ContactPage = () => (
                   <button
                     type="submit"
                     value="Send"
-                    className="w-full px-3 py-4 text-white font-bold bg-warabi-500 rounded-md hover:bg-fern-green-400ripple waves-light hover:shadow-lg focus:outline-hidden"
+                    className="w-full px-3 py-4 text-white font-bold cursor-pointer bg-warabi-500 rounded-md hover:bg-warabi-700 dark:hover:bg-warabi-400"
                   >
                     送出 Submit
                   </button>
@@ -148,10 +147,10 @@ const ContactPage = () => (
               </form>
             </div>
             <div className="mb-6">
-              <h5 className="text-sm text-slate-500">
+              <h5 className="text-sm text-slate-600 dark:text-neutral-400">
                 收到郵件後，開放街圖台灣社群成員將會儘快與您取得聯繫。謝謝！
               </h5>
-              <h5 className="text-sm text-slate-500">
+              <h5 className="text-sm text-slate-600 dark:text-neutral-400">
                 OSMTW community members will get back to you as soon as
                 available once received. Much obliged!
               </h5>

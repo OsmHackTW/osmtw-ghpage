@@ -6,6 +6,7 @@ import PageMeta from "../components/metadata";
 const NewsPage = () => (
   <Layout>
     <PageMeta keywords={["新聞公告", "週刊OSM", "News", "Weekly OSM"]} title="新聞公告 News - 週刊OSM Weekly OSM" />
+    <h1 className="sr-only">新聞公告 News</h1>
     <section className="antialiased text-slate-900 py-2 h-full flex items-center justify-center lg:max-w-(--breakpoint-xl) mx-auto">
       <div className="py-32" />
       <div className="w-full mx-auto">
@@ -22,8 +23,8 @@ const WEEKLY_OSM_JSON = `https://api.rss2json.com/v1/api.json?rss_url=https%3A%2
 
 const WeeklyOsmFeed = () => {
   const { data, error } = useSWR(WEEKLY_OSM_JSON, fetcher);
-  if (error) return <><p className="text-lg font-semibold text-red-500 dark:text-red-400 my-4">發生未知的錯誤 Error while fetching :\(</p><p /><pre className="text-xs text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 rounded p-3 overflow-auto">{JSON.stringify(error)}</pre></>;
-  if (!data) return <p className="text-lg font-medium text-slate-500 dark:text-slate-400 animate-pulse my-4">載入中…… Loading...</p>;
+  if (error) return <><p className="text-lg font-semibold text-red-500 dark:text-red-400 my-4">發生未知的錯誤 Error while fetching :\(</p><p /><pre className="text-xs text-slate-600 dark:text-neutral-400 bg-slate-100 dark:bg-neutral-800 rounded p-3 overflow-auto">{JSON.stringify(error)}</pre></>;
+  if (!data) return <p className="text-lg font-medium text-slate-600 dark:text-neutral-400 animate-pulse my-4">載入中…… Loading...</p>;
 
   const feed = data.items[0]; // lastest issue
   return feed === null || feed.length === 0 ?

@@ -6,6 +6,7 @@ import { landingPageComponents } from "../components/landingData";
 import { ExtLinkIcon } from "../components/util";
 
 import PageMeta from "../components/metadata";
+import CommunityStrip from "../components/communityStrip";
 
 const RN990698 = "/assets/images/RN990698_2000.jpg";
 const mapLayersd0 = "/assets/images/landing_maplayers_d0.png";
@@ -36,16 +37,16 @@ export default function Home() {
         <div className="relative w-full flex py-32 md:py-64 bg-cover bg-center bg-no-repeat object-fill bg-osmtw-landing-hero osmtw-osmcontributors--bottom-right">
           <div className="w-full max-w-5xl mx-auto p-2">
             <div className="flex-1 text-center md:text-left bg-slate-100/25 mx-auto px-4 my-4 md:px-16 md:mr-8 lg:ml-16">
-              <div className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-900 leading-none my-4 ">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-900 leading-none my-4 ">
                 開放街圖・台灣
-              </div>
+              </h1>
               <div className="text-2xl lg:text-3xl font-bold tracking-tight text-slate-700 pb-4 mb-6 md:space-x-4">
                 <span className="block md:inline">自由開放的圖資</span>
                 <span className="block md:inline">廣泛運用的圖資</span>
               </div>
               <Link
                 href="https://osm.org/"
-                className="my-2 px-6 py-2 md:my-4 md:px-8 md:py-4 rounded-full font-semibold tracking-wide bg-pink-500 text-white outline-hidden focus:outline-hidden hover:shadow-lg hover:bg-pink-600 transition duration-200 ease-in-out"
+                className="my-2 px-6 py-2 md:my-4 md:px-8 md:py-4 rounded-full font-semibold tracking-wide bg-warabi-600 text-white outline-hidden focus:outline-hidden hover:shadow-lg hover:bg-warabi-700 transition duration-200 ease-in-out"
               >
                 立刻開始使用 <ExtLinkIcon />
               </Link>
@@ -60,7 +61,7 @@ export default function Home() {
           <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-(--breakpoint-xl) md:px-24 lg:px-8 lg:py-20">
             <div className="flex flex-col mb-6 lg:flex-row md:mb-10">
               <div className="w-full mb-8 md:mb-16 lg:w-1/2">
-                <h2 className="max-w-full text-3xl lg:text-4xl xl:text-5xl font-bold highlight-yellow text-slate-900 dark:bg-slate-400 dark:rounded-none xl:max-w-lg">
+                <h2 className="max-w-full text-3xl lg:text-4xl xl:text-5xl font-bold highlight-yellow text-slate-900 dark:text-white xl:max-w-lg">
                   人人可編輯的世界地圖
                 </h2>
               </div>
@@ -77,15 +78,15 @@ export default function Home() {
               </div>
             </div>
             <div className="flex my-12 justify-center md:mt-6 md:mb-16">
-              <div className="w-24 h-1 rounded-full bg-teal-500 inline-flex" />
+              <div className="w-24 h-1 rounded-full bg-warabi-500 inline-flex" />
             </div>
             <div className="grid gap-8 row-gap-10 sm:grid-cols-2 lg:grid-cols-4">
               {landingPageComponents.feature.map((link) => (
-                <React.Fragment key={link.id}>
+                <React.Fragment key={link.heading}>
                   <div className="max-w-md">
-                    <div className="flex items-center justify-center relative mx-auto w-32 h-32 md:w-24 md:h-24 mb-4 rounded-full bg-red-200">
+                    <div className="flex items-center justify-center relative mx-auto w-32 h-32 md:w-24 md:h-24 mb-4 rounded-full bg-warabi-100 dark:bg-warabi-700">
                       <svg
-                        className="w-24 h-24 md:w-16 md:h-16 text-red-500"
+                        className="w-24 h-24 md:w-16 md:h-16 text-warabi-700 dark:text-warabi-200"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -112,10 +113,10 @@ export default function Home() {
 
       {/* Ka-ki-e te-too Ka-ki ue */}
       <section className="flex-col-center">
-        <div className="relative w-full flex flex-col-reverse bg-teal-300 py-16 lg:p-0 lg:flex-col">
+        <div className="relative w-full flex flex-col-reverse bg-warabi-700 py-16 lg:p-0 lg:flex-col">
           <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-1/2 lg:max-w-full lg:absolute xl:px-0">
             <svg
-              className="absolute left-0 hidden h-full z-50 text-teal-300 transform -translate-x-1/2 lg:block "
+              className="absolute left-0 hidden h-full z-50 text-warabi-700 transform -translate-x-1/2 lg:block "
               viewBox="0 0 100 100"
               fill="currentColor"
               preserveAspectRatio="none slice"
@@ -137,7 +138,7 @@ export default function Home() {
                   <React.Fragment
                     key={hashtag}>
                     <span
-                      className="px-3 py-px text-sm font-semibold tracking-wider text-indigo-700 uppercase rounded-full border-2 border-indigo-600 hover:border-blue-800 hover:text-blue-800"
+                      className="px-3 py-px text-sm font-semibold tracking-wider text-warabi-50 uppercase rounded-full border-2 border-warabi-200 hover:border-white hover:text-white"
                     >
                       {`#${hashtag}`}
                     </span>
@@ -145,26 +146,26 @@ export default function Home() {
                 ))}
               </p>
               <div className="hidden px-2 py-4 md:flex">
-                <div className="w-24 h-1 rounded-full bg-teal-600 inline-flex" />
+                <div className="w-24 h-1 rounded-full bg-warabi-300 inline-flex" />
               </div>
-              <h2 className="px-1 mb-5 font-sans text-5xl font-medium tracking-tight text-slate-900 md:px-0.5 md:text-6xl sm:leading-none md:leading-snug space-y-2">
+              <h2 className="px-1 mb-5 font-sans text-5xl font-medium tracking-tight text-white md:px-0.5 md:text-6xl sm:leading-none md:leading-snug space-y-2">
                 <span className="block">自己的地圖</span>
                 <span className="block font-black">自己畫</span>
               </h2>
-              <h3 className="p-2 mb-5 text-base text-slate-700 md:text-lg md:pr-16 lg:pr-4 xl:pr-8">
+              <h3 className="p-2 mb-5 text-base text-slate-100 md:text-lg md:pr-16 lg:pr-4 xl:pr-8">
                 地理資訊是全民共享的寶貴資源，透過開放協作的力量，讓人人都能參與地圖的建構與維護，攜手打造更完整、更精準的地理世界。
               </h3>
               <div className="flex items-center mb-8">
                 <a
                   href="https://osm.org/"
                   aria-label=""
-                  className="inline-flex items-center justify-center h-12 py-px px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-indigo-600 hover:bg-blue-600 focus:shadow-outline focus:outline-hidden"
+                  className="inline-flex items-center justify-center h-12 py-px px-6 mr-6 font-medium tracking-wide text-warabi-700 transition duration-200 rounded-full shadow-md bg-white hover:bg-warabi-50 focus:shadow-outline focus:outline-hidden"
                 >
                   開始畫圖 <ExtLinkIcon />
                 </a>
                 <Link
-                  href="/qsg/mapper/"
-                  className="inline-flex items-center font-semibold text-slate-800 transition-colors duration-200 hover:text-blue-600"
+                  href="/qsg#mapper"
+                  className="inline-flex items-center font-semibold text-white transition-colors duration-200 hover:text-warabi-200"
                 >
                   {learnMore}
                 </Link>
@@ -204,7 +205,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col justify-center px-5 -mx-4 md:px-0 lg:pl-8 lg:max-w-lg xl:max-w-3xl">
-              <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-green-500">
+              <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-warabi-600 dark:bg-warabi-700">
                 <svg
                   className="text-white w-8 h-8"
                   viewBox="0 0 16 16"
@@ -222,7 +223,7 @@ export default function Home() {
                   OpenStreetMap及其他應用服務有提供多種地圖樣式，即使是相同的資料也會給你帶來截然不同的感受！
                 </div>
                 <a
-                  className="inline-flex items-center font-semibold text-green-600 dark:text-green-200"
+                  className="inline-flex items-center font-semibold text-warabi-600 dark:text-warabi-200"
                   href="https://wiki.openstreetmap.org/wiki/Tile_servers"
                   aria-label=""
                   target="_blank"
@@ -231,7 +232,7 @@ export default function Home() {
                   探索更多地圖樣式
                   <ExtLinkIcon />
                 </a>
-                <span className="text-slate-400 text-xs mx-1">(英語)</span>
+                <span className="text-slate-600 dark:text-neutral-400 text-xs mx-1">(英語)</span>
                 <blockquote className="flex flex-col py-4 md:py-8 space-y-1 text--muted-xs">
                   <div>&copy; OpenStreetMap contributors.</div>
                   <div>
@@ -251,43 +252,45 @@ export default function Home() {
         <div className="relative w-full flex-1 text-left max-w-7xl">
           <div className="container p-5 md:py-16 mx-auto text-slate-600 body-font">
             <div className="flex flex-col text-center w-full mb-12 md:mb-20">
-              <h2 className="text-2xl text-green-500 dark:text-green-200 tracking-widest font-semibold title-font mb-1">
+              <p className="text-2xl text-warabi-600 dark:text-warabi-300 tracking-widest font-semibold title-font mb-1">
                 &#35;當地圖不再只是地圖
+              </p>
+              <h2 className="sm:text-4xl text-3xl font-medium title-font text-slate-900 dark:text-white">
+                摩拳擦掌？躍躍欲試？
               </h2>
-              <h1 className="sm:text-4xl text-3xl font-medium title-font text-slate-900 dark:text-white">
-                發掘開放街圖的更多潛在的可能性
-              </h1>
+              <p className="mt-3 text-lg text-slate-600 dark:text-neutral-300">
+                選一個身分，馬上開始使用開放街圖！
+              </p>
             </div>
             <div className="flex flex-wrap -m-4">
               {landingPageComponents.quickStartGuide.map((link) => (
-                <div className="p-4 md:w-1/3" key={link.id}>
+                <div className="p-4 md:w-1/3" key={link.route}>
                   <div className="flex rounded-lg h-full shadow-lg bg-slate-100 p-8 flex-col">
                     <div className="flex items-center mb-3">
-                      <div className="w-12 h-12 mr-3 inline-flex items-center justify-center rounded-full bg-green-500 text-white shrink-0">
+                      <div className="w-12 h-12 mr-3 inline-flex items-center justify-center rounded-full bg-warabi-100 text-warabi-700 shrink-0">
                         <svg
                           className="p-2"
-                          fill="none"
+                          fill={link.filled ? "currentColor" : "none"}
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          strokeWidth="2"
+                          strokeWidth={link.strokeWidth ?? 2}
                         >
                           <path d={link.SVGpath} />
                         </svg>
                       </div>
-                      <h2 className="text-slate-900 text-xl title-font font-medium">
+                      <h3 className="text-slate-900 text-xl title-font font-medium">
                         我是
                         {link.role}
-                      </h2>
+                      </h3>
                     </div>
                     <div className="grow">
                       <p className="leading-relaxed text-normal">
                         {link.desc}
                       </p>
                       <Link
-                        className="mt-3 text-green-500 inline-flex items-center"
-                        key={link.title}
+                        className="mt-3 text-warabi-600 hover:text-warabi-700 inline-flex items-center"
                         href={link.route}
                       >
                         {learnMore}
@@ -312,38 +315,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Banner */}
-      <section className="flex-col-center">
-        <div className="w-full flex object-fill bg-green-200">
-          <div className="w-full md:w-3/4 xl:w-3/5 2xl:w-2/3 2xl:max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-            <h2 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900">
-              <span className="block py-2">摩拳擦掌？躍躍欲試？</span>
-              <span className="block text-indigo-600">
-                馬上開始使用開放街圖！
-              </span>
-            </h2>
-            <div className="mt-8 flex lg:mt-0 lg:shrink-0">
-              <div className="inline-flex rounded-md shadow">
-                <a
-                  href="https://osm.org/"
-                  className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-700"
-                >
-                  開始畫圖
-                  <ExtLinkIcon />
-                </a>
-              </div>
-              <div className="ml-3 inline-flex rounded-md shadow">
-                <Link
-                  href="/qsg"
-                  className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-lg text-indigo-600 bg-white hover:bg-indigo-50"
-                >
-                  {learnMore}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CommunityStrip />
     </Layout>
   );
 }
