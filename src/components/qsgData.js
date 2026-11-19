@@ -1,8 +1,14 @@
+import { apps } from "./appsData";
+
 // Role sections of the single-page QSG (/qsg). `task` is the jump-bar answer to 你想用開放街圖做什麼？; `group` splits map users from contributors.
-const qsgSections = [
+// An item with `app` takes its name and link from appsData; the card keeps its own `desc`, and may override `title` or `href`.
+const sections = [
   {
     id: "general",
-    related: { route: "/applications/", label: "瀏覽更多應用程式與服務" },
+    related: {
+      route: "/applications/",
+      label: "瀏覽更多應用程式與服務",
+    },
     task: "導航找路",
     group: "use",
     eyebrow: "01 · Everyday users",
@@ -10,28 +16,20 @@ const qsgSections = [
     lead: "不用註冊、不用畫圖，這些 App 就用著 OSM 圖資。",
     items: [
       {
-        title: "OsmAnd",
+        app: "osmand",
         desc: "Android 與 iOS 的離線導航 App。",
-        href: "http://osmand.net/",
-        linkLabel: "osmand.net",
       },
       {
-        title: "uMap",
+        app: "umap",
         desc: "在 OSM 上製作自己的地圖，適合整理私人書籤。",
-        href: "https://umap.openstreetmap.fr/zh-tw/",
-        linkLabel: "umap.openstreetmap.fr",
       },
       {
-        title: "MapComplete",
+        app: "mapcomplete",
         desc: "OSM 比利時推出的主題地圖，可提案新主題。",
-        href: "https://mapcomplete.osm.be/",
-        linkLabel: "mapcomplete.osm.be",
       },
       {
-        title: "StreetComplete",
+        app: "streetcomplete",
         desc: "回答簡單問題，順手補齊地圖資料。",
-        href: "https://github.com/streetcomplete/StreetComplete/",
-        linkLabel: "github.com/streetcomplete",
       },
     ],
   },
@@ -44,52 +42,38 @@ const qsgSections = [
     lead: "頂天立地、上山下海時也能離線查路，這些地圖應用程式都使用 OSM 圖資。",
     items: [
       {
-        title: "Organic Maps",
+        app: "organic-maps",
         desc: "以 OSM 製作的離線地圖 App，適合登山與戶外路線。",
-        href: "https://organicmaps.app/",
-        linkLabel: "organicmaps.app",
       },
       {
+        app: "rudymap",
         title: "魯地圖",
         desc: "台灣社群成員開發的戶外地圖 App。",
-        href: "https://rudymap.tw",
-        linkLabel: "rudymap.tw",
       },
       {
-        title: "OpenTopoMap",
+        app: "opentopomap",
         desc: "以 OSM 資料製作的等高線地形圖。",
-        href: "https://opentopomap.org/",
-        linkLabel: "opentopomap.org",
       },
       {
-        title: "Waymarked Trails",
+        app: "waymarked-trails",
         desc: "在地圖上疊加健行路線，全球都能看。",
         href: "https://hiking.waymarkedtrails.org/",
-        linkLabel: "hiking.waymarkedtrails.org",
       },
       {
-        title: "OpenAndroMaps",
+        app: "openandromaps",
         desc: "可下載的離線向量地圖，依地區下載後使用。",
-        href: "https://www.openandromaps.org/en",
-        linkLabel: "openandromaps.org",
       },
       {
-        title: "OruxMaps",
+        app: "oruxmaps",
         desc: "Android 戶外 App，支援離線地圖與軌跡記錄。",
-        href: "https://www.oruxmaps.com/cs/en/",
-        linkLabel: "oruxmaps.com",
       },
       {
-        title: "綠野遊蹤",
+        app: "greentracks",
         desc: "台灣的登山健行 App，查看與記錄路線。",
-        href: "https://greentracks.app/",
-        linkLabel: "greentracks.app",
       },
       {
-        title: "健行筆記",
+        app: "hiking-biji",
         desc: "台灣的健行社群網站，分享路線與經驗。",
-        href: "https://hiking.biji.co/",
-        linkLabel: "hiking.biji.co",
       },
     ],
   },
@@ -102,28 +86,20 @@ const qsgSections = [
     lead: "規劃騎車路線，標出坡度、自行車道與路面狀況，就算沒有網路也能使用。",
     items: [
       {
-        title: "BRouter",
+        app: "brouter",
         desc: "以 OSM 資料規劃騎車與步行路線的工具。",
-        href: "https://brouter.de/",
-        linkLabel: "brouter.de",
       },
       {
-        title: "Komoot",
+        app: "komoot",
         desc: "規劃騎車與健行路線，全球都能用。",
-        href: "https://www.komoot.com/",
-        linkLabel: "komoot.com",
       },
       {
-        title: "CyclOSM",
+        app: "cyclosm",
         desc: "為騎車設計的 OSM 地圖樣式，標出自行車道與坡度。",
-        href: "https://www.cyclosm.org/",
-        linkLabel: "cyclosm.org",
       },
       {
-        title: "Waymarked Trails",
+        app: "waymarked-trails",
         desc: "顯示自行車與登山車路線的地圖。",
-        href: "https://waymarkedtrails.org/",
-        linkLabel: "waymarkedtrails.org",
       },
     ],
   },
@@ -142,16 +118,12 @@ const qsgSections = [
         linkLabel: "openstreetmap.org：交通地圖圖層",
       },
       {
-        title: "OpenRailwayMap",
+        app: "openrailwaymap",
         desc: "以 OSM 製作的鐵道地圖，標出軌道、車站與號誌。",
-        href: "https://www.openrailwaymap.org/",
-        linkLabel: "openrailwaymap.org",
       },
       {
-        title: "Transitous",
+        app: "transitous",
         desc: "以開放資料規劃大眾運輸路線與班次。",
-        href: "https://transitous.org/",
-        linkLabel: "transitous.org",
       },
       {
         title: "大眾運輸 Wiki",
@@ -214,58 +186,41 @@ const qsgSections = [
         linkLabel: "OSM Wiki：Map Features",
       },
       {
-        title: "JOSM",
+        app: "josm",
         desc: "功能完整的桌面編輯器，適合批次修改大量資料。",
-        href: "https://josm.openstreetmap.org/",
-        linkLabel: "josm.openstreetmap.org",
       },
       {
+        app: "overpass-turbo",
         title: "Overpass Turbo",
         desc: "用查詢語言搜尋地圖資料，找出需要修正的地方。",
-        href: "https://overpass-turbo.eu/",
-        linkLabel: "overpass-turbo.eu",
       },
       {
-        title: "OSMcha",
+        app: "osmcha",
         desc: "檢視地圖編輯紀錄（changeset），快速審查與找出可疑修改。",
-        href: "https://osmcha.org/",
-        linkLabel: "osmcha.org",
       },
       {
-        title: "Osmose",
+        app: "osmose",
         desc: "自動檢查地圖錯誤，列出待修清單。",
-        href: "https://osmose.openstreetmap.fr/",
-        linkLabel: "osmose.openstreetmap.fr",
       },
       {
-        title: "Taginfo",
+        app: "taginfo",
         desc: "查看各種標籤的使用量，幫你選擇常見的標籤。",
-        href: "https://taginfo.openstreetmap.org/",
-        linkLabel: "taginfo.openstreetmap.org",
       },
       {
-        title: "MapRoulette",
+        app: "maproulette",
         desc: "小型的引導式修圖任務，不用先學編輯器。",
-        href: "https://maproulette.org/",
-        linkLabel: "maproulette.org",
       },
       {
-        title: "HOT Tasking Manager",
+        app: "hot-tasking-manager",
         desc: "組織化的製圖專案，適合加入團體一起畫。",
-        href: "https://tasks.hotosm.org/",
-        linkLabel: "tasks.hotosm.org",
       },
       {
-        title: "Mapillary",
+        app: "mapillary",
         desc: "上傳街景照片，協助確認地圖上的地物。",
-        href: "https://www.mapillary.com/",
-        linkLabel: "mapillary.com",
       },
       {
-        title: "Panoramax 台灣站",
+        app: "panoramax-tw",
         desc: "開源的街景照片平台，可上傳與瀏覽街景照片。台灣站由在地社群架設維護，儲存硬碟由熱心人士捐贈，主要收集台灣各地的街景。",
-        href: "https://panoramax.osm.tw/",
-        linkLabel: "panoramax.osm.tw",
       },
     ],
   },
@@ -284,10 +239,8 @@ const qsgSections = [
         linkLabel: "switch2osm.org",
       },
       {
-        title: "Leaflet",
+        app: "leaflet",
         desc: "輕量的開源網頁地圖函式庫。",
-        href: "http://leafletjs.com/",
-        linkLabel: "leafletjs.com",
       },
       {
         title: "圖磚服務",
@@ -296,31 +249,35 @@ const qsgSections = [
         linkLabel: "switch2osm.org/providers",
       },
       {
-        title: "MapLibre GL JS",
+        app: "maplibre",
         desc: "開源的向量地圖渲染函式庫，用於網頁與 App。",
-        href: "https://maplibre.org/",
-        linkLabel: "maplibre.org",
       },
       {
-        title: "Nominatim",
+        app: "nominatim",
         desc: "地址與地名查詢（地理編碼）服務。",
-        href: "https://nominatim.org/",
-        linkLabel: "nominatim.org",
       },
       {
-        title: "OSRM",
+        app: "osrm",
         desc: "路線規劃服務，計算行車與步行路線。",
-        href: "https://project-osrm.org/",
-        linkLabel: "project-osrm.org",
       },
       {
-        title: "Geofabrik",
+        app: "geofabrik",
         desc: "提供各地區 OSM 資料下載，含台灣範圍，適合自架服務。",
-        href: "https://download.geofabrik.de/",
-        linkLabel: "download.geofabrik.de",
       },
     ],
   },
 ];
+
+const hostOf = (href) => new URL(href).hostname.replace(/^www\./, "");
+
+const qsgSections = sections.map((section) => ({
+  ...section,
+  items: section.items.map(({ app, ...item }) => {
+    if (!app) return item;
+    const { name, href } = apps[app];
+    const link = item.href ?? href;
+    return { title: name, href: link, linkLabel: hostOf(link), ...item };
+  }),
+}));
 
 export { qsgSections };
