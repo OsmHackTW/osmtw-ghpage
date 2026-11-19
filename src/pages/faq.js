@@ -25,6 +25,10 @@ const FaqList = [{
       question: "我要如何參與？",
       answer: "歡迎加入！首先到 https://www.openstreetmap.org/ 申請帳號。發現地圖有誤？幾分鐘就能幫忙標記修正。出遊時也可以用手機記錄軌跡，或用 iD 編輯器直接線上編輯。不熟悉的話，可以參考我們的教學文件，或參加社群活動，大家都很歡迎新手！",
     },
+    {
+      question: "你們是 OSM 品牌或專櫃的客服嗎？",
+      answer: "不是。開放街圖台灣（OSMTW）是志願者組成的地圖社群，不販售任何商品，也和名稱同樣縮寫為 OSM 的公司、品牌或店家沒有關係。購物、發票、售後服務等問題，請直接聯絡你購買的店家。",
+    },
   ],
 },
 {
@@ -60,6 +64,10 @@ const FaqList = [{
     {
       question: "我們機構想使用 OSM，但很多點位精準度不足，怎麼改善？",
       answer: "歡迎直接登入編輯！如果還不熟悉 OSM 編輯器，可以到 Facebook 社團「OpenStreetMap 台灣」發問，社群夥伴很樂意協助你上手。https://www.facebook.com/groups/468945293170945/",
+    },
+    {
+      question: "我是店家，網路上的店家資訊有誤，可以請你們幫忙更正嗎？",
+      answer: "OSM 的資料由所有人共同編輯，社群不代為修改特定店家的資訊。你可以到 https://www.openstreetmap.org/ 註冊後自行更新名稱、地址、營業時間等，或在地圖上留下備註請社群協助確認：https://www.openstreetmap.org/note/new 。另外，Google 搜尋結果和 Google 地圖上的商家資訊來自 Google，不是 OSM，請透過 Google 商家檔案更正。星級評等、宣傳文案這類內容也不屬於地圖資料。",
     },
   ],
 },
@@ -97,6 +105,14 @@ const FaqList = [{
       question: "OSM 地圖上標示了軍事設施（營區），這樣安全嗎？",
       answer: "這是 OSM 資料完整性的討論議題。台灣社群也有收到民眾和相關單位的反映，但這類內容的最終決定權在英國的 OpenStreetMap Foundation，台灣社群無法代為決定移除。如果你有顧慮，建議透過 OSM 官方社群管道反映。",
     },
+    {
+      question: "我想用 OSM，但不想在自己的地圖上顯示軍事設施，可以嗎？",
+      answer: "可以。OSM 提供的是原始資料，要畫出哪些內容由你決定。軍事相關的地物通常標記為 `landuse=military` 或 `military=*`（例如營區、機場、靶場），你可以在兩個地方把它們拿掉：處理資料時就先排除，例如用 `osmium tags-filter` 過濾掉這些標籤；或是在地圖樣式裡隱藏對應的圖層與類別，例如 MapLibre 的向量圖磚樣式。要注意的是，直接使用別人已經算好的點陣圖磚（例如 OSM 官方圖磚）沒辦法挑選內容，想完全掌控就要用向量圖磚搭配自己的樣式，或自架圖磚。這只會改變你的地圖，不會刪除 OSM 上的資料。",
+    },
+    {
+      question: "路上看到沒有標示的街景車，是在偷拍嗎？",
+      answer: "不一定。除了 Google、Apple，還有許多圖資商、導航與自駕車公司、測量單位都在收集街景影像，車身不一定有明顯標示。開放社群也會拍！志工用手機、行車紀錄器或環景相機記錄街景，上傳到開放的街景平台，用來協助畫地圖、確認路名與店家。這些平台會自動模糊人臉和車牌，對特定照片有疑慮也可以在平台上回報。想了解或一起參與，可以看看台灣社群維護的 Panoramax 台灣站 https://panoramax.osm.tw/ ，以及 Mapillary https://www.mapillary.com/ 。",
+    },
   ],
 },
 {
@@ -110,6 +126,14 @@ const FaqList = [{
     {
       question: "有問題或想貢獻，怎麼聯絡台灣社群？",
       answer: "可以參考頁尾連結，或者到 https://openstreetmap.community/?map=23.68984,121.00137&zoom=7 找到台灣社群的聯絡資訊，或直接在 Facebook 社團發文提問，大家都很歡迎新朋友！",
+    },
+    {
+      question: "我想參加社群活動，有人數限制嗎？要怎麼報名？",
+      answer: "近期活動都列在 https://osm.tw/events （資料來自 OSMCal），每場的報名方式、需要填的資料寫在該活動的頁面上；也可以留意 Facebook 粉絲專頁的活動公告 https://www.facebook.com/openstreetmaptaiwan/ ，或直接問社群夥伴。人數上限依場地而定；如果是學校或團體一次帶多人參加，建議請先與主辦方或社群取得聯繫，方便安排座位與交流。",
+    },
+    {
+      question: "可以在社群活動上宣傳我們的活動或競賽嗎？",
+      answer: "社群活動以 OpenStreetMap 與開放資料為主題。如果你的活動和地圖、開放資料相關，歡迎事先到 Telegram 群組或社群討論板 https://community.openstreetmap.org/c/communities/tw/42 說明內容，由當次主辦人決定是否安排分享時間。請盡量提早聯絡，臨時詢問不一定排得進去。",
     },
     {
       question: "我的 OSM 帳號被封鎖了，該怎麼辦？",
@@ -161,13 +185,18 @@ const SecretFaqs = {
   ],
 };
 
+// Answers are plain strings: URLs become links, `backticked` text (OSM tags, commands) becomes <code>.
 function renderAnswer(text) {
-  const parts = text.split(/(https?:\/\/[^\s）。，、]+)/g);
-  return parts.map((part, i) =>
-    part.match(/^https?:\/\//)
-      ? <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="text--warabi hover:underline break-all">{part}<ExtLinkIcon /></a>
-      : part
-  );
+  const parts = text.split(/(https?:\/\/[^\s）。，、]+|`[^`]+`)/g);
+  return parts.map((part, i) => {
+    if (part.match(/^https?:\/\//)) {
+      return <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="text--warabi hover:underline break-all">{part}<ExtLinkIcon /></a>;
+    }
+    if (part.length > 2 && part.startsWith("`") && part.endsWith("`")) {
+      return <code key={i} className="font-mono text-sm px-1 rounded bg-slate-100 dark:bg-neutral-800">{part.slice(1, -1)}</code>;
+    }
+    return part;
+  });
 }
 
 const HINT_TEXTS = ["還差 4 次⋯⋯", "還差 3 次⋯⋯", "還差 2 次，你快發現了", "再一次！🎸"];
