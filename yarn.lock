@@ -1585,21 +1585,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"baseline-browser-mapping@npm:^2.10.12":
-  version: 2.10.17
-  resolution: "baseline-browser-mapping@npm:2.10.17"
+"baseline-browser-mapping@npm:^2.10.12, baseline-browser-mapping@npm:^2.11.33":
+  version: 2.11.38
+  resolution: "baseline-browser-mapping@npm:2.11.38"
   bin:
     baseline-browser-mapping: dist/cli.cjs
-  checksum: 10c0/e792a92a6b206521681e3ab3a72770023f74a3274450bfe11ba55a075ba26f5820d5d2d02d92e25224b8d01e327b78fbf3e116bdc6ac74b3d9c52f5e3f4a048a
-  languageName: node
-  linkType: hard
-
-"baseline-browser-mapping@npm:^2.11.33":
-  version: 2.11.37
-  resolution: "baseline-browser-mapping@npm:2.11.37"
-  bin:
-    baseline-browser-mapping: dist/cli.cjs
-  checksum: 10c0/48322036bee156d700d1511045abcce3be6cd596d4fadd2e383960ba4206ef4f5eb8c1485481443f931e9b972ab5d9a6f91ec19e7e7778c197fcda88bcf27349
+  checksum: 10c0/f9b9576f79e4c15a2e7cd2173380922ec82db65a5815fd7a01dc4081cc25ffb25002c07e25076831adec19bf5dcfe11acd0f73473a308e40bb070bc4a98762cb
   languageName: node
   linkType: hard
 
