@@ -65,7 +65,7 @@ export default function Header() {
             <div className="flex items-center gap-4">
               <a
                 href="https://osm.org/"
-                className="hidden md:inline-flex xl:hidden px-3 py-2 rounded-full font-semibold tracking-wide bg-green-800 text-white outline-hidden focus:outline-hidden"
+                className="hidden md:inline-flex xl:hidden px-3 py-2 rounded-full font-semibold tracking-wide bg-warabi-600 hover:bg-warabi-700 text-white outline-hidden focus:outline-hidden"
               >
                 OSM.org
                 <ExtLinkIcon />
@@ -107,7 +107,7 @@ export default function Header() {
             >
               <a
                 href="https://osm.org/"
-                className="hidden xl:inline-flex xl:order-last mr-4 px-3 py-2 xl:ml-4 rounded-full font-semibold tracking-wide bg-green-800 text-white outline-hidden focus:outline-hidden"
+                className="hidden xl:inline-flex xl:order-last mr-4 px-3 py-2 xl:ml-4 rounded-full font-semibold tracking-wide bg-warabi-600 hover:bg-warabi-700 text-white outline-hidden focus:outline-hidden"
               >
                 OSM.org
                 <ExtLinkIcon />
